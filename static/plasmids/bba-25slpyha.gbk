@@ -1,0 +1,74 @@
+LOCUS       bba-25slpyha            1503 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25SLPYHA C1ND-Sed1 | type=Coding | status=published | 
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=93e924a9-f10b-4b05-8f6e-8aaa50940edf | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1503)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1503
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     sig_peptide     1..276
+                     /label=preOst1-pro-alpha-MF secretion signal
+                     /note="color: #cc99b2"
+     CDS             277..294
+                     /codon_start=1
+                     /product="6xHis affinity tag"
+                     /label=6xHis
+                     /note="color: #cc99b2"
+                     /translation="HHHHHH"
+     CDS             295..618
+                     /codon_start=1
+                     /label=C1ND
+                     /note="color: #ffff99"
+                     /translation="MQLTTESMPFNVAEGKEVLLLVHNLPQQLFGYSWYKGERVDGNRQ
+                     IVGYAIGTQQATPGPANSGRETIYPNASLLIQNVTQNDTGFYTLQVIKSDLVNEEATGQ
+                     FHVY"
+     CDS             619..663
+                     /label=GS linker
+                     /note="color: #a6acb3; direction: RIGHT"
+     CDS             664..1503
+                     /codon_start=1
+                     /label=Sed1
+                     /note="color: #3366ff"
+                     /translation="ALPTNGTSTEAPTDTTTEAPTTGLPTNGTTSAFPPTTSLPPSNTT
+                     TTPPYNPSTDYTTDYTVVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKPT
+                     TTSTTEYTVVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKPTTTSTTEYT
+                     VVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKSEAPESSVPVTESKGTTT
+                     KETGVTTKQTTANPSLTVSTVVPVSSSASSHSVVINSNGANVVVPGALGLAGVAMLFL"
+ORIGIN
+        1 atgagacaag tttggttttc ctggatcgtt ggtttattct tatgcttttt caatgtgtct
+       61 tctgctgccc cagtcaacac tactactgaa gatgaaactg cccaaattcc cgctgaagct
+      121 gttattggct actcagattt ggaaggtgat tttgatgtgg ctgttttgcc atttagtaat
+      181 agtactaata atggtctgtt attcattaac acaaccatcg cctctattgc cgccaaagaa
+      241 gaaggtgttt ccttagaaaa gagagaagct gaagctcacc atcaccacca tcacatgcaa
+      301 ttgaccaccg aaagtatgcc attcaacgtt gctgagggta aagaagtttt gttgttggtc
+      361 cataatttgc ctcaacaatt gtttggttat tcctggtata aaggtgaaag ggttgatggc
+      421 aacagacaaa tcgttggata tgctattggt acccaacaag ctactccagg tccagctaat
+      481 tcgggtagag aaactattta cccaaatgct tcattgttga tccaaaatgt tacacagaac
+      541 gatactggtt tctatactct acaagtgata aaaagtgact tggttaatga agaggcaact
+      601 ggtcaatttc atgtgtacgg tggtggtggt tccggtggtg gaggttctgg tggtggtggt
+      661 tctgctttac ctacaaatgg tacaagtaca gaagctccaa ctgatactac tactgaagct
+      721 ccaactactg gtttgcctac taatggtact acaagcgctt tcccaccaac tacgtctttg
+      781 ccaccatcta atactaccac tacaccacct tataatccgt ccaccgacta tactacagat
+      841 tatacagttg ttactgaata tactacttat tgtcctgaac caactacttt tactacaaat
+      901 ggtaagactt atacagttac tgaacctaca accttgacaa ttactgattg tccttgtact
+      961 attgaaaagc ctacaactac ttccacaaca gaatatactg ttgttacaga atacacaact
+     1021 tactgtccag aacctactac tttcaccact aacggtaaaa cttacaccgt taccgaacct
+     1081 actacattga ccatcactga ctgtccatgc acaattgaaa aaccaactac tactagcact
+     1141 accgaatata cagttgttac tgaatacact acttattgtc cggaacctac tactttcaca
+     1201 actaacggaa agacgtacac tgtaacggaa ccaaccactc tgactattac tgactgtcca
+     1261 tgtaccattg aaaagtcaga ggctccagaa tcttctgttc cagttaccga atctaaaggt
+     1321 acaacaacta aggaaaccgg tgttacaacc aagcaaacaa ctgctaatcc atcattgacc
+     1381 gtctctactg tcgttcctgt cagttcttcc gcttctagtc attccgttgt tatcaactct
+     1441 aatggtgcta atgttgttgt ccctggtgct ttgggtttag ctggtgttgc aatgttattt
+     1501 ttg
+//

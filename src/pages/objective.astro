@@ -1,0 +1,29 @@
+---
+// 这是一个文章的总局 2026.2.27
+import ArticleLayout from '../layouts/ArticleLayout.astro'
+
+// 这是一个design.md markdown文件 2026.2.27
+import Content from '../content/design.md'
+
+const toc = [
+  { id: 'chassis-strain-providing-a-comfortable-therapeutic-approach', text: 'Chassis Strain: Providing a comfortable therapeutic approach', depth: 4 },
+  { id: 'sensory-system-specifically-responding-to-helicobacter-pylori', text: 'Sensory System: Specifically responding to Helicobacter pylori', depth: 4 },
+  { id: 'therapeutic-system-breaking-through-the-barrier-of-drug-resistance', text: 'Therapeutic System: Breaking through the barrier of drug resistance', depth: 4 },
+  { id: 'adhesion-system-exerting-prolonged-functional-effects', text: 'Adhesion System: Exerting prolonged functional effects', depth: 4 },
+  { id: 'delivery-system-effectively-reaching-the-helicobacter-pylori-colonization-niche', text: 'Delivery System: Effectively reaching the Helicobacter pylori colonization niche', depth: 4 },
+  { id: 'suiside-system', text: 'Suiside System', depth: 4 },
+  { id: 'proof-of-concept', text: 'Proof of Concept', depth: 4 },
+  { id: 'sensory-system', text: 'Sensory system', depth: 5 },
+  { id: 'therapeutic-system', text: 'Therapeutic System', depth: 5 },
+  { id: 'adhesion-system', text: 'Adhesion System', depth: 5 },
+  { id: 'delivery-system', text: 'Delivery System', depth: 5 },
+  { id: 'reference', text: 'Reference', depth: 4 }
+];
+---
+
+<!-- <ArticleLayout title="Design" toc={toc} featuredImage="https://static.igem.wiki/teams/5870/header/design.webp"> -->
+<ArticleLayout title="设计" toc={toc} featuredImage="https://static.igem.wiki/teams/5870/header/design.webp">
+     <!-- <Content />  -->
+     打造 “艺术 + 科技 + 心理 + 教育” 跨学科协同的美育创新范式，以南京外国语学校为核心实践基地，通过 IP 打造、文创开发、数字平台搭建、交互装置研发等多元成果，为中学生提供情绪调节与审美提升的双重载体，形成可复制、可推广的中学疗愈性美育实践模型，实现学术价值、教育价值与社会价值的协同提升。
+
+</ArticleLayout>

@@ -1,0 +1,25 @@
+LOCUS       bba-25v9jzm4              77 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25V9JZM4 tRNA-sglinker | type=Intermediate | status=published | 
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=a819ce00-12d1-4c13-bd02-fe6562fb2cd8 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 77)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..77
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     tRNA            7..77
+                     /label=tRNA_Gly
+                     /note="color: #228b22; direction: RIGHT"
+ORIGIN
+        1 aaacaagcgc aagtggttta gtggtaaaat ccaacgttgc catcgttggg cccccggttc
+       61 gattccgggc ttgcgca
+//

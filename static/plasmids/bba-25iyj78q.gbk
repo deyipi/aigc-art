@@ -1,0 +1,116 @@
+LOCUS       bba-25iyj78q            2868 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25IYJ78Q yhH3R-P2A-Gp-alpha-i | type=Coding | status=published |
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=79eae9c2-d650-458d-9e68-f440e10bcc91 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2868)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..2868
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..1335
+                     /codon_start=1
+                     /label=yhH3R
+                     /note="color: #ffcc00"
+                     /translation="MERAPPDGPLNASGALAGEAAAAGGARGFSAAWTAVLAALMALLI
+                     VATVLGNALVMLAFVADSSLRTQNNFFMLNLAISDFLVGAFCIPLYVPYVLTGRWTFGR
+                     GLCKLWLVVDYLLCTSSAFNIVLISYDRFLSVTRAVSYRAQQGDTRRAVRKMLLVWVLA
+                     FLLYGPAILSWEYLSGGSSIPEGHCYAEFSYNWYFLITASTLEFFTPFLSVTFFNLSIY
+                     LNIQRRTRLRLDGAREAAGPEPPPEAQPSPPPPPGCWGCWQKGHGEAMPLHRYGVGEAA
+                     VGAEAGEATLGGGGGGGSVASPTSSSGSSSRGTERPRSLKRGSKPSASSASLEKRMKMV
+                     SQSFTQRFRLSRDRKVAKYLAVIVSIFGLCWAPYTLLMIIRAACHGHCVPDYWYETSFW
+                     LLWANSAVNPVLYPLRHHSFRRAFTKLLCPQKLKIQPHSSLEHCWK"
+     CDS             1336..1362
+                     /codon_start=1
+                     /product="HA (human influenza hemagglutinin) epitope tag"
+                     /label=HA
+                     /note="color: #cc99b2"
+                     /translation="YPYDVPDYA"
+     CDS             1363..1425
+                     /codon_start=1
+                     /label=P2A
+                     /note="color: #00ffff"
+                     /translation="GSLLNFDLLKLAGDVESNPGP"
+     CDS             1429..1452
+                     /codon_start=1
+                     /product="FLAG(R) epitope tag, followed by an enterokinase 
+                     cleavage site"
+                     /label=FLAG
+                     /note="color: #cc99b2"
+                     /translation="DYKDDDDK"
+     CDS             1453..2853
+                     /codon_start=1
+                     /label=GPA1-Delta-C5
+                     /note="color: #ff6600"
+                     /translation="MGCTVSTQTIGDESDPFLQNKRANDVIEQSLQLEKQRDKNEIKLL
+                     LLGAGESGKSTVLKQLKLLHQGGFSHQERLQYAQVIWADAIQSMKILIIQARKLGIQLD
+                     CDDPINNKDLFACKRILLKAKALDYINASVAGGSDFLNDYVLKYSERYETRRRVQSTGR
+                     AKAAFDEDGNISNVKSDTDRDAETVTQNEDADRNNSSRINLQDICKDLNQEGDDQMFVR
+                     KTSREIQGQNRRNLIHEDIAKAIKQLWNNDKGIKQCFARSNEFQLEGSAAYYFDNIEKF
+                     ASPNYVCTDEDILKGRIKTTGITETEFNIGSSKFKVLDAGGQRSERKKWIHCFEGITAV
+                     LFVLAMSEYDQMLFEDERVNRMHESIMLFDTLLNSKWFKDTPFILFLNKIDLFEEKVKS
+                     MPIRKYFPDYQGRVGDAEAGLKYFEKIFLSLNKTNKPIYVKRTCATDTQTMKFVLSAVT
+                     DLIIQQNLK"
+     CDS             2854..2868
+                     /codon_start=1
+                     /label=mamG-alpha-i C5-tail
+                     /note="color: #00ffff"
+                     /translation="DCGLF"
+ORIGIN
+        1 atggagaggg ctccaccaga tggtcctttg aatgctagtg gagctttagc tggtgaagca
+       61 gcagctgctg gtggtgctag aggttttagt gctgcctgga cagcagtttt ggctgctttg
+      121 atggctttat taatagttgc aacggtgtta ggtaatgcac tggttatgtt agctttcgtt
+      181 gcagattcaa gtctaaggac tcaaaacaat ttctttatgt taaatttggc tatttctgac
+      241 tttttagttg gtgctttttg cattccattg tatgttccat acgtattgac aggtagatgg
+      301 actttcggta gaggtttatg caaattgtgg ttagttgttg attacttatt gtgtacttct
+      361 tccgctttta acattgtgtt aatttcatat gatagattct tgtcagtgac tagagctgtt
+      421 tcttatcgtg ctcaacaagg tgatacaagg agagcagttc gaaaaatgtt gcttgtttgg
+      481 gttttggctt ttctattata tggacccgca attttgtctt gggaatattt atccggtggt
+      541 tcttctattc cagaaggtca ttgttatgct gaattttctt ataattggta ctttctaatt
+      601 acagcttcaa ctctggaatt ttttacacca tttttatctg taacattttt caacttgtct
+      661 atctacttaa atattcaaag aagaactaga ttaagactag atggtgctag agaagcagct
+      721 ggtccagaac caccacctga agctcaacca tctccaccac cacctccagg ttgctggggt
+      781 tgttggcaaa agggtcatgg tgaagctatg cctcttcaca gatacggtgt tggtgaagct
+      841 gctgttggtg ccgaagctgg agaagcaaca ctgggtggcg gtggtggtgg tggttctgtc
+      901 gcatctccta cttcatcttc tggttcaagt tcaagaggta ctgaaagacc aagatcttta
+      961 aaaagaggtt ctaagccatc cgcttcctca gccagcttag aaaaaagaat gaaaatggtt
+     1021 tctcaatcat ttacccaaag gtttagattg tcaagagata gaaaagttgc aaaatacttg
+     1081 gctgttattg tctccatctt tggattatgc tgggctccat atacattatt aatgattatt
+     1141 agagctgctt gtcatggtca ttgtgttcca gattattggt atgaaacctc tttttggctg
+     1201 ttgtgggcta atagtgcagt gaatcctgtt ttgtatccat taagacatca tagttttaga
+     1261 cgtgcattta caaaattgtt gtgtcctcaa aagttgaaaa tccagcctca ttcttcatta
+     1321 gaacattgct ggaagtaccc atacgatgtt ccagattacg ctggatccct actgaacttc
+     1381 gatctcctta agttggcggg tgacgtcgag agtaaccctg gtccaatgga ctacaaggat
+     1441 gacgatgaca agatgggatg cactgtaagt acacagacca ttggtgatga atccgatcca
+     1501 tttttacaaa ataagagagc taacgatgtt atcgaacaaa gccttcaatt agaaaaacaa
+     1561 agagataaga atgaaattaa attattattg ctaggtgctg gtgaatctgg taaatcaact
+     1621 gttttgaaac aattgaaatt gttgcatcaa ggtggttttt cacaccaaga aaggcttcaa
+     1681 tatgcacaag ttatctgggc tgatgctatt caatctatga aaattttgat aattcaggct
+     1741 agaaagttgg gtatccaact tgattgcgat gatcctatta ataataaaga tttatttgcc
+     1801 tgcaaaagaa tattgttaaa agcaaaagct ttagattata ttaatgcttc tgtagcaggt
+     1861 ggttccgatt ttttgaacga ttacgttttg aagtattcag aaagatatga aactagaaga
+     1921 agagttcagt caacaggtag agctaaagct gctttcgacg aagatggtaa tatctcaaac
+     1981 gtaaaatcgg acacagacag agatgctgaa acagtaactc aaaatgaaga tgccgataga
+     2041 aacaattcat cacgtatcaa tttgcaagat atttgtaagg atttgaacca agaaggtgat
+     2101 gatcaaatgt ttgtgagaaa gacttcaaga gaaattcaag gtcaaaatag aaggaatttg
+     2161 attcatgaag atatcgcaaa ggctataaag caattatgga acaatgataa aggtattaag
+     2221 caatgttttg ctagatccaa tgaatttcaa ttggaaggtt ctgctgcata ctatttcgat
+     2281 aatattgaaa agtttgccag tccaaattat gtttgtactg atgaagatat cttgaaaggt
+     2341 agaataaaaa ctactggtat tactgaaaca gaatttaata taggttcatc caaatttaaa
+     2401 gttttagacg ctggtggtca gagatctgaa agaaaaaagt ggatccattg ttttgaaggt
+     2461 attacggcag ttctattcgt tttagcaatg agtgaatatg atcaaatgtt gtttgaagat
+     2521 gaaagagtta acagaatgca cgaatctatt atgttgtttg atacattgct taactctaaa
+     2581 tggtttaaag atacaccatt cattttgttt ttaaataaga ttgatttgtt tgaagaaaaa
+     2641 gttaaatcga tgccaattag aaaatacttc ccagattacc aaggtagagt gggtgatgcc
+     2701 gaagcaggtt tgaaatactt cgaaaaaatt tttttgtctt taaacaaaac taataaacct
+     2761 atttacgtaa agagaacatg tgctactgat acacaaacta tgaagttcgt gttgtcagca
+     2821 gttaccgatt tgattattca gcaaaatctg aaagattgtg ggctattt
+//

@@ -1,0 +1,69 @@
+LOCUS       bba-25qt2rzu            1429 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25QT2RZU KanMX4 | type=Generator | status=published | 
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=105deda6-719e-422c-8672-0d746a22286b | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1429)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1429
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     gene            36..1392
+                     /label=kanMX
+                     /note="yeast selectable marker conferring kanamycin 
+                     resistance (Wach et al., 1994)"
+                     /note="color: #ff7f50; direction: RIGHT"
+     promoter        36..379
+                     /label=TEF promoter
+                     /note="Ashbya gossypii TEF promoter"
+                     /note="color: #ffffff; direction: RIGHT"
+     CDS             380..1189
+                     /codon_start=1
+                     /gene="aph(3')-Ia"
+                     /product="aminoglycoside phosphotransferase"
+                     /label=KanR
+                     /note="confers resistance to kanamycin"
+                     /note="color: #ccffcc"
+                     /translation="MGKEKTHVSRPRLNSNMDADLYGYKWARDNVGQSGATIYRLYGKP
+                     DAPELFLKHGKGSVANDVTDEMVRLNWLTEFMPLPTIKHFIRTPDDAWLLTTAIPGKTA
+                     FQVLEEYPDSGENIVDALAVFLRRLHSIPVCNCPFNSDRVFRLAQAQSRMNNGLVDASD
+                     FDDERNGWPVEQVWKEMHKLLPFSPDSVVTHGDFSLDNLIFDEGKLIGCIDVGRVGIAD
+                     RYQDLAILWNCLGEFSPSLQKRLFQKYGIDNPDMNKLQFHLMLDEFF"
+     terminator      1195..1392
+                     /label=TEF terminator
+                     /note="Ashbya gossypii TEF terminator"
+                     /note="color: #ffffff; direction: RIGHT"
+ORIGIN
+        1 agcttgcctc gtccccgccg ggtcacccgg ccagcgacat ggaggcccag aataccctcc
+       61 ttgacagtct tgacgtgcgc agctcagggg catgatgtga ctgtcgcccg tacatttagc
+      121 ccatacatcc ccatgtataa tcatttgcat ccatacattt tgatggccgc acggcgcgaa
+      181 gcaaaaatta cggctcctcg ctgcagacct gcgagcaggg aaacgctccc ctcacagacg
+      241 cgttgaattg tccccacgcc gcgcccctgt agagaaatat aaaaggttag gatttgccac
+      301 tgaggttctt ctttcatata cttcctttta aaatcttgct aggatacagt tctcacatca
+      361 catccgaaca taaacaacca tgggtaagga aaagactcac gtttcgaggc cgcgattaaa
+      421 ttccaacatg gatgctgatt tatatgggta taaatgggct cgcgataatg tcgggcaatc
+      481 aggtgcgaca atctatcgat tgtacgggaa gcccgatgcg ccagagttgt ttctgaaaca
+      541 tggcaaaggt agcgttgcca atgatgttac agatgagatg gtcagactaa actggctgac
+      601 ggaatttatg cctcttccga ccatcaagca ttttatccgt actcctgatg atgcatggtt
+      661 actcaccact gcgatccccg gcaaaacagc attccaggta ttagaagaat atcctgattc
+      721 aggtgaaaat attgttgatg cgctggcagt gttcctgcgc cggttgcatt cgattcctgt
+      781 ttgtaattgt ccttttaaca gcgatcgcgt atttcgtctc gctcaggcgc aatcacgaat
+      841 gaataacggt ttggttgatg cgagtgattt tgatgacgag cgtaatggct ggcctgttga
+      901 acaagtctgg aaagaaatgc ataagctttt gccattctca ccggattcag tcgtcactca
+      961 tggtgatttc tcacttgata accttatttt tgacgagggg aaattaatag gttgtattga
+     1021 tgttggacga gtcggaatcg cagaccgata ccaggatctt gccatcctat ggaactgcct
+     1081 cggtgagttt tctccttcat tacagaaacg gctttttcaa aaatatggta ttgataatcc
+     1141 tgatatgaat aaattgcagt ttcatttgat gctcgatgag tttttctaat cagtactgac
+     1201 aataaaaaga ttcttgtttt caagaacttg tcatttgtat agttttttta tattgtagtt
+     1261 gttctatttt aatcaaatgt tagcgtgatt tatatttttt ttcgcctcga catcatctgc
+     1321 ccagatgcga agttaagtgc gcagaaagta atatcatgcg tcaatcgtat gtgaatgctg
+     1381 gtcgctatac tgctgtcgat tcgatactaa cgccgcctcc agtgtcgaa
+//

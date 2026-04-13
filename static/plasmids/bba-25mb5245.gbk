@@ -1,0 +1,21 @@
+LOCUS       bba-25mb5245              26 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25MB5245 HRH4-R | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=b2ab5ac6-2f7c-4a1d-9392-80bf848d0e2d | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 26)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..26
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 gctagagact gatcttgagt gctgac
+//

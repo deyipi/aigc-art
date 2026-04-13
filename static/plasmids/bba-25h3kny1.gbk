@@ -1,0 +1,100 @@
+LOCUS       bba-25h3kny1            2019 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25H3KNY1 EGFP-HopQAD-FLAG | type=Coding | status=published | 
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=54c7bd51-626e-49bf-a1c7-895a2840468e | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2019)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..2019
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             join(1..3,4..6,7..717)
+                     /codon_start=1
+                     /product="the original enhanced GFP (Yang et al., 1996)"
+                     /label=EGFP
+                     /note="mammalian codon-optimized"
+                     /note="This feature has 3 segments:
+                        1:   1 ..   3 / #05fd14
+                        2:   4 ..   6 / #05fd14 / 1a
+                        3:   7 .. 717 / #05fd14"
+                     /translation="MVSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTL
+                     KFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDD
+                     GNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIK
+                     VNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLL
+                     EFVTAAGITLGMDELYK"
+     CDS             join(1..3,4..6,7..717)
+                     /codon_start=1
+                     /product="enhanced GFP"
+                     /label=EGFP
+                     /note="This feature has 3 segments:
+                        1:   1 ..   3 / #05fc14
+                        2:   4 ..   6 / #05fc14 / 1a
+                        3:   7 .. 717 / #05fc14"
+                     /translation="MVSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTL
+                     KFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDD
+                     GNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIK
+                     VNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLL
+                     EFVTAAGITLGMDELYK"
+     CDS             718..1995
+                     /codon_start=1
+                     /label=HopQAD
+                     /note="color: #00ff00"
+                     /translation="MAVQKVKNADKVQKLSDTYEQLSRLLTNDNGTNSKTSAQAINQAV
+                     NNLNERAKTLAGGTTNSPAYQATLLALRSVLGLWNSMGYAVICGGYTKSPGENNQKDFH
+                     YTDENGNGTTINCGGSTNSNGTHSYNGTNTLKADKNVSLSIEQYEKIHEAYQILSKALK
+                     QAGLAPLNSKGEKLEAHVTTSKYQQDNQTKTTTSVIDTTNDAQNLLTQAQTIVNTLKDY
+                     CPILIAKSSSSNGGTNNANTPSWQTAGGGKNSCATFGAEFSAASDMINNAQKIVQETQQ
+                     LSANQPKNITQPHNLNLNSPSSLTALAQKMLKNAQSQAEILKLANQVESDFNKLSSGHL
+                     KDYIGKCDASAISSANMTMQNQKNNWGNGCAGVEETQSLLKTSAADFNNQTPQINQAQN
+                     LANTLIQELGNNPFRNMGMIASSTTNN"
+     CDS             1996..2019
+                     /codon_start=1
+                     /product="FLAG(R) epitope tag, followed by an enterokinase 
+                     cleavage site"
+                     /label=FLAG
+                     /note="color: #cc99b2"
+                     /translation="DYKDDDDK"
+ORIGIN
+        1 atggtgagca agggcgagga gctgttcacc ggggtggtgc ccatcctggt cgagctggac
+       61 ggcgacgtaa acggccacaa gttcagcgtg tccggcgagg gcgagggcga tgccacctac
+      121 ggcaagctga ccctgaagtt catctgcacc accggcaagc tgcccgtgcc ctggcccacc
+      181 ctcgtgacca ccctgaccta cggcgtgcag tgcttcagcc gctaccccga ccacatgaag
+      241 cagcacgact tcttcaagtc cgccatgccc gaaggctacg tccaggagcg caccatcttc
+      301 ttcaaggacg acggcaacta caagacccgc gccgaggtga agttcgaggg cgacaccctg
+      361 gtgaaccgca tcgagctgaa gggcatcgac ttcaaggagg acggcaacat cctggggcac
+      421 aagctggagt acaactacaa cagccacaac gtctatatca tggccgacaa gcagaagaac
+      481 ggcatcaagg tgaacttcaa gatccgccac aacatcgagg acggcagcgt gcagctcgcc
+      541 gaccactacc agcagaacac ccccatcggc gacggccccg tgctgctgcc cgacaaccac
+      601 tacctgagca cccagtccgc cctgagcaaa gaccccaacg agaagcgcga tcacatggtc
+      661 ctgctggagt tcgtgaccgc cgccgggatc actctcggca tggacgagct gtacaagatg
+      721 gccgtgcaaa aagttaaaaa cgccgataag gttcaaaagc tgtctgatac ctacgaacaa
+      781 ttgtccagac ttctaacaaa tgacaacggt acaaactcta aaacatcagc tcaagctatt
+      841 aatcaagcgg taaacaattt aaacgagaga gccaaaactt tggctggtgg tacaaccaat
+      901 tctccagcat accaagccac tcttttggct ttaagatccg ttttaggttt gtggaatagt
+      961 atggggtacg cagtaatttg cggtggttat acaaaatcac ctggtgaaaa taaccaaaaa
+     1021 gatttccatt acactgatga aaatggtaat ggtaccacca tcaattgtgg tggatcaaca
+     1081 aattctaatg gtacacattc ctataatggt actaacacat taaaggccga taaaaacgta
+     1141 tccttatcaa ttgagcaata tgaaaaaata catgaagcct atcaaatatt gagcaaagct
+     1201 ttgaaacaag caggtttagc accattaaat agtaaaggtg aaaaattaga agctcacgta
+     1261 actacttcta agtatcaaca agataatcaa actaagacaa ctacttctgt gattgatact
+     1321 accaatgatg cgcaaaactt attgacccaa gctcaaacaa ttgtcaatac tttgaaggat
+     1381 tattgtccaa ttttaattgc taaatcatct tcttctaatg gtggcaccaa taatgcaaat
+     1441 actccaagtt ggcaaactgc tggtggtggt aaaaattctt gcgcaacatt tggtgcagag
+     1501 ttttcagctg cttctgatat gatcaataac gcccaaaaaa tcgttcaaga aactcaacaa
+     1561 ttgtcagcta atcaaccaaa gaatattact caaccacata atttgaattt aaattctcct
+     1621 tcttctttga ctgccttggc acaaaagatg ttgaagaatg cccaatctca agctgagatt
+     1681 ttgaaattgg caaatcaagt tgaaagtgat tttaacaagt tatcctcagg tcatttaaaa
+     1741 gattatattg gtaaatgtga cgcttctgct atatcatcgg ccaatatgac aatgcaaaat
+     1801 caaaaaaata actggggtaa tggctgtgct ggtgttgaag aaacacaatc cctactaaag
+     1861 acctccgcag ctgatttcaa caatcaaact cctcaaatta atcaagccca aaatttggcc
+     1921 aatactttga ttcaagaatt gggtaataat ccatttagaa atatgggtat gattgcctct
+     1981 tccactacta ataatgacta caaagacgac gacgataaa
+//

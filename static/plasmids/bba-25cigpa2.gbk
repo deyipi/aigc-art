@@ -1,0 +1,29 @@
+LOCUS       bba-25cigpa2             166 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25CIGPA2 tADH1 | type=Terminator [SO:0000141] | status=published
+            | updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=46d952a3-6669-4cb5-9be9-8d12bac541f0 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 166)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..166
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     terminator      1..166
+                     /gene="S. cerevisiae ADH1"
+                     /label=ADH1 terminator
+                     /note="transcription terminator for the S. cerevisiae 
+                     alcohol dehydrogenase 1 (ADH1) gene"
+                     /note="color: #ffffff; direction: RIGHT"
+ORIGIN
+        1 gcgaatttct tatgatttat gatttttatt attaaataag ttataaaaaa aataagtgta
+       61 tacaaatttt aaagtgactc ttaggtttta aaacgaaaat tcttattctt gagtaactct
+      121 ttcctgtagg tcaggttgct ttctcaggta tagcatgagg tcgctc
+//

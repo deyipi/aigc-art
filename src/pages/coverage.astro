@@ -1,0 +1,56 @@
+---
+// 这是一个文章的总局 2026.2.27
+import ArticleLayout from '../layouts/ArticleLayout.astro'
+
+import myImage13 from '../assets/jpg/greece1.jpg'
+import myImage14 from '../assets/jpg/rabbit2.jpg'
+import myImage15 from '../assets/jpg/rabbit3.jpg'
+
+import { Image } from 'astro:assets';
+
+---
+
+<ArticleLayout title="媒体报道&社会影响" >
+     <!-- <Content />  -->
+ 
+
+<h4>新闻报道<br></h4>
+
+团队成果获得南京外国语学校公众号等多家媒体报道，具有较大的影响力。<br>
+<h6>（1）国家级：<br></h6>
+①人民日报客户端<br>
+②人民网视频<br>
+③中华网客户端<br>
+④央视频<br>
+⑤腾讯网<br>
+<h6>（2）南京外国语学校公众号<br></h6>
+① 《推开文明的窗，看见世界的海 | 南外学子的希腊成长笔记》
+<a href="https://mp.weixin.qq.com/s/d7iaJQ3o747zMLY9UCzg_A" target="_blank">https://mp.weixin.qq.com/s/d7iaJQ3o747zMLY9UCzg_A</a>
+
+
+  <div class="img">
+         <Image src={myImage13} alt="合影"  />
+  </div>
+
+
+②《以尺为度，精进不息；倚枕静思，温暖同行 | 南外高三年级期中总结暨表彰大会圆满举行》<br>
+<a href="https://mp.weixin.qq.com/s/xbALP_i7077posqrK9ckNA" target="_blank">https://mp.weixin.qq.com/s/xbALP_i7077posqrK9ckNA</a>
+
+  <div class="img">
+         <Image src={myImage14} alt="兔子玩偶"  />
+  </div>
+
+
+  <div class="img">
+         <Image src={myImage15} alt="手拿玩偶合影"  />
+  </div>
+
+
+</ArticleLayout>
+
+<style>
+     .img {
+        display: block;
+        margin: 0 auto;
+      }
+</style>

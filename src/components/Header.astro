@@ -1,0 +1,101 @@
+---
+import Navigation from '../components/Navigation.astro'
+import { SkipLink } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+
+/**
+ * Header Component
+ *
+ * @description A component that displays the header of the website
+ */
+---
+
+<header>
+  <SkipLink /> 
+  <!-- SkipLink 组件，这个主要是为特殊人群准备，暂不考虑 pidy 2026.2.26 -->
+
+  <Navigation>
+    <li class="menu-item">
+      <a href="/context">项目简介</a>
+    </li>
+
+    <li class="menu-item">
+      <a href="/achivement">中期成果</a>
+    </li>
+
+    <li class="menu-item">
+      <a href="/progress">项目进展</a>
+    </li>
+
+    <li class="menu-item">
+      <a href="/plain">未来计划</a>
+    </li>
+
+    
+    <li class="menu-item">
+      <a href="/cooperation">合作网络</a>
+    </li>
+
+    
+    <li class="menu-item">
+      <a href="/coverage">媒体报道&社会影响</a>
+    </li>
+  </Navigation>
+</header>
+
+<style lang="scss" is:global>
+  header {
+    .type-icon {
+      display: block;
+      margin-inline: -7px;
+
+      svg {
+        inline-size: 30px;
+        block-size: 30px;
+      }
+    }
+    .menu-item,
+    .menu-item a {
+      color: var(--background-color)!important;
+    }
+
+    .submenu-item,
+    .submenu-item a {
+      color: var(--link-color)!important;
+    }
+
+    .menu-item {
+      font-weight: 500;
+    }
+    .submenu-item {
+      font-weight: 400;
+    }
+
+    .awards-item {
+      border: 1px solid var(--background-color);
+      background-color: var(--background-color); 
+      border-radius: 10px;
+      line-height: 1.8;
+      padding: 0 12px; 
+      transition: all var(--animation-speed-fast) var(--cubic-bezier); /* 保持容器的过渡效果 */
+    }
+
+    .awards-item a {
+      color: var(--foreground-color) !important;
+      font-weight: 500;
+      text-decoration: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      background-color: transparent !important;
+    }
+
+    .awards-item:hover {
+      border-color: var(--link-hover-color); 
+      background-color: var(--link-hover-color);
+    }
+
+  }
+  button {
+      color: var(--background-color)!important;
+  }
+</style>

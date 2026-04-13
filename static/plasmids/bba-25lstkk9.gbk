@@ -1,0 +1,29 @@
+LOCUS       bba-25lstkk9              24 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25LSTKK9 FLAG-tag (codon optimized for E. coli) | 
+            type=Protein_Domain | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=4fc38a9b-ef97-4f5f-af71-75b9aba97645 | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 24)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..24
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..24
+                     /codon_start=1
+                     /product="FLAG(R) epitope tag, followed by an enterokinase 
+                     cleavage site"
+                     /label=FLAG
+                     /note="color: #cc99b2"
+                     /translation="DYKDDDDK"
+ORIGIN
+        1 gactacaaag acgacgacga taaa
+//

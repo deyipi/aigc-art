@@ -1,0 +1,269 @@
+---
+export interface Props {
+    plasmids: Array<{
+        partNumber: string;
+        file: string;
+        description: string;
+    }>;
+}
+
+const { plasmids } = Astro.props;
+---
+
+<div class="overflow-x-auto mt-6">
+            {plasmids.map((plasmid, index) => (
+                        <div class="plasmid-preview-container">
+                            <iframe 
+                                id={`plasmid-iframe-${index}`}
+                                src={`/peking/html/plasmid_viewer.html?file=/peking/plasmids/${plasmid.file}&viewer=both`}
+                                width="100%" 
+                                height="720px"
+                                title={`${plasmid.partNumber} plasmid map preview`}
+                                class="border border-gray-200 rounded"
+                            >
+                                Your browser does not support iframes. Please <a href={`/peking/html/plasmid_viewer.html?file=/peking/plasmids/${plasmid.file}&viewer=both`} target="_blank">click here</a> to view the plasmid map.
+                            </iframe>
+                            <div class="figure-caption">
+                                    Download
+                                <a 
+                                    href={`/peking/plasmids/${plasmid.file}`}
+                                    target="_blank"
+                                    class="text-blue-600 hover:text-blue-800 font-medium underline"
+                                    title={`Download ${plasmid.partNumber}`}
+                                >
+                                    {plasmid.partNumber}
+                                </a>
+                                <div class="text-center">
+                                    <button 
+                                        type="button"
+                                        class="text-xxs cursor-pointer bg-transparent border-none enlarge-btn"
+                                        data-plasmid-partNumber={plasmid.partNumber}
+                                        data-viewer-url={`/peking/html/plasmid_viewer.html?file=/peking/plasmids/${plasmid.file}&viewer=both`}
+                                    >
+                                        Click to enlarge
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+            ))}
+</div>
+
+<!-- Modal for enlarged plasmid view -->
+<div id="plasmid-modal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title" class="modal-title">Plasmid Viewer</h3>
+            <button type="button" id="modal-close-btn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <iframe 
+                id="modal-iframe"
+                src=""
+                width="100%" 
+                height="100%"
+                title="Enlarged plasmid map viewer"
+                class="border-0"
+            >
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<style>
+    .plasmid-preview-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        width: auto;
+    }
+    
+    
+    .plasmid-preview-container iframe {
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    /* Modal styles */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(8px) saturate(180%) ;
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .modal-overlay.show {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .modal-content {
+        background: white;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 1200px;
+        height: 80%;
+        max-height: 800px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .modal-overlay.show .modal-content {
+        transform: scale(1);
+    }
+    
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        background-color: #f9fafb;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .modal-title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #374151;
+    }
+    
+    .modal-close {
+        background: #a2a8b39f;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    
+    .modal-close:hover {
+        background-color: #a2a8b3;
+        transform: scale(1.2);
+    }
+    
+    /* 放大按钮样式 */
+    .enlarge-btn {
+        color: #878c96ba !important;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    .enlarge-btn:hover {
+        color: #878c96 !important;
+        background-color: #eff6ff;
+        text-decoration: none;
+    }
+    
+    .modal-body {
+        flex: 1;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .modal-body iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    @media (max-width: 768px) {
+        table {
+            font-size: 0.875rem;
+        }
+        
+        .plasmid-preview-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        th, td {
+            padding: 0.5rem;
+        }
+        
+        .modal-content {
+            width: 95%;
+            height: 90%;
+        }
+    }
+    
+    @media (max-width: 640px) {
+        .plasmid-preview-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .modal-content {
+            width: 98%;
+            height: 95%;
+        }
+    }
+</style>
+
+<script is:client>
+  function enlargePlasmidView(plasmidName, viewerUrl) {
+    const modal = document.getElementById('plasmid-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalIframe = document.getElementById('modal-iframe');
+
+    if (modal && modalTitle && modalIframe) {
+      modalTitle.textContent = `${plasmidName} | Peking 2025 Plasmid Viewer`;
+      modalIframe.src = viewerUrl;
+      modal.style.display = 'flex';
+      modal.offsetHeight;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closePlasmidModal() {
+    const modal = document.getElementById('plasmid-modal');
+    const modalIframe = document.getElementById('modal-iframe');
+    if (modal && modalIframe) {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+        modalIframe.src = '';
+      }, 300);
+      document.body.style.overflow = '';
+    }
+  }
+
+  // 推荐使用事件委托
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('.enlarge-btn');
+    if (button) {
+      const name = button.dataset.plasmidPartnumber;
+      const url = button.dataset.viewerUrl;
+      enlargePlasmidView(name, url);
+    }
+  });
+
+  document.getElementById('modal-close-btn')?.addEventListener('click', closePlasmidModal);
+  document.getElementById('plasmid-modal')?.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) closePlasmidModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closePlasmidModal();
+  });
+</script>

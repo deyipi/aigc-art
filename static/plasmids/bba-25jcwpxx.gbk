@@ -1,0 +1,88 @@
+LOCUS       bba-25jcwpxx            1890 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25JCWPXX EGFP-Sed1 | type=Coding | status=published | 
+            updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=ff87f8fb-15bd-4838-85fa-991cdd0ad0ef | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1890)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1890
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     sig_peptide     1..276
+                     /codon_start=1
+                     /label=preOst1-pro-alpha-MF secretion signal
+                     /note="color: #cc99b2"
+                     /translation="MRQVWFSWIVGLFLCFFNVSSAAPVNTTTEDETAQIPAEAVIGYS
+                     DLEGDFDVAVLPFSNSTNNGLLFINTTIASIAAKEEGVSLEKREAEA"
+     CDS             277..294
+                     /codon_start=1
+                     /product="6xHis affinity tag"
+                     /label=6xHis
+                     /note="color: #cc99b2"
+                     /translation="HHHHHH"
+     CDS             295..1005
+                     /codon_start=1
+                     /product="enhanced GFP"
+                     /label=EGFP
+                     /note="color: #05fc14"
+                     /translation="SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF
+                     ICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGN
+                     YKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVN
+                     FKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEF
+                     VTAAGITLGMDELYK"
+     CDS             1006..1050
+                     /codon_start=1
+                     /label=GS linker
+                     /note="color: #a6acb3"
+                     /translation="GGGGSGGGGSGGGGS"
+     CDS             1051..1890
+                     /codon_start=1
+                     /label=Sed1
+                     /note="color: #3366ff"
+                     /translation="ALPTNGTSTEAPTDTTTEAPTTGLPTNGTTSAFPPTTSLPPSNTT
+                     TTPPYNPSTDYTTDYTVVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKPT
+                     TTSTTEYTVVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKPTTTSTTEYT
+                     VVTEYTTYCPEPTTFTTNGKTYTVTEPTTLTITDCPCTIEKSEAPESSVPVTESKGTTT
+                     KETGVTTKQTTANPSLTVSTVVPVSSSASSHSVVINSNGANVVVPGALGLAGVAMLFL"
+ORIGIN
+        1 atgagacaag tttggttttc ctggatcgtt ggtttattct tatgcttttt caatgtgtct
+       61 tctgctgccc cagtcaacac tactactgaa gatgaaactg cccaaattcc cgctgaagct
+      121 gttattggct actcagattt ggaaggtgat tttgatgtgg ctgttttgcc atttagtaat
+      181 agtactaata atggtctgtt attcattaac acaaccatcg cctctattgc cgccaaagaa
+      241 gaaggtgttt ccttagaaaa gagagaagct gaagctcacc atcaccacca tcactcaaaa
+      301 ggtgaagaat tgttcacagg ggttgttcct attttagttg aattagatgg cgacgttaat
+      361 ggtcataaat tttccgtcag tggtgaaggc gaaggtgatg ctacatacgg taaattgaca
+      421 ttgaagttca tttgtaccac tggtaaattg ccagtgccat ggccaacttt agttaccact
+      481 ttgacctatg gagttcaatg ttttagtcga tatcccgatc atatgaagca acacgacttt
+      541 tttaagtctg ccatgccaga aggttacgtc caagaaagaa ctattttttt caaggatgat
+      601 ggtaattata agacaagagc cgaagtgaaa ttcgaaggtg atacattagt caatagaatt
+      661 gaattaaaag gtattgactt taaagaagac ggtaatattt taggtcacaa attggaatac
+      721 aattacaata gtcacaacgt ctatattatg gccgataaac aaaaaaacgg tataaaagtt
+      781 aattttaaaa ttagacataa tattgaagat ggttctgttc aattggcaga ccattaccaa
+      841 caaaatactc ctattggtga tggtccagta ctattaccag acaatcatta tctgtcaact
+      901 caatctgctt tatcaaagga tccaaacgag aaaagagatc atatggtgtt gttggaattt
+      961 gtaaccgcag ctggtatcac attgggtatg gatgaattgt acaagggtgg tggtggttcc
+     1021 ggtggtggag gttctggtgg tggtggttct gctttaccta caaatggtac aagtacagaa
+     1081 gctccaactg atactactac tgaagctcca actactggtt tgcctactaa tggtactaca
+     1141 agcgctttcc caccaactac gtctttgcca ccatctaata ctaccactac accaccttat
+     1201 aatccgtcca ccgactatac tacagattat acagttgtta ctgaatatac tacttattgt
+     1261 cctgaaccaa ctacttttac tacaaatggt aagacttata cagttactga acctacaacc
+     1321 ttgacaatta ctgattgtcc ttgtactatt gaaaagccta caactacttc cacaacagaa
+     1381 tatactgttg ttacagaata cacaacttac tgtccagaac ctactacttt caccactaac
+     1441 ggtaaaactt acaccgttac cgaacctact acattgacca tcactgactg tccatgcaca
+     1501 attgaaaaac caactactac tagcactacc gaatatacag ttgttactga atacactact
+     1561 tattgtccgg aacctactac tttcacaact aacggaaaga cgtacactgt aacggaacca
+     1621 accactctga ctattactga ctgtccatgt accattgaaa agtcagaggc tccagaatct
+     1681 tctgttccag ttaccgaatc taaaggtaca acaactaagg aaaccggtgt tacaaccaag
+     1741 caaacaactg ctaatccatc attgaccgtc tctactgtcg ttcctgtcag ttcttccgct
+     1801 tctagtcatt ccgttgttat caactctaat ggtgctaatg ttgttgtccc tggtgctttg
+     1861 ggtttagctg gtgttgcaat gttatttttg
+//

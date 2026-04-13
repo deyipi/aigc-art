@@ -1,0 +1,51 @@
+LOCUS       bba-251bde0n            1416 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_251BDE0N Chimeric yeast GPA1 (KIGⅡ) (C5: mammalian G-alpha-q) | 
+            type=Coding | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=574b1926-4c99-4974-9c9b-b502f721f04f | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1416)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1416
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..1401
+                     /label=GPA1-Delta-C5
+                     /note="color: #ff6600; direction: RIGHT"
+     CDS             1402..1416
+                     /label=mamG-alpha-q C5-tail
+                     /note="color: #00ffff; direction: RIGHT"
+ORIGIN
+        1 atgggatgca ctgtaagtac acagaccatt ggtgatgaat ccgatccatt tttacaaaat
+       61 aagagagcta acgatgttat cgaacaaagc cttcaattag aaaaacaaag agataagaat
+      121 gaaattaaat tattattgct aggtgctggt gaatctggta aatcaactgt tttgaaacaa
+      181 ttgaaattgt tgcatcaagg tggtttttca caccaagaaa ggcttcaata tgcacaagtt
+      241 atctgggctg atgctattca atctatgaaa attttgataa ttcaggctag aaagttgggt
+      301 atccaacttg attgcgatga tcctattaat aataaagatt tatttgcctg caaaagaata
+      361 ttgttaaaag caaaagcttt agattatatt aatgcttctg tagcaggtgg ttccgatttt
+      421 ttgaacgatt acgttttgaa gtattcagaa agatatgaaa ctagaagaag agttcagtca
+      481 acaggtagag ctaaagctgc tttcgacgaa gatggtaata tctcaaacgt aaaatcggac
+      541 acagacagag atgctgaaac agtaactcaa aatgaagatg ccgatagaaa caattcatca
+      601 cgtatcaatt tgcaagatat ttgtaaggat ttgaaccaag aaggtgatga tcaaatgttt
+      661 gtgagaaaga cttcaagaga aattcaaggt caaaatagaa ggaatttgat tcatgaagat
+      721 atcgcaaagg ctataaagca attatggaac aatgataaag gtattaagca atgttttgct
+      781 agatccaatg aatttcaatt ggaaggttct gctgcatact atttcgataa tattgaaaag
+      841 tttgccagtc caaattatgt ttgtactgat gaagatatct tgaaaggtag aataaaaact
+      901 actggtatta ctgaaacaga atttaatata ggttcatcca aatttaaagt tttagacgct
+      961 ggtggtcaga gatctgaaag aaaaaagtgg atccattgtt ttgaaggtat tacggcagtt
+     1021 ctattcgttt tagcaatgag tgaatatgat caaatgttgt ttgaagatga aagagttaac
+     1081 agaatgcacg aatctattat gttgtttgat acattgctta actctaaatg gtttaaagat
+     1141 acaccattca ttttgttttt aaataagatt gatttgtttg aagaaaaagt taaatcgatg
+     1201 ccaattagaa aatacttccc agattaccaa ggtagagtgg gtgatgccga agcaggtttg
+     1261 aaatacttcg aaaaaatttt tttgtcttta aacaaaacta ataaacctat ttacgtaaag
+     1321 agaacatgtg ctactgatac acaaactatg aagttcgtgt tgtcagcagt taccgatttg
+     1381 attattcagc aaaatctgaa agagtataat ctagtg
+//

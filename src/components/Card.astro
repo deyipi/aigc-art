@@ -1,0 +1,174 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Heading } from 'accessible-astro-components'
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  class?: string
+  title?: string
+  img?: string
+  imageComponent?: ImageMetadata | Promise<{ default: ImageMetadata }>
+  imageAlt?: string
+  width?: number
+  height?: number
+  inferSize?: boolean
+  headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  footer?: string
+  fullHeight?: boolean
+  objectPosition?: string,
+  imageScale?: number
+}
+
+const {
+  class: className,
+  title = 'Default title',
+  img = 'https://placehold.co/640x360',
+  imageComponent,
+  imageAlt = '',
+  width = 640,
+  height = 360,
+  inferSize = false,
+  imageScale = 1,
+  headingLevel = 'h3',
+  headingSize = 'h6',
+  footer = '',
+  fullHeight = true,
+  objectPosition = 'center',
+  ...rest
+} = Astro.props
+---
+
+<article class:list={['card', { 'card--full-height': fullHeight }, className]} {...rest}>
+  <div class="image" style={`--object-position: ${objectPosition}; --image-scale: ${imageScale}`}>
+    <img src={img} alt={imageAlt} width={width} height={height} />
+  </div>
+  <div class="content">
+    <div class="title">
+      <Heading level={headingLevel} size={headingSize}>
+        {title}
+      </Heading>
+    </div>
+    
+    <p class="description"><slot /></p>
+    {footer && <small class="footer">{footer}</small>}
+  </div>
+</article>
+
+<style>
+  :where(.card) {
+    --transition-duration: 0.3s;
+    --transition-easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: 2px solid var(--link-color);
+    border-radius: 0.5rem;
+    max-inline-size: 60ch;
+    max-block-size: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(.card) {
+      transition: box-shadow var(--transition-duration) var(--transition-easing);
+    }
+  }
+
+  :where(.card--full-height) {
+    block-size: 100%;
+  }
+
+  :where(.card:hover),
+  :where(.card:focus-within) {
+    box-shadow: 0 0 0 0.25rem var(--foreground-color);
+
+  }
+
+  :where(.card:focus-within) a:focus {
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  :where(.image) {
+    aspect-ratio: 27 / 25; 
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  :where(.image img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--object-position, center);
+    transform: scale(var(--image-scale, 1));
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :where(.image img) {
+      transition: transform var(--transition-duration) var(--transition-easing);
+    }
+  }
+
+  :where(.content) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+
+  :where(.card a) {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  :where(.card a:hover),
+  :where(.card a:focus-visible) {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .card:hover .image img,
+  .card:focus-within .image img {
+    transform: scale(calc(var(--image-scale) + 0.05));
+  }
+
+  a::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+  }
+
+  :where(.meta) {
+    order: -1;
+    margin-block-start: 0.5rem;
+  }
+
+  :where(.card .meta) :global(span) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  :where(.card .meta:empty) {
+    display: none;
+  }
+
+  :where(.card .description) {
+    font-size: 0.9rem;
+  }
+
+  :where(.card .description:empty) {
+    display: none;
+  }
+
+  :where(.card .footer) {
+    margin-block-start: auto;
+    padding-block-start: 1rem;
+  }
+</style>

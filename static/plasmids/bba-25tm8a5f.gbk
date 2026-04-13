@@ -1,0 +1,44 @@
+LOCUS       bba-25tm8a5f            1146 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25TM8A5F Human H2R-yeast Ste2 chimeric GPCR (cH2SR) | 
+            type=Coding | status=published | updated=2025-10-04 | 
+            license=cc-by-4.0 | uuid=5b414e10-2f00-4276-9a3c-81d7e9acb326 | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1146)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1146
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..1146
+                     /label=cH2SR
+                     /note="color: #ffcc00; direction: RIGHT"
+ORIGIN
+        1 atggctccta acgggacagc atcttctttt tgtttggatt ccacagcatg taaaattact
+       61 ataactgtgg tcttagctgt actgattttg atcaccgttg ctggaaacgt tgtcgtttgt
+      121 ctagcagttg gcagtaggag ccgtaaaaca gtctctctag cgattaccga tctgttgctt
+      181 ggattgttag tgttaccttt ctctgcaatc taccaactga gttgtaaatg gtcattcggt
+      241 aaagtatttt gtaatattta cacctcacta gatgtaatgt tatgtacggc aagcattctg
+      301 aatctattca tgatatcact tgacaacttc aagaggatag gagttgctat ttctctagtg
+      361 ttgatttggg tcatttctat caccctgtct ttcctttcta tccatttagg ctggaactca
+      421 aggaacgaaa cctctaaggg caaccacacc acatctaaat gtaaagtcca ggtaaatgaa
+      481 gtgtacggtt tggtagatgg tctggttact ttttatctgc cattgttgat catgtgtatt
+      541 acctactata gaaggtccag gagattttta ggtctaaagc aattcacgct tgccgctgtg
+      601 atgggtgcct tcatcatttg ttggtttccc tactttactg ctttcgtcta taggggttta
+      661 cgtggtgatg atgcaataaa tgaagttttg gaggctatcg tgctttggtt gggttacgcc
+      721 aattccgctc taaaccccat tctttatgcc aataatgctt caaaaaccaa caccatcaca
+      781 tccgatttta cgacctctac agatcgtttc tatcccggta ctttgtccag cttccaaaca
+      841 gattcaatca acaatgatgc aaaaagctca cttagatcaa ggctttatga tttgtaccct
+      901 agaagaaaag agacaacctc cgacaaacac tcagaacgta cgtttgttag tgaaacagcc
+      961 gacgatattg aaaaaaacca attctaccaa ttgccaaccc caaccagttc taagaatacg
+     1021 aggattggac cctttgcaga tgcctcttac aaggaaggtg aagttgaacc tgtcgacatg
+     1081 tacacacctg ataccgctgc ggatgaggaa gccaggaagt tctggactga ggataacaac
+     1141 aattta
+//

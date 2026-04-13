@@ -1,0 +1,21 @@
+LOCUS       bba-25tsk5a4              22 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25TSK5A4 Gpa1-F | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=1f258e2c-8486-4e6a-a576-b10243921b4b | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 22)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..22
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 atggggtgta cagtgagtac gc
+//

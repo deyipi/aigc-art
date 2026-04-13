@@ -1,0 +1,336 @@
+import Plasmid from '../../components/Plasmid.astro';
+
+To achieve specific treatment, we engineered a group of the GPCR receptors to specifically sense the *H. pylori* biomarker N-α-methylhistamine, and induce the secretion of the downstream AiiA protein. The development of the entire system could be demonstrated as two engineering big cycles: **Yeast Knockout**, **Sensory System Construction and Validation**.
+
+---
+
+### Big Cycle 1: Yeast Knockout
+
+We designed knockouts of the STE2 and SST2 genes in the mating pathway of *Saccharomyces cerevisiae* STE2 encodes the native GPCR receptor, while SST2 encodes an RGS protein that attenuates GPCR signaling. Deletion of both genes benefits the enhancement of synthetic pathway sensitivity and specificity.
+
+---
+
+#### D-B-T-L: Construction of pML104-KanMx4 Plasmid via In-Fusion Cloning
+
+##### Design
+
+Based on a literature review, pML104 is established as a single-plasmid system vector for CRISPR-Cas9 genome editing in *S. cerevisiae*. 
+gene, and it utilizes the URA3 gene as the selectable marker in yeast<sup id="back1">[1](#ref1)</sup>. 
+We have designed a double-stranded DNA construct that serves as the template to transcribe 
+sgRNAs targeting *Ste2* and *Sst2* of *Saccharomyces cerevisiae* for improving the efficiency of mating pathway engineering<sup id="back2">[2](#ref2)</sup>. 
+To avoid issues of redundant selection marker during the final design of the system plasmid , 
+we opted to replace the URA3 marker with the KanMx4 gene.
+
+
+##### Build
+
+The pML104-KanMx4 plasmid was constructed using In-Fusion cloning. The pML104 vector was linearized using the primers KanVec-F and KanVec-R, and the KanMx4 gene fragment was amplified with the primers KanMx4-F and KanMx4-R. The linearized vector and KanMx4 fragment were then assembled via In-Fusion cloning. 
+
+
+export const plasmid1 = [
+    {
+        partNumber: 'pML104-KanMx4-sgSte2-Sst2',
+        file: 'pML104-KanMx4-sgSte2-Sst2.gbk',
+        description: 'Knock-out plasmid for replacing URA3 with KanMx4 in pML104.'
+    }
+];
+
+<Plasmid plasmids={plasmid1} />
+
+##### Test
+During the assembly process, we attempted to obtain the final linearized pML104 vector through PCR amplification, agarose gel electrophoresis, and gel extraction. The electrophoresis results of the PCR products obtained using the corresponding primer pairs are shown in the figure. 
+
+![1](https://static.igem.wiki/teams/5870/engineering/sensorysys/20250813.webp)
+
+<p class="figure-caption"><b>Figure 1: </b>Electrophoresis results of the PCR products of pML104 obtained using the primers KanVec-F and KanVec-R.</p >
+
+However, no distinct DNA band was observed, and thus gel extraction could not be performed.
+
+##### Learn
+This result demonstrates that the current linearization method for the pML104 plasmid was unsuccessful. According to literature reports, the amplification efficiency and fidelity decrease markedly with increasing template length, particularly beyond 10 kb<sup id="back3">[3](#ref3)</sup>. 
+
+We therefore hypothesize that the failure is primarily attributable to the large size of the pML104 plasmid (11,240 bp), which significantly reduces PCR efficiency and prevents the generation of a clear target band.
+
+---
+
+#### D-B-T-L: Optimization of Knock-out Plasmid Construction
+
+##### Design
+
+To address the issue identified in the previous cycle, we redesigned two pairs of primers to obtain two linearized fragments of the pML104 vector, thereby reducing the error rate in PCR step. We further streamlined the plasmid construction process by integrating the replacement of the selection marker and the insertion of the sgRNA sequence into a single In-Fusion cloning step.
+
+Since two target genes were intended for knockout, we optimized the design to improve editing efficiency by incorporating two sgRNAs into a single transcriptional cassette, thereby constructing a plasmid capable of simultaneously disrupting both genes.
+
+##### Build
+
+We first used two pairs of primers to amplify two linearized fragments of the pML104 vector, designated as pML_p1 and pML_p2. These fragments were then assembled with the KanMX4 gene fragment and the sgRNA transcriptional cassette in a one-step In-Fusion cloning reaction.<br/>
+![synthesis_schematic](https://static.igem.wiki/teams/5870/engineering/sensorysys/ko-plasmids.svg)
+
+ <p class="figure-caption"><b>Figure 2: </b>Synthesizing schematic of knock-out plasmid.</p >
+
+
+##### Test
+
+During the assembly process, we attempted to obtain the fragments pML_p1 and pML_p2 through PCR amplification, agarose gel electrophoresis, and gel extraction. The resulting plasmid was subsequently transformed into *E. coli* (DH5α) to obtain transformants. Subsequent sequencing results further confirmed the successful construction of the plasmid.   
+
+![3](https://static.igem.wiki/teams/5870/engineering/sensorysys/20250817.webp)
+
+<p class="figure-caption"><b>Figure 3: </b>Knockout plasmid successfully transform into <i>E. coli</i>(DH5α).</p >
+
+![4](https://static.igem.wiki/teams/5870/engineering/sensorysys/pml104-kanmx4-sgste2-sst2-map.webp)
+
+<p class="figure-caption"><b>Figure 4: </b>Sequencing result.</p >
+
+Finally, the successfully constructed plasmid was transformed into *S. cerevisiae*.
+
+![5](https://static.igem.wiki/teams/5870/engineering/sensorysys/wechatimg2437.webp) 
+
+<p class="figure-caption"><b>Figure 5: </b>Knockout plasmid successfully transform into <i>S. cerevisiae</i>.</p >
+
+##### Learn
+
+Based on these results, we validated the feasibility of employing a segmented PCR followed by In-Fusion assembly for large plasmids. Moreover, we established a more efficient one-step In-Fusion cloning strategy for constructing knockout plasmids. These findings provide valuable insights for the subsequent construction of other plasmids within our sensing system.  
+
+---
+
+### Big Cycle 2: Sensory System Construction and Validation
+Since almost no engineered yeast GPCR capable of recognizing N-α-methylhistamine has been reported to date, we designed two potential strategies for constructing the sensing system. The first approach was inspired by the work of *Schulz et al.* (2022)<sup id="back4">[4](#ref4)</sup>, in which A chimeric GPCR design strategy was built to enable receptor function without altering the native G-protein complex. The second approach was inspired by *Scott et al.* (2021)<sup id="back5">[5](#ref5)</sup>, aiming to modify the G-protein so that the human GPCR receptors can function effectively in *S. cerevisiae*.
+
+---
+
+#### D-B-T-L: Sensory System Plasmid Construction
+
+##### Design
+
+According to the two design strategies, we constructed a total of eleven plasmids.<br/>
+In addition, through literature research, we identified a previously constructed yeast GPCR receptor capable of recognizing N-α-methylhistamine. Accordingly, we designed and constructed the plasmid hH3R-P2A-Gpa1-pESC-HIS, aiming to reproduce the reported results. Furthermore, to assist in validating our sensing system, we referred to *iGEM 2022 NEU_CHINA Parts* and constructed the P2Y2-P2A-Gpa1-pESC-HIS plasmid based on the eATP sensing mechanism. Finally, to verify proper protein expression, we also designed the hH3R-P2A-mCherry-pESC-HIS plasmid incorporating a fluorescent reporter gene.
+
+In summary, our sensing system involves the construction of 14 plasmids, forming a total of 19 sensing systems for screening and functional verification.
+
+##### Build
+
+The synthesis schematic of our sensory system plasmids construction and synthesis is shown below:
+
+![6](https://static.igem.wiki/teams/5870/engineering/sensorysys/modified-vectors.svg)
+
+<p class="figure-caption"><b>Figure 6: </b>Synthesizing schematic of modified vectors.</p >
+
+![s7](https://static.igem.wiki/teams/5870/engineering/sensorysys/chimeric-gpcrs.svg)
+
+<p class="figure-caption"><b>Figure 7: </b>Synthesizing schematic of chimeric GPCRs.</p >
+
+![8](https://static.igem.wiki/teams/5870/engineering/sensorysys/g-proteins.svg)
+
+<p class="figure-caption"><b>Figure 8: </b>Synthesizing schematic of G protein.</p >
+
+![9](https://static.igem.wiki/teams/5870/engineering/sensorysys/terminal-complex.svg)
+
+<p class="figure-caption"><b>Figure 9: </b>Synthesizing schematic adapted human GPCRs.</p >
+
+All plasmids were assembled using the In-Fusion cloning method.
+
+##### Test
+
+According to the synthesis schematic, all plasmids were successfully constructed and transformed into *E. coli* (DH5α) to obtain transformants. Subsequent sequencing results confirmed the successful construction of 11 out of the 14 designed plasmids. These 11 verified plasmids were then transformed into *S. cerevisiae* strains with STE2 and SST2 deletions, preparing for functional validation experiments.
+
+![10](https://static.igem.wiki/teams/5870/engineering/sensorysys/transform-2-00-1.webp) 
+
+<p class="figure-caption"><b>Figure 10: </b> Transformation of sensory system plasmid into <i>E. coil</i> DH5α.</p >  
+
+![11](https://static.igem.wiki/teams/5870/engineering/sensorysys/transform3-00.webp)
+<p class="figure-caption"><b>Figure 11: </b> Transformation of sensory system plasmid into <i>S. cerevisiae</i>.</p >  
+
+
+##### Learn
+Based on the sequencing results, we successfully constructed 10 out of the 14 designed plasmids and achieved successful transformation of 8 designed sensing systems into *S. cerevisiae* strains with STE2 and SST2 deletions. These results demonstrate the feasibility of our plasmid construction strategy and provide a solid foundation for subsequent functional validation experiments of the sensing systems. Due to the time limitation of the iGEM, we were unable to reconstruct the plasmids that failed sequencing; however, in future work, we aim to further optimize our construction workflow to improve accuracy and complete the screening of all designed sensing systems.
+
+---
+
+#### D-B-T-L: Function Validation
+
+##### Design
+
+To verify whether the sensory system responds to the Helicobacter pylori biomarker N-α-methylhistamine, we selected mCherry as the downstream reporter gene. We aimed to assess the functionality of the sensory system. Fluorescence intensity of the yeast culture was measured at different time points after adding the sample.
+
+##### Build
+
+In our experiment, yeast cultures reaching a specific OD value were treated and added to black opaque microplates. Different concentrations of histamine and ATP gradient solutions were then added to each well. We measured the fluorescence intensity using a microplate reader at the specific time intervals throughout the incubation. Finally, we plotted the fluorescence intensity vs. time curves and analyzed the overall functionality of the sensory system.
+
+##### Test
+
+We carried out the experiments  with the sample addition details outlined in Table below:
+
+###### Table: 96-Well Plate Sample Addition Layout
+
+<table>
+  <thead>
+    <tr>
+      <th style="font-size: 0.85rem; text-align: center;"></th>
+      <th style="font-size: 0.85rem; text-align: center;">1</th>
+      <th style="font-size: 0.85rem; text-align: center;">2</th>
+      <th style="font-size: 0.85rem; text-align: center;">3</th>
+      <th style="font-size: 0.85rem; text-align: center;">4</th>
+      <th style="font-size: 0.85rem; text-align: center;">5</th>
+      <th style="font-size: 0.85rem; text-align: center;">6</th>
+      <th style="font-size: 0.85rem; text-align: center;">7</th>
+      <th style="font-size: 0.85rem; text-align: center;">8</th>
+      <th style="font-size: 0.85rem; text-align: center;">9</th>
+      <th style="font-size: 0.85rem; text-align: center;">10</th>
+      <th style="font-size: 0.85rem; text-align: center;">11</th>
+      <th style="font-size: 0.85rem; text-align: center;">12</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>A</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>600nM histamine</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>B</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>120nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>120nM histamine</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>C</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>30nM histamine</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>D</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH1R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH3R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">hH4R×FG<br/>BLANK</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>E</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>7.5mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>7.5mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>7.5mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>600nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>600nM histamine</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>F</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>3.75mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>3.75mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>3.75mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>120nM histamin</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>120nM histamin</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>120nM histamin</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>120nM histamin</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>120nM histamin</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>120nM histamin</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>G</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>1.875mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>1.875mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>1.875mM dATP</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2mC×Blank<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>30nM histamine</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>30nM histamine</td>
+    </tr>
+    <tr>
+      <td style="font-size: 0.85rem; text-align: center;"><strong>H</strong></td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2Y2×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">-</td>
+      <td style="font-size: 0.75rem; text-align: center;">-</td>
+      <td style="font-size: 0.75rem; text-align: center;">-</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">CH2R×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>BLANK</td>
+      <td style="font-size: 0.75rem; text-align: center;">P2pG×FG<br/>BLANK</td>
+    </tr>
+  </tbody>
+</table>
+
+The fluorescence intensity versus time curves, as shown in the figure, were plotted based on measurements obtained using the microplate reader.
+
+![intensity-time-curve.webp (1792×2656)](https://static.igem.wiki/teams/5870/engineering/sensorysys/intensity-time-curve.webp)
+
+<p class="figure-caption"><b>Figure 12: </b> Fluorescence intensity versus time curves.</p >  
+
+Analysis of the results indicates that the constructed sensing system did not demonstrate significant responsiveness to concentration or temporal gradients.
+
+##### Learn
+
+From the results, it was observed that the tested sensing systems did not exhibit the expected functionality. Based on our analysis, we propose the following possible reasons and future avenues for improvement:
+
+First, we speculate that our knockout plasmids may have failed to achieve deletion of the two target proteins, which could have significantly impaired the functionality of the newly introduced system. In future work, the yeast knockout system could be further optimized, and whole-genome sequencing of yeast can be employed to confirm the knockout status.
+
+Second, we hypothesize that the GPCR proteins encoded by the introduced plasmids may not fold correctly in yeast. Moving forward, plasmid design can be refined, and additional experiments can be conducted to verify protein expression and structural integrity.
+
+<br/>
+
+  ##### Reference
+
+  <span class="space-content reference">
+   
+  ---
+   
+1. <span id="ref1"> **Laughery MF, Hunter T, Brown A, et al.** New vectors for simple and streamlined CRISPR-Cas9 genome editing in *Saccharomyces cerevisiae*. *Yeast*. 2015;32(12):711-720. doi:10.1002/yea.3098 [↖](#back1)</span>
+2. <span id="ref2"> **Zhang Y, Wang J, Wang Z, et al.** A gRNA-tRNA array for CRISPR-Cas9 based rapid multiplexed genome editing in *Saccharomyces cerevisiae*. *Nat Commun*. 2019;10(1):1053. Published 2019 Mar 5. doi:10.1038/s41467-019-09005-3 [↖](#back2)</span>
+2. <span id="ref3"> **Potapov V, Ong JL.** Examining Sources of Error in PCR by Single-Molecule Sequencing. *PLoS One*. 2017;12(1):e0169774. Published 2017 Jan 6. doi:10.1371/journal.pone.0169774 [↖](#back3)</span>
+3. <span id="ref4"> **Schulz R, Korkut-Demirbaş M, Venturino A, Colombo G, Siegert S.** Chimeric GPCRs mimic distinct signaling pathways and modulate microglia responses. *Nat Commun*. 2022;13(1):4728. Published 2022 Aug 15. doi:10.1038/s41467-022-32390-1 [↖](#back4)</span>
+4. <span id="ref5"> **Scott BM, Gutiérrez-Vázquez C, Sanmarco LM, et al.** Self-tunable engineered yeast probiotics for the treatment of inflammatory bowel disease.*Nat Med*. 2021;27(7):1212-1222. doi:10.1038/s41591-021-01390-x [↖](#back5)</span>
+  </span>

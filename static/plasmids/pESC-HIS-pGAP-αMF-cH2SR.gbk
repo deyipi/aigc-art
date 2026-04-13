@@ -1,0 +1,460 @@
+LOCUS       pESC-HIS-pGAP-al        7709 bp    DNA     circular SYN 06-OCT-2025
+DEFINITION  .
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 7709)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 6, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..7709
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     rep_origin      1..1343
+                     /label=2u ori
+                     /note="yeast 2u plasmid origin of replication"
+                     /note="color: #ffff00"
+     promoter        1727..1913
+                     /gene="S. cerevisiae HIS3"
+                     /label=HIS3 promoter
+                     /note="color: #ffffff; direction: RIGHT"
+     CDS             1914..2573
+                     /codon_start=1
+                     /gene="S. cerevisiae HIS3"
+                     /product="imidazoleglycerol-phosphate dehydratase, required
+                     for histidine biosynthesis"
+                     /label=HIS3
+                     /note="yeast auxotrophic marker"
+                     /note="color: #ff7f50"
+                     /translation="MTEQKALVKRITNETKIQIAISLKGGPLAIEHSIFPEKEAEAVAE
+                     QATQSQVINVHTGIGFLDHMIHALAKHSGWSLIVECIGDLHIDDHHTTEDCGIALGQAF
+                     KEALLARGVKRFGSGFAPLDEALSRAVVDLSNRPYAVVELGLQREKVGDLSCEMIPHFL
+                     ESFAEASRITLHVDCLRGKNDHHRSESAFKALAVAIREATSPNGTNDVPSTKGVLM"
+     rep_origin      complement(2833..3288)
+                     /direction=LEFT
+                     /label=f1 ori
+                     /note="f1 bacteriophage origin of replication; arrow 
+                     indicates direction of (+) strand synthesis"
+                     /note="color: #ffff00"
+     primer_bind     complement(3342..3366)
+                     /label=GMVec-R
+                     /note="color: 黑色; sequence: CAATTCAGCTGGCGTAATAGCGAAG; 
+                     added: 2025-07-09"
+     primer_bind     3347..3414
+                     /label=GMIns-F
+                     /note="color: 黑色; sequence: 
+                     CTATTACGCCAGCTGAATTGtcattatcaatactcgccatttcaaagaatacgtaaata
+                     attaatagt; added: 2025-07-09"
+     promoter        3367..4010
+                     /gene="S. cerevisiae TDH3"
+                     /label=GAP promoter
+                     /note="promoter for glyceraldehyde-3-phosphate 
+                     dehydrogenase; also known as the TDH3 promoter"
+                     /note="color: #ffffff; direction: RIGHT"
+     CDS             join(4055..4111,4112..4309,4310..4321)
+                     /codon_start=1
+                     /gene="MF-alpha-1"
+                     /product="N-terminal secretion signal from S. cerevisiae 
+                     alpha-factor"
+                     /label=alpha-factor secretion signal
+                     /note="Cleavage by the Kex2 protease occurs after the 
+                     dibasic KR sequence. The EA dipeptides are then removed by 
+                     dipeptidyl aminopeptidase A."
+                     /note="This feature has 3 segments:
+                        1: 4055 .. 4111 / #993366 / presequence
+                        2: 4112 .. 4309 / #993366 / pro region
+                        3: 4310 .. 4321 / #993366
+                     Cleavage sites after bases 4111, 4309"
+                     /translation="MRFPSIFTAVLFAASSALAAPVNTTTEDETAQIPAEAVIGYSDLE
+                     GDFDVAVLPFSNSTNNGLLFINTTIASIAAKEEGVSLEKREAEA"
+     primer_bind     complement(4298..4341)
+                     /label=GMIns-R
+                     /note="color: 黑色; sequence: 
+                     GAAATCAACTTCTGTTCCATAGCTTCAGCCTCTCTTTTCTCGAG; added: 
+                     2025-07-09"
+     primer_bind     4308..4330
+                     /label=MFM-F
+                     /note="color: 黑色; sequence: GAGAGGCTGAAGCTATGGAACAG; added:
+                     2025-07-10"
+     primer_bind     4322..4349
+                     /label=GMVec-F
+                     /note="color: 黑色; sequence: ATGGAACAGAAGTTGATTTCCGAAGAAG; 
+                     added: 2025-07-09"
+     CDS             4325..4354
+                     /codon_start=1
+                     /product="Myc (human c-Myc oncogene) epitope tag"
+                     /label=Myc
+                     /note="color: #cc99b2"
+                     /translation="EQKLISEEDL"
+     CDS             4358..5500
+                     /codon_start=1
+                     /label=cH2SR
+                     /note="color: #ffcc00"
+                     /translation="APNGTASSFCLDSTACKITITVVLAVLILITVAGNVVVCLAVGSR
+                     SRKTVSLAITDLLLGLLVLPFSAIYQLSCKWSFGKVFCNIYTSLDVMLCTASILNLFMI
+                     SLDNFKRIGVAISLVLIWVISITLSFLSIHLGWNSRNETSKGNHTTSKCKVQVNEVYGL
+                     VDGLVTFYLPLLIMCITYYRRSRRFLGLKQFTLAAVMGAFIICWFPYFTAFVYRGLRGD
+                     DAINEVLEAIVLWLGYANSALNPILYANNASKTNTITSDFTTSTDRFYPGTLSSFQTDS
+                     INNDAKSSLRSRLYDLYPRRKETTSDKHSERTFVSETADDIEKNQFYQLPTPTSSKNTR
+                     IGPFADASYKEGEVEPVDMYTPDTAADEEARKFWTEDNNNL"
+     CDS             4487..4504
+                     /codon_start=1
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2
+                     /note="Receptor for alpha-factor pheromone; seven 
+                     transmembrane-domain GPCR that interacts with both 
+                     pheromone and a heterotrimeric G protein to initiate the 
+                     signaling response that leads to mating between haploid a 
+                     and alpha cells"
+                     /note="color: #993366"
+                     /db_xref="GeneID:850518"
+                     /db_xref="SGD:S000001868"
+                     /experiment="EXISTENCE:direct assay:GO:0000755 cytogamy 
+                     [PMID:17369365]"
+                     /experiment="EXISTENCE:direct assay:GO:0004934 mating-type 
+                     alpha-factor pheromone receptor activity [PMID:2161538]"
+                     /experiment="EXISTENCE:direct assay:GO:0005886 plasma
+                     membrane [PMID:2839507]"
+                     /experiment="EXISTENCE:genetic interaction:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000750
+                     pheromone-dependent signal transduction involved in 
+                     conjugation with cellular fusion [PMID:3037311]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000755
+                     cytogamy [PMID:17369365]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115|PMID:6360378]"
+                     /protein_id="NP_116627.2"
+                     /translation="SRSRKT"
+     mRNA            4487..4504
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2 mRNA
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+                     /transcript_id="NM_001179940.2"
+     gene            4487..4504
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /label=STE2
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+     CDS             4676..4696
+                     /codon_start=1
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2
+                     /note="Receptor for alpha-factor pheromone; seven 
+                     transmembrane-domain GPCR that interacts with both 
+                     pheromone and a heterotrimeric G protein to initiate the 
+                     signaling response that leads to mating between haploid a 
+                     and alpha cells"
+                     /note="color: #993366"
+                     /db_xref="GeneID:850518"
+                     /db_xref="SGD:S000001868"
+                     /experiment="EXISTENCE:direct assay:GO:0000755 cytogamy 
+                     [PMID:17369365]"
+                     /experiment="EXISTENCE:direct assay:GO:0004934 mating-type 
+                     alpha-factor pheromone receptor activity [PMID:2161538]"
+                     /experiment="EXISTENCE:direct assay:GO:0005886 plasma
+                     membrane [PMID:2839507]"
+                     /experiment="EXISTENCE:genetic interaction:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000750
+                     pheromone-dependent signal transduction involved in 
+                     conjugation with cellular fusion [PMID:3037311]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000755
+                     cytogamy [PMID:17369365]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115|PMID:6360378]"
+                     /protein_id="NP_116627.2"
+                     /translation="DNFKRIG"
+     mRNA            4676..4696
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2 mRNA
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+                     /transcript_id="NM_001179940.2"
+     gene            4676..4696
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /label=STE2
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+     CDS             4907..4939
+                     /codon_start=1
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2
+                     /note="Receptor for alpha-factor pheromone; seven 
+                     transmembrane-domain GPCR that interacts with both 
+                     pheromone and a heterotrimeric G protein to initiate the 
+                     signaling response that leads to mating between haploid a 
+                     and alpha cells"
+                     /note="color: #993366"
+                     /db_xref="GeneID:850518"
+                     /db_xref="SGD:S000001868"
+                     /experiment="EXISTENCE:direct assay:GO:0000755 cytogamy 
+                     [PMID:17369365]"
+                     /experiment="EXISTENCE:direct assay:GO:0004934 mating-type 
+                     alpha-factor pheromone receptor activity [PMID:2161538]"
+                     /experiment="EXISTENCE:direct assay:GO:0005886 plasma
+                     membrane [PMID:2839507]"
+                     /experiment="EXISTENCE:genetic interaction:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000750
+                     pheromone-dependent signal transduction involved in 
+                     conjugation with cellular fusion [PMID:3037311]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000755
+                     cytogamy [PMID:17369365]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115|PMID:6360378]"
+                     /protein_id="NP_116627.2"
+                     /translation="RSRRFLGLKQF"
+     mRNA            4907..4939
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2 mRNA
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+                     /transcript_id="NM_001179940.2"
+     gene            4907..4939
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /label=STE2
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+     primer_bind     complement(4983..5007)
+                     /label=HRH2-R
+                     /note="color: 黑色; sequence: cggtacacaaaggcggtaaagtaag; 
+                     added: 2025-07-10"
+     CDS             5105..5500
+                     /codon_start=1
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2
+                     /note="Receptor for alpha-factor pheromone; seven 
+                     transmembrane-domain GPCR that interacts with both 
+                     pheromone and a heterotrimeric G protein to initiate the 
+                     signaling response that leads to mating between haploid a 
+                     and alpha cells"
+                     /note="color: #993366"
+                     /db_xref="GeneID:850518"
+                     /db_xref="SGD:S000001868"
+                     /experiment="EXISTENCE:direct assay:GO:0000755 cytogamy 
+                     [PMID:17369365]"
+                     /experiment="EXISTENCE:direct assay:GO:0004934 mating-type 
+                     alpha-factor pheromone receptor activity [PMID:2161538]"
+                     /experiment="EXISTENCE:direct assay:GO:0005886 plasma
+                     membrane [PMID:2839507]"
+                     /experiment="EXISTENCE:genetic interaction:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000750
+                     pheromone-dependent signal transduction involved in 
+                     conjugation with cellular fusion [PMID:3037311]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0000755
+                     cytogamy [PMID:17369365]"
+                     /experiment="EXISTENCE:mutant phenotype:GO:0004934
+                     mating-type alpha-factor pheromone receptor activity 
+                     [PMID:9742115|PMID:6360378]"
+                     /protein_id="NP_116627.2"
+                     /translation="NNASKTNTITSDFTTSTDRFYPGTLSSFQTDSINNDAKSSLRSRL
+                     YDLYPRRKETTSDKHSERTFVSETADDIEKNQFYQLPTPTSSKNTRIGPFADASYKEGE
+                     VEPVDMYTPDTAADEEARKFWTEDNNNL"
+     mRNA            5105..5500
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /product="alpha-factor pheromone receptor STE2"
+                     /label=STE2 mRNA
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+                     /transcript_id="NM_001179940.2"
+     gene            5105..5500
+                     /gene="STE2"
+                     /locus_tag="YFL026W"
+                     /label=STE2
+                     /note="color: #a6acb3; direction: RIGHT"
+                     /db_xref="GeneID:850518"
+     terminator      5527..5716
+                     /gene="S. cerevisiae CYC1"
+                     /label=CYC1 terminator
+                     /note="transcription terminator for CYC1"
+                     /note="color: #ffffff"
+     rep_origin      complement(5959..6547)
+                     /direction=LEFT
+                     /label=ori
+                     /note="high-copy-number ColE1/pMB1/pBR322/pUC origin of 
+                     replication"
+                     /note="color: #ffff00"
+     CDS             complement(join(6718..7509,7510..7578))
+                     /codon_start=1
+                     /gene="bla"
+                     /product="beta-lactamase"
+                     /label=AmpR
+                     /note="confers resistance to ampicillin, carbenicillin, and
+                     related antibiotics"
+                     /note="This feature has 2 segments:
+                        1: 6718 .. 7509 / #ccffcc
+                        2: 7510 .. 7578 / #ccffcc / signal sequence
+                     Cleavage site after base 7509"
+                     /translation="MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYI
+                     ELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRIDAGQEQLGRRIHYSQNDLVEYS
+                     PVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRW
+                     EPELNEAIPNDERDTTMPVAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSA
+                     LPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGAS
+                     LIKHW"
+     promoter        complement(7579..7683)
+                     /gene="bla"
+                     /label=AmpR promoter
+                     /note="color: #ffffff; direction: LEFT"
+ORIGIN
+        1 aacgaagcat ctgtgcttca ttttgtagaa caaaaatgca acgcgagagc gctaattttt
+       61 caaacaaaga atctgagctg catttttaca gaacagaaat gcaacgcgaa agcgctattt
+      121 taccaacgaa gaatctgtgc ttcatttttg taaaacaaaa atgcaacgcg agagcgctaa
+      181 tttttcaaac aaagaatctg agctgcattt ttacagaaca gaaatgcaac gcgagagcgc
+      241 tattttacca acaaagaatc tatacttctt ttttgttcta caaaaatgca tcccgagagc
+      301 gctatttttc taacaaagca tcttagatta ctttttttct cctttgtgcg ctctataatg
+      361 cagtctcttg ataacttttt gcactgtagg tccgttaagg ttagaagaag gctactttgg
+      421 tgtctatttt ctcttccata aaaaaagcct gactccactt cccgcgttta ctgattacta
+      481 gcgaagctgc gggtgcattt tttcaagata aaggcatccc cgattatatt ctataccgat
+      541 gtggattgcg catactttgt gaacagaaag tgatagcgtt gatgattctt cattggtcag
+      601 aaaattatga acggtttctt ctattttgtc tctatatact acgtatagga aatgtttaca
+      661 ttttcgtatt gttttcgatt cactctatga atagttctta ctacaatttt tttgtctaaa
+      721 gagtaatact agagataaac ataaaaaatg tagaggtcga gtttagatgc aagttcaagg
+      781 agcgaaaggt ggatgggtag gttatatagg gatatagcac agagatatat agcaaagaga
+      841 tacttttgag caatgtttgt ggaagcggta ttcgcaatat tttagtagct cgttacagtc
+      901 cggtgcgttt ttggtttttt gaaagtgcgt cttcagagcg cttttggttt tcaaaagcgc
+      961 tctgaagttc ctatactttc tagagaatag gaacttcgga ataggaactt caaagcgttt
+     1021 ccgaaaacga gcgcttccga aaatgcaacg cgagctgcgc acatacagct cactgttcac
+     1081 gtcgcaccta tatctgcgtg ttgcctgtat atatatatac atgagaagaa cggcatagtg
+     1141 cgtgtttatg cttaaatgcg tacttatatg cgtctattta tgtaggatga aaggtagtct
+     1201 agtacctcct gtgatattat cccattccat gcggggtatc gtatgcttcc ttcagcacta
+     1261 ccctttagct gttctatatg ctgccactcc tcaattggat tagtctcatc cttcaatgct
+     1321 atcatttcct ttgatattgg atcatctaag aaaccattat tatcatgaca ttaacctata
+     1381 aaaataggcg tatcacgagg ccctttcgtc tcgcgcgttt cggtgatgac ggtgaaaacc
+     1441 tctgacacat gcagctcccg gagacggtca cagcttgtct gtaagcggat gccgggagca
+     1501 gacaagcccg tcagggcgcg tcagcgggtg ttggcgggtg tcggggctgg cttaactatg
+     1561 cggcatcaga gcagattgta ctgagagtgc accataaatt cccgttttaa gagcttggtg
+     1621 agcgctagga gtcactgcca ggtatcgttt gaacacggca ttagtcaggg aagtcataac
+     1681 acagtccttt cccgcaattt tctttttcta ttactcttgg cctcctctag tacactctat
+     1741 atttttttat gcctcggtaa tgattttcat tttttttttt cccctagcgg atgactcttt
+     1801 ttttttctta gcgattggca ttatcacata atgaattata cattatataa agtaatgtga
+     1861 tttcttcgaa gaatatacta aaaaatgagc aggcaagata aacgaaggca aagatgacag
+     1921 agcagaaagc cctagtaaag cgtattacaa atgaaaccaa gattcagatt gcgatctctt
+     1981 taaagggtgg tcccctagcg atagagcact cgatcttccc agaaaaagag gcagaagcag
+     2041 tagcagaaca ggccacacaa tcgcaagtga ttaacgtcca cacaggtata gggtttctgg
+     2101 accatatgat acatgctctg gccaagcatt ccggctggtc gctaatcgtt gagtgcattg
+     2161 gtgacttaca catagacgac catcacacca ctgaagactg cgggattgct ctcggtcaag
+     2221 cttttaaaga ggccctactg gcgcgtggag taaaaaggtt tggatcagga tttgcgcctt
+     2281 tggatgaggc actttccaga gcggtggtag atctttcgaa caggccgtac gcagttgtcg
+     2341 aacttggttt gcaaagggag aaagtaggag atctctcttg cgagatgatc ccgcattttc
+     2401 ttgaaagctt tgcagaggct agcagaatta ccctccacgt tgattgtctg cgaggcaaga
+     2461 atgatcatca ccgtagtgag agtgcgttca aggctcttgc ggttgccata agagaagcca
+     2521 cctcgcccaa tggtaccaac gatgttccct ccaccaaagg tgttcttatg tagtgacacc
+     2581 gattatttaa agctgcagca tacgatatat atacatgtgt atatatgtat acctatgaat
+     2641 gtcagtaagt atgtatacga acagtatgat actgaagatg acaaggtaat gcatcattct
+     2701 atacgtgtca ttctgaacga ggcgcgcttt ccttttttct ttttgctttt tctttttttt
+     2761 tctcttgaac tcgacggatc tatgcggtgt gaaataccgc acagatgcgt aaggagaaaa
+     2821 taccgcatca ggaaattgta aacgttaata ttttgttaaa attcgcgtta aatttttgtt
+     2881 aaatcagctc attttttaac caataggccg aaatcggcaa aatcccttat aaatcaaaag
+     2941 aatagaccga gatagggttg agtgttgttc cagtttggaa caagagtcca ctattaaaga
+     3001 acgtggactc caacgtcaaa gggcgaaaaa ccgtctatca gggcgatggc ccactacgtg
+     3061 aaccatcacc ctaatcaagt tttttggggt cgaggtgccg taaagcacta aatcggaacc
+     3121 ctaaagggag cccccgattt agagcttgac ggggaaagcc ggcgaacgtg gcgagaaagg
+     3181 aagggaagaa agcgaaagga gcgggcgcta gggcgctggc aagtgtagcg gtcacgctgc
+     3241 gcgtaaccac cacacccgcc gcgcttaatg cgccgctaca gggcgcgtcc attcgccatt
+     3301 caggctgcgc aactgttggg aagggcgatc ggtgcgggcc tcttcgctat tacgccagct
+     3361 gaattgtcat tatcaatact cgccatttca aagaatacgt aaataattaa tagtagtgat
+     3421 tttcctaact ttatttagtc aaaaaattag ccttttaatt ctgctgtaac ccgtacatgc
+     3481 ccaaaatagg gggcgggtta cacagaatat ataacatcgt aggtgtctgg gtgaacagtt
+     3541 tattcctggc atccactaaa tataatggag cccgcttttt aagctggcat ccagaaaaaa
+     3601 aaagaatccc agcaccaaaa tattgttttc ttcaccaacc atcagttcat aggtccattc
+     3661 tcttagcgca actacagaga acaggggcac aaacaggcaa aaaacgggca caacctcaat
+     3721 ggagtgatgc aacctgcctg gagtaaatga tgacacaagg caattgaccc acgcatgtat
+     3781 ctatctcatt ttcttacacc ttctattacc ttctgctctc tctgatttgg aaaaagctga
+     3841 aaaaaaaggt tgaaaccagt tccctgaaat tattccccta cttgactaat aagtatataa
+     3901 agacggtagg tattgattgt aattctgtaa atctatttct taaacttctt aaattctact
+     3961 tttatagtta gtcttttttt tagttttaaa acaccagaac ttagtttcga attcgaattc
+     4021 aaccctcact aaagggcggc cgcactaggc caccatgaga tttccttcaa tttttactgc
+     4081 agttttattc gcagcatcct ccgcattagc tgctccagtc aacactacaa cagaagatga
+     4141 aacggcacaa attccggctg aagctgtcat cggttactca gatttagaag gggatttcga
+     4201 tgttgctgtt ttgccatttt ccaacagcac aaataacggg ttattgttta taaatactac
+     4261 tattgccagc attgctgcta aagaagaagg ggtatctctc gagaaaagag aggctgaagc
+     4321 tatggaacag aagttgattt ccgaagaaga cctcgaggct cctaatggga ctgcctcctc
+     4381 cttctgcctt gactctactg cctgcaaaat aactattaca gtggtactcg ccgtcctgat
+     4441 actgattact gttgcgggta atgtcgtagt gtgtctggcc gtcggctcga gaagcagaaa
+     4501 aacggtgagc ctggcgatca ctgatctcct cctgggcctc ctggtgttgc cctttagtgc
+     4561 aatttaccag ctgtcatgta agtggtcctt cggaaaagta ttctgcaata tttatacgag
+     4621 cctggatgtg atgctgtgca cggcctccat actgaatctg ttcatgattt cccttgacaa
+     4681 cttcaaaagg ataggtgtgg cgattagtct ggtcctcatt tgggttatca gcattaccct
+     4741 ctccttcctg agcatccatc tgggctggaa ctccagaaac gagacctcta aggggaacca
+     4801 cacaaccagt aagtgcaagg tgcaggttaa cgaggtttac gggctggtag atggccttgt
+     4861 gactttttac ttgcccctcc tgattatgtg tataacttat taccggagat caagaagatt
+     4921 ccttggtctc aagcagttca ctctcgctgc tgtgatgggt gccttcatca tctgctggtt
+     4981 cccttacttt accgcctttg tgtaccgggg cctgcgaggc gacgacgcta ttaacgaggt
+     5041 cctggaggcc atcgtcctgt ggctgggcta cgccaacagt gctcttaacc caatcctcta
+     5101 tgcgaataat gcatccaaaa caaacacaat tacttcagac tttacaacat ccacagatag
+     5161 gttttatcca ggcacgctgt ctagctttca aactgatagt atcaacaacg atgctaaaag
+     5221 cagtctcaga agtagattat atgacctata tcctagaagg aaggaaacaa catcggataa
+     5281 acattcggaa agaacttttg tttctgagac tgcagatgat atagagaaaa atcagtttta
+     5341 tcagttgccc acacctacga gttcaaaaaa tactaggata ggaccgtttg ctgatgcaag
+     5401 ttacaaagag ggagaagttg aacccgtcga catgtacact cccgatacgg cagctgatga
+     5461 ggaagccaga aagttctgga ctgaagataa taataattta taagcttggt accgcggcta
+     5521 gctaagatcc gctctaaccg aaaaggaagg agttagacaa cctgaagtct aggtccctat
+     5581 ttattttttt atagttatgt tagtattaag aacgttattt atatttcaaa tttttctttt
+     5641 ttttctgtac agacgcgtgt acgcatgtaa cattatactg aaaaccttgc ttgagaaggt
+     5701 tttgggacgc tcgaagatcc agctgcatta atgaatcggc caacgcgcgg ggagaggcgg
+     5761 tttgcgtatt gggcgctctt ccgcttcctc gctcactgac tcgctgcgct cggtcgttcg
+     5821 gctgcggcga gcggtatcag ctcactcaaa ggcggtaata cggttatcca cagaatcagg
+     5881 ggataacgca ggaaagaaca tgtgagcaaa aggccagcaa aaggccagga accgtaaaaa
+     5941 ggccgcgttg ctggcgtttt tccataggct ccgcccccct gacgagcatc acaaaaatcg
+     6001 acgctcaagt cagaggtggc gaaacccgac aggactataa agataccagg cgtttccccc
+     6061 tggaagctcc ctcgtgcgct ctcctgttcc gaccctgccg cttaccggat acctgtccgc
+     6121 ctttctccct tcgggaagcg tggcgctttc tcatagctca cgctgtaggt atctcagttc
+     6181 ggtgtaggtc gttcgctcca agctgggctg tgtgcacgaa ccccccgttc agcccgaccg
+     6241 ctgcgcctta tccggtaact atcgtcttga gtccaacccg gtaagacacg acttatcgcc
+     6301 actggcagca gccactggta acaggattag cagagcgagg tatgtaggcg gtgctacaga
+     6361 gttcttgaag tggtggccta actacggcta cactagaagg acagtatttg gtatctgcgc
+     6421 tctgctgaag ccagttacct tcggaaaaag agttggtagc tcttgatccg gcaaacaaac
+     6481 caccgctggt agcggtggtt tttttgtttg caagcagcag attacgcgca gaaaaaaagg
+     6541 atctcaagaa gatcctttga tcttttctac ggggtctgac gctcagtgga acgaaaactc
+     6601 acgttaaggg attttggtca tgagattatc aaaaaggatc ttcacctaga tccttttaaa
+     6661 ttaaaaatga agttttaaat caatctaaag tatatatgag taaacttggt ctgacagtta
+     6721 ccaatgctta atcagtgagg cacctatctc agcgatctgt ctatttcgtt catccatagt
+     6781 tgcctgactc cccgtcgtgt agataactac gatacgggag ggcttaccat ctggccccag
+     6841 tgctgcaatg ataccgcgag acccacgctc accggctcca gatttatcag caataaacca
+     6901 gccagccgga agggccgagc gcagaagtgg tcctgcaact ttatccgcct ccatccagtc
+     6961 tattaattgt tgccgggaag ctagagtaag tagttcgcca gttaatagtt tgcgcaacgt
+     7021 tgttgccatt gctacaggca tcgtggtgtc acgctcgtcg tttggtatgg cttcattcag
+     7081 ctccggttcc caacgatcaa ggcgagttac atgatccccc atgttgtgca aaaaagcggt
+     7141 tagctccttc ggtcctccga tcgttgtcag aagtaagttg gccgcagtgt tatcactcat
+     7201 ggttatggca gcactgcata attctcttac tgtcatgcca tccgtaagat gcttttctgt
+     7261 gactggtgag tactcaacca agtcattctg agaatagtgt atgcggcgac cgagttgctc
+     7321 ttgcccggcg tcaatacggg ataataccgc gccacatagc agaactttaa aagtgctcat
+     7381 cattggaaaa cgttcttcgg ggcgaaaact ctcaaggatc ttaccgctgt tgagatccag
+     7441 ttcgatgtaa cccactcgtg cacccaactg atcttcagca tcttttactt tcaccagcgt
+     7501 ttctgggtga gcaaaaacag gaaggcaaaa tgccgcaaaa aagggaataa gggcgacacg
+     7561 gaaatgttga atactcatac tcttcctttt tcaatattat tgaagcattt atcagggtta
+     7621 ttgtctcatg agcggataca tatttgaatg tatttagaaa aataaacaaa taggggttcc
+     7681 gcgcacattt ccccgaaaag tgccacctg
+//

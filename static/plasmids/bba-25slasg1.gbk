@@ -1,0 +1,77 @@
+LOCUS       bba-25slasg1            2692 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25SLASG1 Yeast mating pathway inducible mCherry | type=Reporter 
+            | status=published | updated=2025-10-05 | license=cc-by-4.0 | 
+            uuid=80e1dc61-5601-437a-8e56-8054964bc9e3 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2692)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..2692
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     promoter        1..1636
+                     /label=pFUS1
+                     /note="color: #99cc00; direction: RIGHT"
+     CDS             1675..2385
+                     /label=mCherry
+                     /note="color: #ff0000; direction: RIGHT"
+     terminator      2527..2692
+                     /gene="S. cerevisiae ADH1"
+                     /label=ADH1 terminator
+                     /note="transcription terminator for the S. cerevisiae 
+                     alcohol dehydrogenase 1 (ADH1) gene"
+                     /note="color: #ffffff; direction: RIGHT"
+ORIGIN
+        1 aatctcagag gctgagtctc atttttctca aggaaaccat gcagaagctg ttgcgaagtt
+       61 gacatccgca gctcagtcga accccaatga cgagcaaatg tcaactattg aatcattaat
+      121 tcaaaaaatc gcaggatacg tcatggacaa ccgtagtggt ggtagtgacg cctcgcaaga
+      181 tcgtgctgct ggtggtggtt catcttttat gaacacttta atggcagact ctaagggttc
+      241 ttcccaaacg caactaggaa aactagcttt gttagccaca gtgatgacac actcatcaaa
+      301 taaaggttct tctaacagag ggtttgacgt agggactgtc atgtcaatgc taagtggttc
+      361 tggcggcggg agccaaagta tgggtgcttc cggcctggct gccttggctt ctcaattctt
+      421 taagtcaggt aacaattccc aaggtcaggg acaaggtcaa ggtcaaggtc aaggtcaagg
+      481 acaaggtcaa ggtcaaggtt cttttactgc tttggcgtct ttggcttcat ctttcatgaa
+      541 ttccaacaac aataatcagc aaggtcaaaa tcaaagctcc ggtggttcct cctttggagc
+      601 actggcttct atggcaagct cttttatgca ttccaataat aatcagaact ccaacaatag
+      661 tcaacagggc tataaccaat cctatcaaaa cggtaaccaa aatagtcaag gttacaataa
+      721 tcaacagtac caaggtggca acggtggtta ccaacaacaa cagggacaat ctggtggtgc
+      781 tttttcctca ttggcctcca tggctcaatc ttacttaggt ggtggacaaa ctcaatccaa
+      841 ccaacagcaa tacaatcaac aaggccaaaa caaccagcag caataccagc aacaaggcca
+      901 aaactatcag catcaacaac agggtcagca gcagcaacaa ggccactcca gttcattctc
+      961 agctttggct tccatggcaa gttcctacct gggcaataac tccaattcaa attcgagtta
+     1021 tgggggccag caacaggcta atgagtatgg tagaccgcaa cagaatggtc aacagcaatc
+     1081 caatgagtac ggaagaccgc aatacggcgg aaaccagaac tccaatggac agcacgaatc
+     1141 cttcaatttt tctggcaact tttctcaaca gaacaataac ggcaaccaga accgctactg
+     1201 aacgatgatt cagttcgcct tctatccttt gtttacgtat ttgtttatat atataacttt
+     1261 attttttttt attaattggg ctgcaagaca attttgttgt cagtgatgcc tcaatccttc
+     1321 ttttgcttcc atatttacca tgtggaccct ttcaaaacag agttgtatct ctgcaggatg
+     1381 ccctttttga cgtattgaat ggcataattg cactgtcact tttcgcgctg tctcattttg
+     1441 gtgcgatgat gaaacaaaca tgaaacgtct gtaatttgaa acaaataacg taattctcgg
+     1501 gattggtttt atttaaatga caatgtaaga gtggctttgt aaggtatgtg ttgctcttaa
+     1561 aatatttgga tacgacatcc tttatctttt ttcctttaag agcaggatat aagccatcaa
+     1621 gtttctgaaa atcaaaattc gaattcaacc ctcactaaag ggcggccgca ctagatggtt
+     1681 tctaaaggtg aagaagataa catggctatt attaaggaat ttatgagatt taaagtacac
+     1741 atggaaggtt ctgttaacgg tcatgaattt gaaattgaag gagaaggtga aggtagacca
+     1801 tatgaaggta cacaaacagc taaattgaaa gtaaccaaag gtggtccttt gccattcgct
+     1861 tgggatattt tgtctcctca attcatgtat ggttctaaag cttatgtcaa gcatcctgct
+     1921 gatatcccgg attacttgaa attgtcgttc ccagaaggtt tcaagtggga aagagtcatg
+     1981 aattttgaag atggtggagt tgtcactgtt acacaagact cttctttaca agatggtgag
+     2041 tttatataca aggtgaagtt aagaggtacc aacttcccat cagacggtcc agttatgcaa
+     2101 aagaaaacta tgggttggga agcttcttct gaaagaatgt accctgaaga tggagctttg
+     2161 aaaggtgaaa tcaaacaaag attgaaactg aaagacggtg gtcattatga tgctgaagtc
+     2221 aaaacaacat ataaggctaa gaagccagtc caattacctg gtgcatacaa cgtcaatatt
+     2281 aagttggata tcacttctca taatgaggat tatactattg ttgaacaata tgaaagagct
+     2341 gaaggtagac attcaaccgg tggtatggat gagctgtaca aataagctct taattaacaa
+     2401 ttcttcgcca gaggtttggt caagtctcca atcaaggttg tcggcttgtc taccttgcca
+     2461 gaaatttacg aaaagatgga aaagggtcaa atcgttggta gatacgttgt tgacacttct
+     2521 aaataagcga atttcttatg atttatgatt tttattatta aataagttat aaaaaaaata
+     2581 agtgtataca aattttaaag tgactcttag gttttaaaac gaaaattctt attcttgagt
+     2641 aactctttcc tgtaggtcag gttgctttct caggtatagc atgaggtcgc tc
+//

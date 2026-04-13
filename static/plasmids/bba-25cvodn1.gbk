@@ -1,0 +1,30 @@
+LOCUS       bba-25cvodn1              96 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25CVODN1 Yeast Ste2 sgRNA | type=gRNA_gene [SO:0001264] | 
+            status=published | updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=383624f7-063a-4d2b-88d2-f59e8c7406d0 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 96)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..96
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_RNA        1..20
+                     /label=gSte2
+                     /note="color: #ff00ff; direction: RIGHT"
+     misc_RNA        21..96
+                     /label=gRNA scaffold
+                     /note="guide RNA scaffold for the Streptococcus pyogenes 
+                     CRISPR/Cas9 system"
+                     /note="color: #00ccff; direction: RIGHT"
+ORIGIN
+        1 tcacctctac tgatgaactg gttttagagc tagaaatagc aagttaaaat aaggctagtc
+       61 cgttatcaac ttgaaaaagt ggcaccgagt cggtgc
+//

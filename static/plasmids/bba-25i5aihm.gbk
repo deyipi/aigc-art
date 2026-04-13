@@ -1,0 +1,37 @@
+LOCUS       bba-25i5aihm             840 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25I5AIHM Yeast surface display anchor Sed1 | type=Protein_Domain
+            | status=published | updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=bc5e6915-0cc2-400a-ac6d-5732399e441f | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 840)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..840
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..840
+                     /label=Sed1
+                     /note="color: #3366ff; direction: RIGHT"
+ORIGIN
+        1 gctttaccta caaatggtac aagtacagaa gctccaactg atactactac tgaagctcca
+       61 actactggtt tgcctactaa tggtactaca agcgctttcc caccaactac gtctttgcca
+      121 ccatctaata ctaccactac accaccttat aatccgtcca ccgactatac tacagattat
+      181 acagttgtta ctgaatatac tacttattgt cctgaaccaa ctacttttac tacaaatggt
+      241 aagacttata cagttactga acctacaacc ttgacaatta ctgattgtcc ttgtactatt
+      301 gaaaagccta caactacttc cacaacagaa tatactgttg ttacagaata cacaacttac
+      361 tgtccagaac ctactacttt caccactaac ggtaaaactt acaccgttac cgaacctact
+      421 acattgacca tcactgactg tccatgcaca attgaaaaac caactactac tagcactacc
+      481 gaatatacag ttgttactga atacactact tattgtccgg aacctactac tttcacaact
+      541 aacggaaaga cgtacactgt aacggaacca accactctga ctattactga ctgtccatgt
+      601 accattgaaa agtcagaggc tccagaatct tctgttccag ttaccgaatc taaaggtaca
+      661 acaactaagg aaaccggtgt tacaaccaag caaacaactg ctaatccatc attgaccgtc
+      721 tctactgtcg ttcctgtcag ttcttccgct tctagtcatt ccgttgttat caactctaat
+      781 ggtgctaatg ttgttgtccc tggtgctttg ggtttagctg gtgttgcaat gttatttttg
+//

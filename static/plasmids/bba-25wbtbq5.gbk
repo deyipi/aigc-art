@@ -1,0 +1,30 @@
+LOCUS       bba-25wbtbq5              95 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25WBTBQ5 Yeast Sst2 sgRNA | type=gRNA_gene [SO:0001264] | 
+            status=published | updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=92671c4f-1f45-4b08-b900-d1f92ac8e428 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 95)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..95
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     misc_RNA        1..20
+                     /label=gSst2
+                     /note="color: #ff00ff; direction: RIGHT"
+     misc_RNA        21..95
+                     /label=gRNA scaffold
+                     /note="guide RNA scaffold for the Streptococcus pyogenes 
+                     CRISPR/Cas9 system"
+                     /note="color: #00ccff; direction: RIGHT"
+ORIGIN
+        1 gagaaatcta agccagaaca gttttagagc tagaaatagc aagttaaaat aaggctagtc
+       61 cgttatcaac ttgaaaaagt ggcaccgagt cggtg
+//

@@ -1,0 +1,123 @@
+---
+import '../styles/tailwind.css'
+import '../assets/scss/index.scss'
+import SiteMeta from '../components/SiteMeta.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { ClientRouter } from 'astro:transitions'
+import PageHeader from '../components/PageHeader.astro'
+import PageNavigation from '../components/PageNavigation.jsx'
+import BackToTop from '../components/BackToTop.jsx'
+
+import myImage from '../assets/jpg/icon1.png'
+import { Image } from 'astro:assets';
+
+const {
+  title = '智绘心光',
+  description = '',
+  url = Astro.site,
+  image = 'social-preview-image.png',
+  author = '“智绘心光”艺术疗愈研究团队', 
+  toc,
+  featuredImage,
+} = Astro.props
+
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href={myImage.src} />
+
+    <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
+
+    <!-- Enable Astro View Transitions for all browsers -->
+    <ClientRouter />
+  </head>
+  <body>
+    <Header />   <!-- 头，就是菜单部分 2026.2.27 pidy -->
+
+    <!-- main 部分是主要部分 -->
+    <main id="main-content" transition:animate="fade">
+
+     
+      <section class="layout-section">
+        <div class="layout-shell layout-shell--with-nav">
+
+
+          <!-- <PageNavigation client:load toc={toc} />  pidy 2026.4.5  -->
+
+  <slot />
+        </div>
+        <div>
+ 
+        </div>
+                 
+      </section>
+    </main>
+
+    <!-- footer部分，是页面的后面部分 pidy 2026.2.27 -->
+    <Footer />
+    <BackToTop client:load />
+  </body>
+</html>
+
+
+<!-- 下面是script，这是一个无用的注释 pidy 2026.2.27 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.space-content p > img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        document.body.appendChild(overlay);
+
+        const bigImg = document.createElement('img') as HTMLImageElement;
+        bigImg.src = img.src;
+        overlay.appendChild(bigImg);
+
+        // 触发过渡动画
+        requestAnimationFrame(() => {
+          overlay.style.background = 'rgba(0,0,0,0.5)';
+          bigImg.style.transform = 'scale(1)';
+        });
+
+        overlay.addEventListener('click', () => {
+          // 收回动画
+          overlay.style.background = 'rgba(0,0,0,0)';
+          bigImg.style.transform = 'scale(0.5)';
+          setTimeout(() => overlay.remove(), 300); // 等动画完成后移除
+        });
+      });
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.md-img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        document.body.appendChild(overlay);
+
+        const bigImg = document.createElement('img') as HTMLImageElement;
+        bigImg.src = img.src;
+        overlay.appendChild(bigImg);
+
+        // 触发过渡动画
+        requestAnimationFrame(() => {
+          overlay.style.background = 'rgba(0,0,0,0.5)';
+          bigImg.style.transform = 'scale(1)';
+        });
+
+        overlay.addEventListener('click', () => {
+          // 收回动画
+          overlay.style.background = 'rgba(0,0,0,0)';
+          bigImg.style.transform = 'scale(0.5)';
+          setTimeout(() => overlay.remove(), 300); // 等动画完成后移除
+        });
+      });
+    });
+  });
+</script>

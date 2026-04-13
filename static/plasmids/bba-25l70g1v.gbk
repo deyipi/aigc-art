@@ -1,0 +1,46 @@
+LOCUS       bba-25l70g1v            1278 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25L70G1V H. pylori HopQ adhesion domain (HopQAD) | 
+            type=Protein_Domain | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=2130bb56-a795-4fe6-910c-09a9301b4ab2 | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 1278)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..1278
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..1278
+                     /label=HopQAD
+                     /note="color: #00ff00; direction: RIGHT"
+ORIGIN
+        1 atggccgtgc aaaaagttaa aaacgccgat aaggttcaaa agctgtctga tacctacgaa
+       61 caattgtcca gacttctaac aaatgacaac ggtacaaact ctaaaacatc agctcaagct
+      121 attaatcaag cggtaaacaa tttaaacgag agagccaaaa ctttggctgg tggtacaacc
+      181 aattctccag cataccaagc cactcttttg gctttaagat ccgttttagg tttgtggaat
+      241 agtatggggt acgcagtaat ttgcggtggt tatacaaaat cacctggtga aaataaccaa
+      301 aaagatttcc attacactga tgaaaatggt aatggtacca ccatcaattg tggtggatca
+      361 acaaattcta atggtacaca ttcctataat ggtactaaca cattaaaggc cgataaaaac
+      421 gtatccttat caattgagca atatgaaaaa atacatgaag cctatcaaat attgagcaaa
+      481 gctttgaaac aagcaggttt agcaccatta aatagtaaag gtgaaaaatt agaagctcac
+      541 gtaactactt ctaagtatca acaagataat caaactaaga caactacttc tgtgattgat
+      601 actaccaatg atgcgcaaaa cttattgacc caagctcaaa caattgtcaa tactttgaag
+      661 gattattgtc caattttaat tgctaaatca tcttcttcta atggtggcac caataatgca
+      721 aatactccaa gttggcaaac tgctggtggt ggtaaaaatt cttgcgcaac atttggtgca
+      781 gagttttcag ctgcttctga tatgatcaat aacgcccaaa aaatcgttca agaaactcaa
+      841 caattgtcag ctaatcaacc aaagaatatt actcaaccac ataatttgaa tttaaattct
+      901 ccttcttctt tgactgcctt ggcacaaaag atgttgaaga atgcccaatc tcaagctgag
+      961 attttgaaat tggcaaatca agttgaaagt gattttaaca agttatcctc aggtcattta
+     1021 aaagattata ttggtaaatg tgacgcttct gctatatcat cggccaatat gacaatgcaa
+     1081 aatcaaaaaa ataactgggg taatggctgt gctggtgttg aagaaacaca atccctacta
+     1141 aagacctccg cagctgattt caacaatcaa actcctcaaa ttaatcaagc ccaaaatttg
+     1201 gccaatactt tgattcaaga attgggtaat aatccattta gaaatatggg tatgattgcc
+     1261 tcttccacta ctaataat
+//

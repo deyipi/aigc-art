@@ -1,0 +1,334 @@
+---
+// 这是一个文章的总局 2026.2.27
+import ArticleLayout from '../layouts/ArticleLayout.astro'
+
+// 这是一个design.md markdown文件 2026.2.27
+import Content from '../content/design.md'
+import myImage from '../assets/jpg/image1.png'; // 导入同一目录下的图片
+import myImage2 from '../assets/jpg/article1.jpg'
+import myImage3 from '../assets/jpg/book1.jpg'
+import myImage4 from '../assets/jpg/book2.jpg'
+import myImage5 from '../assets/jpg/book3.jpg'
+import myImage6 from '../assets/jpg/ebookminiapp.jpg'
+import myImage7 from '../assets/jpg/ebookQR.jpg'
+import myImage8 from '../assets/jpg/fruit1.jpg'
+import myImage9 from '../assets/jpg/postcard1.jpg'
+import myImage10 from '../assets/jpg/nfls1.jpg'
+import myImage11 from '../assets/jpg/nflsqr1.jpg'
+import myImage12 from '../assets/jpg/rabbit-banner.png'
+
+
+import { Image } from 'astro:assets';
+
+
+---
+
+
+<ArticleLayout title="中期成果" >
+     <!-- <Content />  -->
+  <!-- <div id="research-report" class="reserved"> </div> -->
+  <h4 id="research-report" class="reserved">1、调研报告<br></h4>
+    本研究以艺术疗愈理论为核心框架，聚焦 AIGC 驱动下校本文化与中学疗愈性美育的深度融合实践，以南京外国语学校为核心调研对象，系统开展实证研究。调研覆盖南外及其他学校，收集3026份有效问卷，深度访谈美术教师 2 名、心理教师 1 名、高级教师1名、学生代表 8 名，同步进行校园实地考察。<br>
+最终形成的调研报告明确了三大核心结论：一是超过 85% 学生认可 “南外考神兔””IP 形象的陪伴感与疗愈性，期待通过与其相关的形式参与校园美育活动；二是中学生对美育的核心需求集中在互动性、情绪调节功能和校本文化贴合度；三是当前中学美育存在形式单一、科技融合不足、心理关怀缺失等问题。报告为项目成果优化与落地提供了坚实的数据支撑与实践依据。<br>
+
+    <Image src={myImage} alt="调查问卷" style="display:block;margin:0 auto;" />
+
+<!-- <div id="academic-paper" class="reserved"> </div> -->
+<h4 id="academic-paper" class="reserved">2、学术论文<br></h4>
+围绕项目核心主题，已完成 1 篇高质量论文初稿 ——《AIGC 赋能校本美育的艺术疗愈路径研究 —— 以 “南外考神兔”IP 为例》。论文聚焦三大核心方向：一是 “考神兔” IP 的疗愈性设计逻辑与校本文化符号建构机制；二是 AIGC 技术在青少年情绪可视化表达中的应用效能与优化路径；三是 ““艺术 + 科技 + 心理 + 教育” 跨学科协同的美育创新范式构建。目前已完成文献综述、研究方法、初步数据论证等核心章节，拟投稿至《美术研究》，为项目实践提供学术支撑。目前已撰写心理漫画专栏论文一篇，投稿至《长江心理学刊》。
+
+<Image src={myImage2} alt="论文" style="display:block;margin:0 auto;" />
+
+<!-- <div id="ebook" class="reserved"> </div> -->
+<h4 id="ebook" class="reserved">3、科技艺术疗愈电子书<br></h4>
+在理论研究与实践探索的基础上，项目组基于艺术疗愈理论与技术应用实践，系统梳理了校本文化资源、疗愈性美育案例及目前已有的 AIGC 创意生成成果，通过分析中学生认知发展阶段与情绪表达需求的关联性，完成电子书的框架搭建、内容筛选与层级化编排。为支撑后续美育课程落地与成果推广，团队以 “技术赋能 — 文化传承 — 心灵疗愈” 为核心逻辑框架，精选交互装置原理和实践案例等核心内容汇编成书。<br>
+该电子书以主题模块为依据划分单元结构，通过 “理论基础 — 实践步骤 — 案例展示 — 拓展资源” 的阶梯式编排，由浅入深引导使用者从技术应用、课程设计、校园落地等维度展开实践，既体现内容的学术严谨性，又兼顾操作的实用性与适配性。此项成果不仅构建起 AIGC 驱动下疗愈性美育的资源库，更通过理论与实践的融合设计，为学生提供系统性、可落地的创新实践指南，为项目成果的规模化推广奠定坚实基础。
+
+  <div class="img-box">
+    <Image class="pic1" src={myImage3} alt="图1" />
+    <Image class="pic1" src={myImage4} alt="图2" />
+    <Image class="pic1" src={myImage5} alt="图3" />
+  </div>
+
+  <!-- <div class="img-box">
+    <Image class="pic2" src={myImage6} alt="图1" />
+    <Image class="pic2" src={myImage7} alt="图2" />
+  </div> -->
+
+    <div class="img-box">
+      <div class="img2">
+          <Image  src={myImage6} alt="电子书小程序" />
+          <!-- <span  style="text-align: center;">图 4"科技·交互·疗愈"电子书小程序</span> -->
+      </div>
+      <div class="img2">
+          <Image  src={myImage7} alt="电子书二维码" />
+      </div>
+    </div>
+
+
+  <h4 id="ip-design" class="reserved">4、“南外考神兔”IP 全系列设计开发<br></h4>
+本套IP设计开发深度融合南外校本文化（银杏叶、图书馆、校园精神），完成 “考神兔” IP 完整设计体系：<br>
+（1）	基础设计：包含手绘草图手稿、正面 / 侧面 / 背面标准三视图、5 组不同角度 3D 模型渲染图；<br>
+（2）情感化设计：开发简笔画表情包（开心、思考、抱抱、加油、冥想、睡觉），覆盖中学生核心情绪表达场景；<br>
+
+  <div class="img-rabbit">
+         <Image src={myImage12} alt="考神兔形象海报" class="hero-image" />
+  </div>
+
+（3）故事设定：考神兔原本是南外图书馆角落里的小兔子，喜欢听同学们的心事，后来学会了运用 AIGC 工具把情绪变成画，成为陪伴大家成长的心灵伙伴，赋予 IP 情感共鸣与文化归属感；<br>
+（4）应用规范：制定 IP 在文创、数字平台、装置等不同场景的使用标准，确保形象一致性。<br>
+目前 “考神兔” 已成为项目核心视觉符号，逐步融入南外校园文化，成为师生认可的文化载体。
+
+<h4 id="cultural-products" class="reserved">5、疗愈性系列文创产品开发与落地<br></h4>
+基于 IP 形象开发多款兼具实用性与纪念性的校本文创产品，完成设计、打样与小批量生产，具体包括：
+<ul>
+  <li>系列徽章（开心兔、加油兔 2 款）；</li>
+  <li>“抱住好运” 主题帆布袋（正面印考神兔抱书插画）；</li>
+  <li>互动式笔记本（内页嵌入考神兔表情包、情绪记录页）；</li>
+  <li>刺绣 logo 棒球帽（侧边绣考神兔简笔画）；</li>
+  <li>场景化亚克力立牌（银杏树下读书款）；</li>
+  <li>水果系列解压产品；</li>
+</ul>
+
+  <div class="img">
+         <Image src={myImage8} alt="解压水果"  />
+  </div>
+产品已通过校内文创店、运动会、文化节、科技节等活动落地销售，累计售出 3000 + 件。
+<h4 id="ar-products" class="reserved">6、AR 产品研发与测试<br></h4>
+设计两款功能差异化产品，分别为校园地图式AR导览和校园AR 明信片，完成原型开发与初步测试：<br>
+（1）情绪互动版：正面印“中国灵魂，世界胸怀”中间为南外3d校徽旋转图标，扫描二维码触发 AR 效果 ——3D 动画 + 明信片背面内容
+
+  <div class="img">
+         <Image src={myImage9} alt="明信片"  />
+  </div>
+
+  <div class="img-box">
+    <Image class="pic2" src={myImage10} alt="南京外国语学校" />
+    <Image class="pic2" src={myImage11} alt="南京外国语学校二维码" />
+  </div>
+（2）校园地图导览版：以南外南部新城校区地图为基底，标注校园核心文化地标，扫描后触发 AR导览界面，可沉浸式了解校园历史与建筑特色（南部新城校区版本已完成，北京东路校区版本处于收尾阶段）。
+<h4 id="conductive-ink" class="reserved">7、导电油墨互动原型实验<br></h4>
+本项目为降低交互装置开发成本、优化中学生作为用户的实际体验，开展导电油墨互动原型实验：<br>
+<ul>
+  <li>实验目的：通过低成本导电材料实现触摸感应与情绪反馈的联动；</li>
+  <li>技术路径：在柔性电路板上印制考神兔轮廓，涂抹导电油墨作为感应触点，连接 LED 灯与简易发声模块；</li>
+  <li>核心功能：学生触摸考神兔耳朵、胸口等部位，可触发对应情绪的亮灯效果（蓝色 = 平静、黄色 = 愉悦、粉色 = 温暖）与简短疗愈音效；</li>
+  <li>实践成果：验证了低成本感应方案的可行性，同步收集学生体验建议 12 条，用于技术优化。</li>
+</ul>
+<h4 id="cooperation" class="reserved">8、签订项目合作协议<br></h4>
+项目组已与妙峰庵社区签订合作协议，并与南京市外国语学校建立合作。目前累计开展五次社区艺术疗愈性活动实践，参与群众包括社区老年人、青少年儿童、特殊群体及普通居民等超200余人次。课程开展包括艺术疗愈体验课、一对一创作指导、社区美育氛围营造及需求调研等工作。年度合作意向的达成不仅为项目提供了稳定的实践基地与常态化教学场景，更通过社区文化资源与学校教育需求的深度整合，实现课程内容动态优化；同时，合作单位反馈机制的形成助力项目范式迭代升级，为后续规模化实践奠定基础。<br>
+
+<h4 id="promo-video" class="reserved">9、拍摄儿童诗教学宣传片<br></h4>
+团队成员已将线下实践过程拍摄成宣传片，发布在小红书、抖音、微博等网络社交媒体，扩大项目的影响力，在社会层面引起对艺术疗愈价值的关注；对实践经验，团队成员将定期录制分享讲解视频进行宣传，在尽可能广的范围内带动更多人关注和参与到艺术疗愈青少年身心健康中。<br>
+
+<h4 id="digital-platform" class="reserved">10、数字化平台矩阵开发（小程序、网页端、H5）<br></h4>
+团队已构建 “三端联动” 的数字化美育平台矩阵，完成 UI 设计与核心功能开发：<br>
+（1）	微信小程序 “智绘心光”：<br>
+设定四大核心模块，启动页设计考神兔眨眼动效增强互动感。<br>
+①首页：展示考神兔今日语录+ 校园活动报名入口；<br>
+②作品展：汇集学生文创作品、考神兔二创作品，支持点赞分享；<br>
+③情绪树洞：支持匿名留言倾诉情绪，考神兔自动回复 AIGC 生成的个性化图像；<br>
+④疗愈资源：提供电子书节选、冥想音频（配考神兔引导动画）。目前 UI 设计已完成，前端 Demo 可正常运行，累计测试用户 100 + 人。<br>
+（2）	网页端平台：<br>
+完成响应式设计，适配电脑、平板等多终端，包含项目介绍、考神兔故事、电子书下载、装置预约及建议、研究资源库五大板块，考神兔作为导航栏吉祥物贯穿全程，增强品牌辨识度。<br>
+（3）	H5 互动界面 “和考神兔一起画心情”：<br>
+设计完整互动流程 —— 选择情绪关键词（焦虑、期待、孤独等）→ 考神兔动画引导创作 → AIGC 生成专属情绪明信片 → 支持保存分享至社交平台。目前已累计生成学生专属明信片 500 + 张，传播覆盖南外 3 个年级。<br>
+
+
+
+
+  <!-- 右下角固定目录（仅此页面） -->
+  <nav class="corner-toc" aria-label="页面目录">
+    <!-- <div class="corner-toc__title">目录</div> -->
+    <ol class="corner-toc__list">
+      <li><a href="#research-report">1 调研报告</a></li>
+      <li><a href="#academic-paper">2 学术论文</a></li>
+      <li><a href="#ebook">3 科技艺术疗愈电子书</a></li>
+      <li><a href="#ip-design">4 “南外考神兔”IP 全系列设计开发</a></li>
+      <li><a href="#cultural-products">5 疗愈性系列文创产品开发与落地</a></li>
+      <li><a href="#ar-products">6 AR 产品研发与测试</a></li>
+      <li><a href="#conductive-ink">7 导电油墨互动原型实验</a></li>
+      <li><a href="#cooperation">8 签订项目合作协议</a></li>
+      <li><a href="#promo-video">9 拍摄儿童诗教学宣传片</a></li>
+      <li><a href="#digital-platform">10 数字化平台矩阵开发（小程序、网页端、H5）</a></li>
+    </ol>
+  </nav>
+
+
+</ArticleLayout>
+
+<style>
+  /* 父容器：设置横排 */
+  .img-box {
+    display: flex;    /* 核心：开启横排 */
+     justify-content: center;
+    gap: 2px;        /* 图片之间的间距，可改 */
+    align-items: center; /* 垂直居中对齐 */
+  }
+
+  .pic1 {
+    width:33%;
+    height:auto;
+  }
+
+  .reserved {
+      /* 1. 先抵消上面的 padding，保证盒子大小不变 */
+  margin-top: -80px; 
+  /* 2. 增加顶部内边距，让出导航栏的高度 */
+  padding-top: 80px; 
+  }
+
+  .pic2 {
+    width:33%;
+    height:auto;
+  }
+  .img2 {
+    width:33%;
+    height:auto;
+    text-align: center;
+  }
+      .img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .hero-image {
+        width: 100%;
+        height:auto;
+        // max-width: 520px;
+        
+        margin: 0 0 0.8rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+</style>
+
+<!-- 页面内脚本：目录高亮与平滑滚动（仅此页面生效） -->
+<script>
+  // 平滑滚动
+  try {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  } catch (e) {}
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const ids = [
+      'research-report',
+      'academic-paper',
+      'ebook',
+      'ip-design',
+      'cultural-products',
+      'ar-products',
+      'conductive-ink',
+      'cooperation',
+      'news-report',
+    ];
+
+    const links = Array.from(document.querySelectorAll('.corner-toc a'));
+
+    // 点击时手动高亮（防止极快跳转未触发观察）
+    links.forEach((a) => {
+      a.addEventListener('click', () => {
+        links.forEach((l) => l.classList.remove('active'));
+        a.classList.add('active');
+      });
+    });
+
+    // 观察标题进入视区，高亮对应目录项
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const link = document.querySelector(`.corner-toc a[href="#${entry.target.id}"]`);
+          if (!link) return;
+          if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+            links.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: [0, 0.1, 1.0],
+      }
+    );
+
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  });
+</script>
+
+<!-- 局部样式：右下角目录外观（仅此页面生效） -->
+<style>
+  .corner-toc {
+    position: fixed;
+    right: clamp(0.75rem, 3.5vw, 2rem);
+    bottom: clamp(4rem, 6vw, 5rem);
+    width: clamp(180px, 22vw, 220px);
+    max-height: 60vh;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #e5e7eb; /* tailwind: gray-200 */
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+    z-index: 9998;
+  }
+
+  .corner-toc__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9; /* slate-100 */
+    color: #334155; /* slate-700 */
+    background: #fafafa;
+    position: sticky;
+    top: 0;
+  }
+
+  .corner-toc__list {
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+  }
+
+  .corner-toc a {
+    display: block;
+    padding: 0.35rem 0.75rem 0.35rem 0.75rem;
+    font-size: 0.9rem;
+    color: #475569; /* slate-600 */
+    text-decoration: none;
+    line-height: 1.35;
+    border-left: 3px solid transparent;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .corner-toc a:hover {
+    background: #f8fafc; /* slate-50 */
+  }
+
+  .corner-toc a.active {
+    color: #2563eb; /* blue-600 */
+    border-left-color: #2563eb;
+    background: #eff6ff; /* blue-50 */
+    position: relative;
+  }
+
+  .corner-toc a.active::before {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #2563eb; /* 蓝色小箭头 */
+  }
+
+  /* 小屏隐藏，保持简洁 */
+  @media (max-width: 1024px) {
+    .corner-toc { display: none; }
+  }
+</style>

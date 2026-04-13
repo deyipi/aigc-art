@@ -1,0 +1,24 @@
+LOCUS       bba-25w6ggdu              45 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25W6GGDU (G4S)3 linker | type=Protein_Domain | status=published 
+            | updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=5e3f1048-152f-41f9-ba8b-79bc61d8c819 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 45)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..45
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..45
+                     /label=GS linker
+                     /note="color: #a6acb3; direction: RIGHT"
+ORIGIN
+        1 ggtggtggtg gttccggtgg tggaggttct ggtggtggtg gttct
+//

@@ -1,0 +1,298 @@
+import FoldCard from '../../components/FoldCard.astro'
+import { Avatar } from 'accessible-astro-components'
+
+
+#### Part 2 - Core System Refinement: From Blueprint to Breakthrough
+
+As a central component of our broader Human Practices efforts, this section, "Core System Refinement," details the engine room of our project's technical development. While other parts of our iHP address our mission, safety, and public engagement, our focus here is on the direct, iterative loop connecting expert consultation with tangible laboratory progress. Our objective is to demonstrate how we systematically translated dialogue into data, refining our project's foundational modules—Adhesion, Sensory & Therapeutic, and Delivery—through a structured cycle of feedback and implementation.
+
+![Figure 9](https://static.igem.wiki/teams/5870/handbook/dcri.webp)
+
+<p class="figure-caption">**Figure 9:** Our DCRI (Design-Consult-Refine-Inplement) Strategy.</p>
+
+The methodology governing this refinement process is our **Feedback-Driven Engineering Loop (DCRI)**. Each engineering challenge began with an initial **Design**, which we then critically evaluated by **Consulting** academic and industrial experts. Their insights empowered us to **Refine** our strategies—identifying potential flaws and optimizing our approach—before committing to lab work. Finally, we would **Implement** these improved designs through rigorous experimentation, with the results informing the next cycle of innovation.
+
+The following case studies showcase this engineering-focused dialogue in action. By embedding this feedback loop into our R&D, we ensured that the foundational science of our project was not only ambitious but also practical, safe, and strategically sound, providing a solid technical base for the broader goals of our entire iHP endeavor.
+
+##### Adhesion Strategy: From Delayed to "Always-Ready" Adhesion
+
+###### Overview
+
+To maximize therapeutic efficacy, our engineered yeast must not only sense and act, but first and foremost, remain anchored at the site of infection. The design of our Adhesion System, therefore, represented one of our earliest and most fundamental strategic challenges. This section details the foundational pivot we made in response to expert feedback, a critical decision that shaped the architecture of our entire project. We began with a concept where adhesion was inducible, triggered only upon sensing *H. pylori*. However, early consultations challenged this idea, raising concerns about metabolic load and a critical time-lag that could render our system ineffective in the dynamic gastric environment. This led us to re-evaluate and ultimately adopt a more robust constitutive expression strategy, ensuring our yeast is always ready to bind its target. 
+
+###### Consultation: Re-evaluating the Adhesion Strategy with Prof. Qingsong Wang and Dr. Long Qian
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Qingsong Wang" img="https://static.igem.wiki/teams/5870/ihp/qingsongwang.webp"/>
+        <Avatar label="Long Qian" img="https://static.igem.wiki/teams/5870/ihp/longqian.webp"/>
+      </div>
+      <p><b>Date:</b> March 9, 2025</p>
+      <p><b>Experts:</b></p>
+      <ul>
+        <li><b>Prof. Qingsong Wang</b>, Associate Professor, School of Life Sciences, Peking University</li>
+        <li><b>Dr. Long Qian</b>, Associate Investigator, Center for Quantitative Biology, Peking University</li>
+      </ul>
+    </div>
+
+    <p><b>Background & Purpose:</b></p>
+    <p>Our initial design aimed to link the adhesion system directly to the sensing system. The yeast was engineered to first detect Nα-methylhistamine, a signal molecule unique to *H. pylori*, and subsequently trigger the expression of the C1ND adhesion domain on its surface. This approach was conceived to conserve the yeast's metabolic energy, ensuring that the adhesion proteins were only produced when the target pathogen was present. The purpose of our consultation during this early brainstorming stage was to present this concept to Professor Qingsong Wang and Dr. Long Qian. We aimed to leverage their expertise in biochemistry and computational synthetic biology to discuss the design’s feasibility and gather critical feedback before proceeding.</p>
+
+    <div slot="more">
+      <p><b>Insights from the Conversation:</b></p>
+      <p>Both experts provided critical feedback that challenged our initial assumptions. They raised two primary concerns:</p>
+      <ol>
+        <li><b>Plasmid Metabolic Load:</b> They pointed out that integrating a complex inducible system, which includes both sensing and adhesion components, onto a single plasmid would create a significant metabolic burden for the yeast cells. This high plasmid load could negatively impact the yeast's growth, stability, and overall therapeutic function.</li>
+        <li><b>Sensing Delay Effect:</b> he experts highlighted the critical issue of a "time-lag." The process—from detecting the signal molecule to transcribing the gene, translating the C1ND protein, and successfully displaying it on the cell surface—would not be instantaneous. They argued that this delay could significantly reduce the system's effectiveness; the yeast might flow past the infection site in the stomach before it could firmly attach.</li>
+      </ol>
+      <br/>
+      <p><b>Action & Outcome:</b></p>
+      <p>Based on this crucial expert feedback, we made a pivotal change to our project design. We decided to decouple the adhesion system from the sensing system. The gene encoding the C1ND adhesion domain was placed under the control of a strong constitutive promoter, ensuring it is always expressed on the yeast surface.</p>
+      <p>This strategic shift simplified the genetic circuit, reduced the metabolic load on the host, and critically, eliminated the risk of the time-lag effect. Our engineered yeast is now "always ready" to bind to *H. pylori* upon encounter, ensuring immediate and efficient localization at the infection site. This early consultation was fundamental in shaping a more reliable and effective design for our adhesion system.</p>
+    </div>
+  </FoldCard>
+</div>
+
+
+##### Delivery System: Forging the "Landing Craft" 
+
+###### Overview
+
+With a robust strategy in place to ensure our yeast remains anchored to *H. pylori*, our next critical challenge was to engineer its core function: the ability to sense the pathogen and deliver a targeted therapeutic response. This section details the iterative refinement of this crucial system, which underwent a fundamental redesign catalyzed by expert consultations. Our initial path, based on a split-ubiquitin nanobody system, was fraught with potential obstacles. Through dialogue with experts in microbial engineering and synthetic biology, we pivoted to a more viable and innovative GPCR-based sensing mechanism, systematically optimized our genetic pathways, and established rigorous validation protocols, forging a clear and scientifically sound path forward.
+
+###### Consultation 1: Pivoting Our Sensing Strategy with Dr. Long Hong
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Long Hong" img="https://static.igem.wiki/teams/5870/ihp/longhong.webp"/>
+      </div>
+      **Date:** July 10, 2025
+
+      **Expert:** **Dr. Long Hong**, School of Life Sciences, Peking University
+    </div>
+    **Background & Purpose:**
+
+    Our initial design for the sensory module was based on a split-ubiquitin nanobody system intended to recognize surface antigens on H. pylori. However, we quickly ran into a wall of potential obstacles. We were concerned about **steric hindrance from the yeast cell wall**, as well as the system's potential instability and inefficient signal transduction within a complex in vivo environment. To find a more viable path forward, we consulted Dr. Long Hong, an expert in microbial engineering and protein display technology, to discuss a fundamental shift in our approach: **moving from nanobodies to a GPCR-based system.**
+
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Dr. Hong, a distinguished researcher in microbiology and protein engineering, immediately validated our concerns. He pointed out that the dense yeast cell wall would likely prevent a nanobody from effectively binding to the pathogen. Drawing from "yeast display" technology, he suggested methods for localizing membrane proteins to the cell surface to overcome this spatial barrier.
+
+      This insight prompted us to propose a new idea: what if, instead of recognizing a surface antigen, we **detected a metabolic byproduct of H. pylori, such as histamine, using a GPCR**? Dr. Hong confirmed this was a **highly promising direction**. He further enriched our strategy by suggesting we could adapt secretion systems from *E. coli*, which use signal peptides like MBP, for our therapeutic protein. He advised us to research secretion signal sequences native to our chassis, *S. boulardii*. Beyond the core biology, Dr. Hong also offered practical advice on downstream technologies like microcapsule preparation and even offered to help us access key instrumental resources.
+<br/>
+      **Action & Outcome:**
+
+      This interview was the **turning point for our sensory module**. Guided by Dr. Hong's expert advice, we made the decisive choice to abandon the nanobody approach and commit fully to a GPCR-based metabolite-sensing pathway. We immediately began a deep dive into the literature, screening for suitable GPCRs, optimizing signal peptides, and designing our yeast surface display system. Dr. Hong's insights and generous offer of support dramatically accelerated our project's redesign, laying a robust foundation for all subsequent work.
+    </div>
+  </FoldCard>
+</div>
+
+###### Consultation 2: Technical Deep Dive on GPCR Engineering with Bohan Li
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Bohan Li" img="https://static.igem.wiki/teams/5870/ihp/bohanli.avif"/>
+      </div>
+      **Date:** July 3, 2025
+
+      **Expert:** **Bohan Li**, Graduate Student, Yulong Li Lab, Peking University
+    </div>
+    **Background & Purpose:**
+
+    As we moved forward with our GPCR strategy, we encountered a new set of technical bottlenecks, specifically in **the construction of chimeric G-proteins.** We needed to know how to rationally select G-protein alpha-subunits for combinatorial screening, understand the precise molecular cloning details, and get an expert opinion on the overall feasibility of our plan. These details were critical for the functional implementation of our sensory module. We sought the expertise of Bohan Li, a senior graduate student in the renowned Yulong Li Lab at Peking University, to guide us through these technical nuances.
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Bohan Li provided clear, actionable guidance that transformed our abstract plan into an executable roadmap. He recommended a systematic screening of combinations between histamine receptors and G-protein families and illuminated the standard method for constructing chimeric G-proteins by replacing the C-terminal 5-11 amino acids. He also clarified a key detail in our expression strategy: the GPCR requires a signal peptide for proper membrane insertion, but the G-protein itself does not. His advice provided the technical clarity we desperately needed to move forward efficiently.
+<br/>
+      **Action & Outcome:**
+
+      Armed with Bohan Li's advice, we **completely overhauled our experimental plan, transforming it from a concept into a highly efficient workflow.** We designed a systematic screening protocol, established a small-scale chimeric G-protein library, and perfected our molecular cloning strategy. These targeted improvements unlocked our progress, making our project far more executable and dramatically increasing our R&D efficiency.
+    </div>
+  </FoldCard>
+</div>
+
+
+###### Consultation 3: Ensuring Safety and Rigor with Associate Professor Zhexian Tian
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Zhexian Tian" img="https://static.igem.wiki/teams/5870/ihp/zhexiantian.webp"/>
+      </div>
+      **Date:** August 14, 2025
+
+      **Expert:** **Prof. Zhexian Tian**, Peking University
+    </div>
+    **Background & Purpose:**
+
+    As we developed our therapeutic module, we faced critical questions not just of efficacy, but of scientific integrity and responsibility. We were unsure about the **specific safety protocols for culturing Pseudomonas aeruginosa** and needed to establish a **reliable, gold-standard method for quantifying biofilm**. Furthermore, we had to critically evaluate the real-world feasibility of our therapeutic enzyme, AiiA. To ensure our project was built on a foundation of safety and scientific validity, we consulted microbiology expert Prof. Zhexian Tian.
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Prof. Tian began by instilling in us the paramount importance of laboratory safety. On the technical side, he recommended **crystal violet staining followed by a plate reader assay as the definitive method for biofilm quantification**. Regarding our AiiA enzyme, Prof. Tian offered a crucial molecular perspective: because AiiA targets the highly conserved quorum sensing system, the **risk of developing resistance is relatively low**. This insight provided critical validation for our therapeutic approach, but he stressed the importance of experimentally validating its degradation efficiency.
+<br/>
+      **Action & Outcome:**
+
+      Following Prof. Tian's guidance, we immediately **embedded a new layer of rigor and safety into our project's DNA.** We established a standardized and normalized workflow for biofilm quantification and designed a comprehensive suite of experiments to systematically evaluate our AiiA enzyme. Prof. Tian's mentorship did more than refine our methods; it ensured the successful and responsible execution of our project, reinforcing the core principles of sound science.
+    </div>
+  </FoldCard>
+</div>
+
+
+##### Sensory & Therapeutic System: Building the "Smart Missile"
+
+###### Overview
+
+Having engineered a yeast capable of both adhering to and acting upon its target, the final piece of our technical puzzle was ensuring it could survive the journey through the harsh gastrointestinal tract to reach the site of infection. This section chronicles the development of a robust delivery system, a journey that evolved from a simple encapsulation concept to an advanced, integrated microfluidics platform. We faced significant technical hurdles, including the structural collapse of our microbeads and critical safety constraints related to propulsion materials. Through targeted consultations with academic and industrial experts, we systematically navigated these challenges, demonstrating an iterative design process that transformed our delivery vehicle into a precise, scalable, and innovative solution. 
+
+###### Consultation 1: Refining Encapsulation Strategy with Dr. Long Hong
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Long Hong" img="https://static.igem.wiki/teams/5870/ihp/longhong.webp"/>
+      </div>
+      **Date:** July 10, 2025
+
+      **Expert:** **Dr. Long Hong**, School of Life Sciences, Peking University
+    </div>
+    **Background & Purpose:**
+
+    Our initial plan for creating microbeads to encapsulate our yeast cells was based on the emulsification–internal gelation method for producing sodium alginate beads. This method was conceptually feasible and well-supported by existing literature, offering the advantage of lower equipment requirements. However, our team identified potential concerns regarding the control of particle size and the overall reproducibility of the process. We understood that significant variations in bead size could impact the consistency and reliability of subsequent experiments. In contrast, microfluidic systems were known to offer superior control and uniformity, but at the cost of higher technical complexity. To determine the most effective path forward, we consulted Dr. Long Hong, leveraging his experience with alginate gel systems and cell immobilization techniques to help us weigh the trade-offs between these two methods.
+
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Dr. Hong provided a clear assessment of our options. He affirmed the distinct advantage of microfluidic systems for achieving uniform particle size, a critical factor for precision applications. However, he also acknowledged the technical challenges and steeper learning curve associated with implementing such systems. Dr. Hong advised that the emulsification–internal gelation method was a reasonable and practical starting point for our project. He reasoned that if our initial application phase did not demand extreme precision, this simpler method would be sufficient to produce the necessary materials for proof-of-concept experiments, allowing us to make progress without being delayed by complex technical optimizations.
+<br/>
+      **Action & Outcome:**
+
+      Based on Dr. Hong's input, we adopted a phased strategic approach. We decided to begin our experimental work using the simpler emulsification method. This allowed us to initiate our proof-of-concept studies promptly, utilizing accessible resources and techniques. In parallel, we designated microfluidics as a long-term optimization pathway for our delivery system. This decision enabled us to proceed efficiently with our biological validation work while simultaneously conducting the necessary research and design for a more advanced fabrication method. This approach retained the potential for future scalability and precision while ensuring immediate progress.
+    </div>
+  </FoldCard>
+</div>
+
+###### Consultation 2: Addressing Magnesium Coating with Prof. Qing Chen
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar initials="QC" label="Qing Chen" />
+      </div>
+      **Date:** July 1, 2025
+
+      **Expert:** **Prof. Qing Chen**, Center for Nanoscience and Technology, Peking University
+    </div>
+    **Background & Purpose:**
+
+    To equip our capsules with a self-propulsion mechanism, our design involved coating the dried alginate beads with magnesium powder. The reaction of magnesium with water in the gastrointestinal tract would generate hydrogen bubbles, creating thrust for active movement. However, we lacked clarity on the practical methods for applying a consistent and effective layer of magnesium onto the microscopic beads. We needed expert guidance to understand the viable coating techniques and their potential limitations before proceeding with experimental work.
+
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Prof. Chen validated the general feasibility of our magnesium coating concept. She provided specific technical suggestions, recommending that we explore two primary methods: ultrasonic deposition and a simpler dispersion-spraying approach. She noted that while more advanced techniques like ultrasonic deposition might improve coating efficiency and uniformity, straightforward approaches could still provide the functional proof-of-concept required for the current stage of our project. This advice gave us concrete experimental directions to pursue.
+<br/>
+      **Action & Outcome:**
+
+      Following Prof. Chen's suggestions, we proceeded to research and design experimental protocols based on both spraying and dispersion methods. The subsequent experiments confirmed the baseline feasibility of our micromotor coating strategy. This step was crucial as it validated a core component of our delivery system's design and highlighted specific areas for later process optimization. 
+    </div>
+  </FoldCard>
+</div>
+
+###### Consultation 3: Exploring Industrial Feasibility and Safety Constraints
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Entrepreneur" shape="square" img="https://static.igem.wiki/teams/5870/ihp/entrepreneur.webp" />
+      </div>
+      **Date:** July 2025
+
+      **Partners Contacted:** Hangzhou Furui Jie Technology co., LTD, Engineering For Life (EFL), Beidi Technology co. LTD, BMF Precision Tech, Guangdong Institute of Semiconductor Micro-Nano Manufacturing Technology,  Quantum Design China, Nanjing Nanoeast Biotech co., LTD, Thencure co., LTD
+    </div>
+    **Background & Purpose:**
+
+    As our project progressed, two significant practical issues emerged that required an industrial perspective. The first was the recurring collapse of our alginate beads during the freeze-drying process. The second, more critical issue concerned the regulatory and safety restrictions on the use of magnesium nano-powder, which we had learned posed potential explosion risks. To evaluate viable solutions and understand the real-world constraints, we reached out to several industrial companies with expertise in materials, biotechnology, and equipment manufacturing.
+
+    <div slot="more">
+      **Insights from the Exchanges:**
+
+      The feedback from our industrial partners was invaluable. Regarding the freeze-drying issue, experts confirmed that advanced equipment and specialized protective agents were available and could likely solve the bead collapse problem, but they also cautioned that the necessary process optimization would be both complex and time-consuming. The feedback on magnesium nano-powder was definitive: all companies emphasized the strict safety regulations governing its use. They confirmed that its application would require anti-explosion certification, a significant regulatory hurdle that would severely limit the feasibility of our approach, particularly for future clinical or commercial development.
+  <br/>
+      **Action & Outcome:**
+
+      These discussions directly influenced a major strategic decision. Based on the clear safety and regulatory feedback, we decided to deprioritize approaches involving magnesium nano-powder. We shifted our focus to developing safer, more scalable alternatives, such as using bulk magnesium powder or biocompatible inorganic substitutes that would not carry the same risks. This early engagement with industry allowed us to align our project with practical constraints, preventing us from investing further resources into a technologically and regulatorily challenging path.
+    </div>
+  </FoldCard>
+</div>
+
+###### Consultation 4: Overcoming Freeze-Drying Challenges with Prof. Xuan Zhang
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Xuan Zhang" initials="XZ" />
+      </div>
+      **Date:** August 25, 2025
+
+      **Expert:** **Prof. Xuan Zhang**, Department of Pharmaceutics, Peking University Health Science Center
+    </div>
+      **Background & Purpose:**
+
+      We continued to face a persistent technical problem during the freeze-drying stage, where our alginate microbeads frequently collapsed and lost their structural integrity. This issue represented a significant bottleneck, as intact, porous beads were essential for subsequent coating and functional testing. To resolve this challenge in formulation science, we sought expert advice from Prof. Xuan Zhang, who specializes in pharmaceutics and drug delivery systems.
+    <div slot="more">
+      **Insights from the Conversation:**
+
+      Prof. Zhang provided a critical insight that reframed the problem. He highlighted the inherent complexity of freeze-drying alginate systems, noting that bead collapse is influenced by multiple factors, including the choice of cryoprotectant and precise temperature control protocols. However, his most impactful recommendation was to question the necessity of the freeze-drying step itself at this stage. He advised that we should first test whether the liquid-state (hydrated) microencapsulation was sufficient to protect the yeast and ensure its stability under gastric conditions. He suggested that we should only commit to solving the complex challenges of freeze-drying if its advantages were clearly justified for our application.
+  <br/>
+      **Action & Outcome:**
+
+      Based on Prof. Zhang's advice, we shifted our experimental strategy. We prioritized testing the stability and efficacy of liquid-state encapsulation. Freeze-drying was re-designated as a conditional, secondary step, to be pursued only if liquid-state formulations proved inadequate. This strategic shift allowed us to bypass a significant technical bottleneck and focus our efforts on the core biological function of our delivery system, thereby accelerating our research progress.
+    </div>
+  </FoldCard>
+</div>
+
+###### Consultation 5: Developing an Integrated Janus Micromotor System
+
+<div class="page">
+  <FoldCard title="" headingLevel="h6" headingSize="h6" footer="">
+    <div slot="left">
+      <div class="avatar-row">
+        <Avatar label="Shujing Wang" img="https://static.igem.wiki/teams/5870/ihp/shujingwang.webp" />
+      </div>
+      **Date:** August 4 & August 10, 2025
+
+      **Expert:** **Dr. Shujing Wang**, Microfluidics Fabrication Platform, Peking University; Engineers at Dxfluidics Ltd.
+    </div>
+      **Background & Purpose:**
+
+      To overcome the limitations of a multi-step fabrication process and to integrate the encapsulation and propulsion functions more effectively, we advanced our design to a microfluidics-based system for fabricating Janus particles. The design consisted of a single particle with two distinct hemispheres: one made of alginate hydrogel for encapsulating the yeast, and the other made of calcium carbonate (CaCO₃), which would function as a safe and biocompatible micromotor. This integrated approach required expertise in microfluidic device design and fabrication.
+    <div slot="more">
+      **Insights from the Conversations:**
+
+      Our development of this system was a collaborative effort. Dr. Shujing Wang, an expert at the Peking University Microfluidics Fabrication Platform, confirmed the feasibility of our proposed design. She provided a key technical suggestion to optimize the oil phase in the microfluidic device by using soybean oil with 1% Span-60, which she advised would improve the stability and uniformity of droplet formation. We also collaborated with engineers at Dxfluidics Ltd. Working together and referencing relevant literature, we jointly designed custom microfluidic chips that were then manufactured by the company to meet our specific experimental requirements.
+  <br/>
+      **Action & Outcome:**
+
+      With the combined support of academic expertise and industrial manufacturing capabilities, we successfully designed and partially validated a reliable microfluidics-based method for producing Janus particles. This advanced solution ingeniously integrates encapsulation and micromotor propulsion functions into a unified entity. The development of this platform effectively overcomes previous challenges of particle collapse and magnesium safety, while providing our project with a precise, scalable, and innovative delivery system.
+    </div>
+  </FoldCard>
+</div>
+
+
+
+
+ 

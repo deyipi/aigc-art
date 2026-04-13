@@ -1,0 +1,199 @@
+import Plasmid from '../../components/Plasmid.astro';
+export const plasmid1 = [
+    {
+        partNumber: 'pESC-URA-pOpM-EGFP-Sed1',
+        file: 'pESC-URA-pOpM-EGFP-Sed1.gbk',
+        description: 'Plasmid for expressing EGFP-Sed1 fusion protein in yeast.'
+    }
+];
+
+To ensure the engineered yeast remains in close proximity to *Helicobacter pylori*, we designed the adhesion system. Through three cycles of D-B-T-L, we constructed the system and successfully validated the feasibility of the entire setup.
+
+---
+
+#### D-B-T-L: Feasibility of Cell Wall Fusion Protein Expression
+
+We use Sed1, a cell wall anchoring protein, as a tool to anchor target proteins to the yeast cell wall. To verify the anchoring function of Sed1, we first designed an EGFP-Sed1 fusion protein to characterize the feasibility of expressing Sed1 fusion proteins on the cell wall and established an experimental method for extracting cell wall fusion proteins.
+
+##### Design
+
+We designed an expression plasmid for the EGFP-Sed1 fusion protein, using the GAL1,10 promoter for induced expression, and added a 6xHis tag at the C-terminus for subsequent purification and detection. EGFP, as a reporter protein, allows for the characterization of the expression level and anchoring effect of the fusion protein through changes in fluorescence intensity.
+
+
+
+<Plasmid plasmids={plasmid1} />
+
+
+![Figure 1](https://static.igem.wiki/teams/5870/engineering/adhesionsys/figure2.svg)
+
+<p class="figure-caption"><b>Figure 1:</b> PCR verification of positive clones and recombinant plasmid for EGFP-Sed1 construct. Lanes 2-4: Colony PCR products from single clones, showing the expected ~600 bp fragment. Lanes 5-7: PCR products from the corresponding purified plasmids, confirming the successful construction of the pESC-URA-pOpM-EGFP-Sed1 plasmid.</p>
+
+
+##### Build
+
+Using a yeast competent cell preparation kit, we prepared yeast competent cells by chemical method, transformed the plasmid into yeast cells, and then cultured them on the corresponding nutrient-deficient medium to obtain positive transformants.
+
+![Figure 2](https://static.igem.wiki/teams/5870/engineering/adhesionsys/egfp-transformation-result.webp)
+
+<p class="figure-caption"><b>Figure 2:</b> Transformation results.</p>
+
+##### Test
+We cultured the transformants overnight in SD-URA medium containing 2% glucose, and then transferred the cells to SC-URA medium containing 2% galactose for induced expression. We took samples at 0h, 1h, 2h, 3h, 4h, 6h, 12h, 16h, 20h, and 24h after induction and measured the fluorescence intensity of the cells using a microplate reader to evaluate the expression level of the EGFP-Sed1 fusion protein. The results showed that as the induction time increased, the fluorescence intensity of the cells gradually increased, indicating that the EGFP-Sed1 fusion protein was successfully expressed and anchored to the cell wall, and the expression level showed a clear time gradient.
+
+![Figure 3](https://static.igem.wiki/teams/5870/engineering/adhesionsys/egfp-fluo.webp)
+
+<p class="figure-caption"><b>Figure 3:</b> EGFP fluorescence intensity vs. time.</p>
+
+To further verify whether the EGFP-Sed1 fusion protein was successfully anchored to the cell wall, we used a cell wall protein extraction method. We used Lyticase to specifically hydrolyze the cell wall to specifically extract cell wall proteins while avoiding interference from intracellular proteins.
+
+Due to the action of Lyticase, the EGFP we extracted was only a fragment, but the experimental results still indicated that the EGFP-Sed1 fusion protein was successfully expressed and anchored to the cell wall, and the expression level showed a clear time gradient.
+
+We performed purification verification on the extracted cell wall proteins, using IDA-Ni magnetic beads to separate the target protein with a His tag. We also performed SDS-PAGE and Western Blot verification on both the total protein and the purified protein. The results showed clear protein fragment bands, further verifying the successful expression and anchoring of the EGFP-Sed1 fusion protein.
+
+![Figure 4](https://static.igem.wiki/teams/5870/engineering/adhesionsys/egfp-time-sds.webp)
+
+<p class="figure-caption"><b>Figure 4:</b> SDS-PAGE results of extracted and purified cell wall EGFP-Sed1 protein. </p>
+
+Further Western Blot verification using an Anti-His antibody strongly supported our design hypothesis with the specific antigen-antibody interaction, proving the successful expression and anchoring of the EGFP-Sed1 fusion protein.
+
+![Figure 5](https://static.igem.wiki/teams/5870/engineering/adhesionsys/egfp-time-wb.webp)
+
+<p class="figure-caption"><b>Figure 5:</b> Western blot results of extracted and purified cell wall EGFP-Sed1 protein. </p>
+
+##### Learn
+
+Through the above experiments, we successfully verified the expression and anchoring function of the EGFP-Sed1 fusion protein in yeast cells and established effective methods for cell wall protein expression and verification. The time-gradient change in fluorescence intensity and the results of SDS-PAGE and Western Blot all support our design hypothesis. This result provides a solid foundation for our subsequent use of Sed1 to anchor other target proteins (hCEACAM1ND), further advancing our understanding and application of the cell wall fusion protein expression system.
+
+---
+
+#### D-B-T-L: Feasibility of hCEACAM1ND-Sed1 (C1ND) Fusion Protein Expression
+
+After successfully verifying the expression and anchoring function of the EGFP-Sed1 fusion protein, we further designed and verified the expression of the hCEACAM1ND-Sed1 fusion protein to achieve the specific application of the cell wall anchoring function in our project.
+
+##### Design
+
+Following the design idea of EGFP-Sed1, we designed the expression plasmid for the C1ND-Sed1 fusion protein, also using the GAL1,10 promoter for induced expression, and added a 6xHis tag at the C-terminus for subsequent purification and detection. As the target protein in our project, the successful expression and anchoring of C1ND are of great significance for achieving cell wall functionalization.
+
+export const plasmid2 = [
+    {
+        partNumber: 'pESC-URA-pOpM-C1ND-Sed1',
+        file: 'pESC-URA-pOpM-C1ND-Sed1.gbk',
+        description: 'Plasmid for expressing hCEACAM1ND-Sed1 fusion protein in yeast.'
+    }
+];
+
+<Plasmid plasmids={plasmid2} />
+
+
+{/* <!-- 这里放交互式质粒展示 pESC-URA-pOpM-C1ND-Sed1.gbk--> */}
+
+![Figure 6](https://static.igem.wiki/teams/5870/engineering/adhesionsys/figure4.svg)
+
+<p class="figure-caption"><b>Figure 6:</b> PCR verification of C1ND gene cloning and plasmid construction. Lanes 2-4: Colony PCR products from monoclonal yeasts, showing the expected insert fragment. Lanes 5-7: PCR products amplified from the corresponding purified recombinant plasmids (pESC-URA-pOpM-C1ND-Sed1), confirming the successful cloning of the HopQ gene. The DNA molecular weight marker (lane 1) is used for fragment size determination. </p>
+
+##### Build
+
+Using the same method as for EGFP-Sed1, we prepared yeast competent cells, transformed the C1ND-Sed1 plasmid into yeast cells, and then cultured them on the corresponding nutrient-deficient medium to obtain positive transformants.
+
+
+![Figure 7](https://static.igem.wiki/teams/5870/engineering/adhesionsys/image-1.webp)
+
+<p class="figure-caption"><b>Figure 7:</b> Transformation results. </p>
+
+##### Test
+We used the induced expression and cell wall protein extraction methods established in the EGFP-Sed1 experiment to verify the expression of the C1ND-Sed1 fusion protein. We cultured the transformants overnight in SD-URA medium containing 2% glucose, and then transferred the cells to SC-URA medium containing 2% galactose for induced expression.
+
+We took samples at different time points after induction and extracted cell wall proteins using the previously established Lyticase method. We also used IDA-Ni magnetic beads to separate the target protein with a His tag. Subsequently, we performed SDS-PAGE and Western Blot verification on both the total protein and the purified protein. The results obtained all indicated that we successfully expressed the C1ND-Sed1 fusion protein on the yeast cell wall, and the expression level showed a clear time gradient.
+
+![Figure 8](https://static.igem.wiki/teams/5870/engineering/adhesionsys/c1nd-time-sds.webp)
+
+<p class="figure-caption"><b>Figure 8:</b> SDS-PAGE results of extracted and purified cell wall C1ND-Sed1 protein. </p>
+
+![Figure 9](https://static.igem.wiki/teams/5870/engineering/adhesionsys/c1nd-time-wb.webp)
+
+<p class="figure-caption"><b>Figure 9:</b> Western blot results of extracted and purified cell wall C1ND-Sed1 protein. </p>
+
+##### Learn
+
+Through the above experiments, we successfully verified the expression and anchoring function of the C1ND-Sed1 fusion protein in yeast cells. The results of SDS-PAGE and Western Blot both support our design hypothesis, proving the successful expression and anchoring of the C1ND-Sed1 fusion protein. This result not only verifies the feasibility of our design but also provides a solid foundation for our subsequent experiments, advancing our understanding and application of the cell wall fusion protein expression system.
+
+---
+
+#### D-B-T-L: Recombinant Expression and Purification of Target Molecule HopQ
+
+To verify the function of the C1ND-Sed1 fusion protein, we chose its target molecule, HopQ. HopQ is an important adhesion protein on the surface of *H. pylori* that can bind to hCEACAM1ND. To conduct subsequent binding capacity verification experiments, we first need to recombinantly express and purify the HopQ protein in *E. coli*.
+
+##### Design
+We designed the expression plasmid for HopQ, using the lac promoter for induced expression, and added a 6xHis tag at the C-terminus for subsequent purification and detection.
+
+export const plasmid3 = [
+    {
+        partNumber: 'pET-15b-HopQAD-FLAG',
+        file: 'pET-15b-HopQAD-FLAG.gbk',
+        description: 'Plasmid for expressing HopQ protein in E. coli.'
+    }
+];
+
+<Plasmid plasmids={plasmid3} />
+
+![Figure 10](https://static.igem.wiki/teams/5870/engineering/adhesionsys/figure1.svg)
+<p class="figure-caption"><b>Figure 10:</b> PCR verification of HopQ gene cloning and plasmid construction. Lanes 2-4: Colony PCR products from monoclonal yeasts, showing the expected insert fragment. Lanes 5-7: PCR products amplified from the corresponding purified recombinant plasmids (pET-15b-HopQAD-FLAG), confirming the successful cloning of the HopQ gene. The DNA molecular weight marker (lane 1) is used for fragment size determination. </p>
+
+
+##### Build
+We transformed the HopQ expression plasmid into *E. coli* BL21(DE3) competent cells and then cultured them on LB medium containing ampicillin to obtain positive transformants.
+
+![Figure 11](https://static.igem.wiki/teams/5870/engineering/adhesionsys/hopq-dh5a.webp)
+<p class="figure-caption"><b>Figure 11:</b>Transformation results. </p>
+
+
+##### Test
+We cultured the transformants overnight in LB medium containing ampicillin, and then transferred the cells to new LB medium for induced expression. We used IPTG as an inducer and took samples at different time points and different IPTG concentrations to verify the expression of the HopQ protein using SDS-PAGE and Western Blot. The results showed that the HopQ protein was successfully expressed, and clear protein bands could be detected at different time points after induction.
+
+![Figure 12](https://static.igem.wiki/teams/5870/engineering/adhesionsys/hopq-time-sds.webp)<br/>
+<p class="figure-caption"><b>Figure 12:</b> Time gradient of HopQ protein expression. </p>
+
+![Figure 13](https://static.igem.wiki/teams/5870/engineering/adhesionsys/hopq-iptg-sds.webp)<br/>
+<p class="figure-caption"><b>Figure 13:</b> IPTG gradient of HopQ protein expression. </p>
+
+![Figure 14](https://static.igem.wiki/teams/5870/engineering/adhesionsys/hopq-time-wb.webp)<br/>
+<p class="figure-caption"><b>Figure 14:</b> Western blot results of HopQ protein expression (time gradient). </p>
+
+![Figure 15](https://static.igem.wiki/teams/5870/engineering/adhesionsys/hopq-iptg-wb.webp)<br/>
+<p class="figure-caption"><b>Figure 15:</b> Western blot results of HopQ protein expression (IPTG gradient). </p>
+
+
+##### Learn
+Through the above experiments, we successfully achieved the recombinant expression of the HopQ protein in *E. coli* and obtained the optimal parameters for recombinant protein expression (0.5mM IPTG, 16h, 25°C). From this, we further obtained a large amount of high-purity recombinant HopQ protein, providing a solid foundation for subsequent binding capacity verification experiments.
+
+---
+
+#### D-B-T-L: Establishing a Modified Immunocytofluorescence (ICF) Assay to Verify the Binding Capacity of hCEACAM1ND-Sed1 (C1ND) Fusion Protein with the Adhesion Target Protein HopQ
+After successfully verifying the expression and anchoring function of the C1ND-Sed1 fusion protein, we further designed and established a Modified Immunocytofluorescence (ICF) Assay to verify the binding capacity of the C1ND-Sed1 fusion protein with its adhesion target protein HopQ. This experiment is of great significance for evaluating the function of our designed cell wall fusion protein in practical applications.
+
+##### Design
+We designed a Modified Immunocytofluorescence (ICF) Assay, using the HopQ protein as an intermediate molecule for fluorescent staining to characterize the protein-protein binding capacity through fluorescent signals.
+
+Specifically, we first incubated the yeast cells expressing the C1ND-Sed1 fusion protein with purified HopQ protein, allowing HopQ to bind to C1ND-Sed1. Subsequently, we used an Anti-His antibody to recognize the HopQ protein and detected it with a fluorescently labeled secondary antibody. By observing the fluorescent signal of the cells under a fluorescence microscope, we can evaluate the binding capacity of C1ND-Sed1 and HopQ.
+
+We also designed multiple control groups, including wild-type yeast cells that do not express C1ND-Sed1 and experimental groups without the addition of HopQ protein, to ensure the reliability and specificity of the experimental results.
+
+|   | Blank Control | Background Control | Background Control | Experimental Group |
+| :-: | :-: | :-: | :-: | :-: |
+| Yeast Cells | C1ND- | C1ND- | C1ND+ | C1ND+ |
+| HopQ Protein | HopQ- | HopQ+ | HopQ- | HopQ+ |
+
+##### Build
+According to the design plan, we prepared yeast cells expressing the C1ND-Sed1 fusion protein and purified the HopQ protein. Subsequently, we incubated different yeast cells with the HopQ protein to ensure a sufficient binding reaction. Then, we performed the primary antibody incubation with the Anti-His antibody, followed by the secondary antibody incubation with a fluorescently labeled secondary antibody. Finally, we observed and captured the fluorescent signals of the cells using a fluorescence microscope.
+
+##### Test
+We observed the cell fluorescence signals of different experimental groups under a fluorescence microscope. The results showed that in the experimental group (C1ND +, HopQ +), a clear fluorescent signal appeared on the surface of the yeast cells, indicating that the C1ND-Sed1 fusion protein successfully bound to HopQ. In the blank control group (C1ND -, HopQ -) and the background control group (C1ND -, HopQ +), almost no fluorescent signal was detected, indicating that the experimental results have good specificity and reliability.
+
+
+![Figure 16](https://static.igem.wiki/teams/5870/engineering/adhesionsys/icc.svg)
+
+<p class="figure-caption"><b>Figure 16:</b> Modified Immunocytofluorescence (ICF) Assay Results. The first column (Fig A,D,G,J) shows results in CFW channel, locating yeast cell walls; the second column (Fig B,E,H,K) shows results in Cy3 channel, locating HopQ receptor protein; the third column (Fig C,F,I,L) shows merged images of the first two columns. The first row (Fig A-C) is the experimental group (C1ND +, HopQ +); the second and third rows (Fig D-I) is the background control group (C1ND-, HopQ+; C1ND+, HopQ- ); the fourth row (Fig J-L) is the blank group (C1ND-, HopQ-). </p>
+
+##### Learn
+
+We successfully established a Modified Immunocytofluorescence (ICF) Assay to determine the binding capacity of C1ND-Sed1 and HopQ. The experimental results show that the C1ND-Sed1 fusion protein can effectively bind to HopQ, verifying the function of the adhesion system and supporting the function of our designed cell wall fusion protein in practical applications. This result not only supports our design hypothesis but also provides an important experimental basis for our subsequent research, advancing our understanding and application of cell wall fusion protein functionalization.

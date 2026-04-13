@@ -1,0 +1,51 @@
+---
+import { Link } from 'accessible-astro-components'
+import myImage from "../assets/jpg/icon1.png"
+import { Image } from 'astro:assets';
+/**
+ * Logo Component
+ *
+ * @description Logo description
+ */
+interface Props {
+  /**
+   * Whether to load the image eagerly or lazily
+   * @default 'eager'
+   */
+  loading?: 'eager' | 'lazy'
+}
+
+const { loading = 'eager' }: Props = Astro.props
+---
+
+<Link href="/" class="group flex items-center gap-4">
+  <Image
+    src={myImage}
+    alt="NJNU"
+    width="65"
+    loading={loading}
+    class="group-hover:animate-[shake_0.4s_ease-in-out]"
+  />
+  <span class="team-name">“智绘心光”艺术疗愈研究团队</span>
+  <!-- 这是团队的名字 pidy 2026.2.26 -->
+</Link>
+
+<style>
+  .team-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--background-color);  /* 字体设置为变量background-colr的颜色  pidy 2026.2.27 */ 
+    transition: color 0.4s ease; /*  /* 文本颜色变化时添加0.4秒的过渡动画 pidy 2026.2.27 */
+  }
+  a:hover .team-name {
+    color: var(--link-hover-color);
+  }
+
+  @keyframes shake {    /* 晃动动画 pidy 2026.2.27 */
+    0% { transform: rotate(0deg); }
+    33% { transform: rotate(5deg); }  /* 动画进行到1/3（33%进度）：元素顺时针旋转5度 */
+    66% { transform: rotate(-5deg); } /* 动画进行到2/3（66%进度）：元素逆时针旋转5度 */
+    100% { transform: rotate(0deg); }
+  }
+
+</style>

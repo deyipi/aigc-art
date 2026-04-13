@@ -1,0 +1,36 @@
+LOCUS       bba-25fmg7z6             708 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25FMG7Z6 mCherry (codon optimized for yeast expression) | 
+            type=Coding | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=9ba7996f-bb51-4e63-ab48-ecbd9801ac0b | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 708)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..708
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..708
+                     /label=mCherry
+                     /note="color: #ff0000; direction: RIGHT"
+ORIGIN
+        1 atggtttcta aaggtgaaga agataacatg gctattatta aggaatttat gagatttaaa
+       61 gtacacatgg aaggttctgt taacggtcat gaatttgaaa ttgaaggaga aggtgaaggt
+      121 agaccatatg aaggtacaca aacagctaaa ttgaaagtaa ccaaaggtgg tcctttgcca
+      181 ttcgcttggg atattttgtc tcctcaattc atgtatggtt ctaaagctta tgtcaagcat
+      241 cctgctgata tcccggatta cttgaaattg tcgttcccag aaggtttcaa gtgggaaaga
+      301 gtcatgaatt ttgaagatgg tggagttgtc actgttacac aagactcttc tttacaagat
+      361 ggtgagttta tatacaaggt gaagttaaga ggtaccaact tcccatcaga cggtccagtt
+      421 atgcaaaaga aaactatggg ttgggaagct tcttctgaaa gaatgtaccc tgaagatgga
+      481 gctttgaaag gtgaaatcaa acaaagattg aaactgaaag acggtggtca ttatgatgct
+      541 gaagtcaaaa caacatataa ggctaagaag ccagtccaat tacctggtgc atacaacgtc
+      601 aatattaagt tggatatcac ttctcataat gaggattata ctattgttga acaatatgaa
+      661 agagctgaag gtagacattc aaccggtggt atggatgagc tgtacaaa
+//

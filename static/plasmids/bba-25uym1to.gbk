@@ -1,0 +1,21 @@
+LOCUS       bba-25uym1to              26 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25UYM1TO HRH1-R | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=09f7364c-edd2-4c11-a699-2e8c202e4227 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 26)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..26
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 ggaccttata tgcaagatcc gcttga
+//

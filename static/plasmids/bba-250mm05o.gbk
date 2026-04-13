@@ -1,0 +1,37 @@
+LOCUS       bba-250mm05o             750 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_250MM05O A quorum-quenching N-acyl-homoserine lactonase AiiA | 
+            type=Coding | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=9df88241-c045-4375-974b-5d513b5e28e8 | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 750)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..750
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..750
+                     /label=AiiA
+                     /note="color: #ff00ff; direction: RIGHT"
+ORIGIN
+        1 atgacagtca agaagttata ttttgttcct gctggtagat gcatgttaga tcattcatca
+       61 gttaactccc gtttgacacc tggtaatttg ctaaacttac ctgtgtggtg ttacttattg
+      121 gaaacagaag aaggtttaat tttagttgat acaggtatgc cagaatccgc agttaataat
+      181 gaaaatttgt ttgacggtac cttcgtagaa ggtcaaattt tgccaaagat gactgaagaa
+      241 gacagaattg ttaacatctt gaaaagagtt ggttatggtc cagaggactt actttacatc
+      301 atatcttctc atttgcattt tgatcatgct ggtggtaatg gtgcagtaac taatacacca
+      361 attatagttc aaagagctga gtatgaggct gcccaacatt cagaagagta cttaaaagaa
+      421 tgcattttgc ctaatttaaa ttataaaatt attgaaggtg attacgaagt tgtaccaggt
+      481 gtccaattgt tgcacactcc tggtcataca ccaggtcatc aatctttatt gatcgaaacc
+      541 gagaaaagtg gtcctgtgtt attaactatc gatgcttctt acacaaaaga aaattttgaa
+      601 gatgaagtcc ctttcgctgg tttcgatccc gaattggctc tgtcttctat aaagagatta
+      661 aaagaagttg tcatgaagga aaaacctatt gtttttttcg gtcatgacat tgaacaagaa
+      721 aggggctgta aagaatttcc agaatatatc
+//

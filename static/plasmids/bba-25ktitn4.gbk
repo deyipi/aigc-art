@@ -1,0 +1,102 @@
+LOCUS       bba-25ktitn4            2935 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25KTITN4 Mating pathway inducible AiiA enzyme | type=Device | 
+            status=published | updated=2025-10-03 | license=cc-by-4.0 | 
+            uuid=51c88522-6952-4090-8157-41116229958b | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 2935)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..2935
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     promoter        1..1636
+                     /label=pFUS1
+                     /note="color: #99cc00; direction: RIGHT"
+     promoter        1644..1662
+                     /label=T7 promoter
+                     /note="promoter for bacteriophage T7 RNA polymerase"
+                     /note="color: #ffffff; direction: RIGHT"
+     sig_peptide     1676..1951
+                     /codon_start=1
+                     /label=preOst1-pro-alpha-MF secretion signal
+                     /note="color: #ffcc00"
+                     /translation="MRQVWFSWIVGLFLCFFNVSSAAPVNTTTEDETAQIPAEAVIGYS
+                     DLEGDFDVAVLPFSNSTNNGLLFINTTIASIAAKEEGVSLEKREAEA"
+     CDS             1952..1969
+                     /codon_start=1
+                     /product="6xHis affinity tag"
+                     /label=6xHis
+                     /note="color: #cc99b2"
+                     /translation="HHHHHH"
+     CDS             1970..2719
+                     /codon_start=1
+                     /label=AiiA
+                     /note="color: #ff00ff"
+                     /translation="MTVKKLYFVPAGRCMLDHSSVNSRLTPGNLLNLPVWCYLLETEEG
+                     LILVDTGMPESAVNNENLFDGTFVEGQILPKMTEEDRIVNILKRVGYGPEDLLYIISSH
+                     LHFDHAGGNGAVTNTPIIVQRAEYEAAQHSEEYLKECILPNLNYKIIEGDYEVVPGVQL
+                     LHTPGHTPGHQSLLIETEKSGPVLLTIDASYTKENFEDEVPFAGFDPELALSSIKRLKE
+                     VVMKEKPIVFFGHDIEQERGCKEFPEYI"
+     terminator      2746..2935
+                     /gene="S. cerevisiae CYC1"
+                     /label=CYC1 terminator
+                     /note="transcription terminator for CYC1"
+                     /note="color: #ffffff; direction: RIGHT"
+ORIGIN
+        1 aatctcagag gctgagtctc atttttctca aggaaaccat gcagaagctg ttgcgaagtt
+       61 gacatccgca gctcagtcga accccaatga cgagcaaatg tcaactattg aatcattaat
+      121 tcaaaaaatc gcaggatacg tcatggacaa ccgtagtggt ggtagtgacg cctcgcaaga
+      181 tcgtgctgct ggtggtggtt catcttttat gaacacttta atggcagact ctaagggttc
+      241 ttcccaaacg caactaggaa aactagcttt gttagccaca gtgatgacac actcatcaaa
+      301 taaaggttct tctaacagag ggtttgacgt agggactgtc atgtcaatgc taagtggttc
+      361 tggcggcggg agccaaagta tgggtgcttc cggcctggct gccttggctt ctcaattctt
+      421 taagtcaggt aacaattccc aaggtcaggg acaaggtcaa ggtcaaggtc aaggtcaagg
+      481 acaaggtcaa ggtcaaggtt cttttactgc tttggcgtct ttggcttcat ctttcatgaa
+      541 ttccaacaac aataatcagc aaggtcaaaa tcaaagctcc ggtggttcct cctttggagc
+      601 actggcttct atggcaagct cttttatgca ttccaataat aatcagaact ccaacaatag
+      661 tcaacagggc tataaccaat cctatcaaaa cggtaaccaa aatagtcaag gttacaataa
+      721 tcaacagtac caaggtggca acggtggtta ccaacaacaa cagggacaat ctggtggtgc
+      781 tttttcctca ttggcctcca tggctcaatc ttacttaggt ggtggacaaa ctcaatccaa
+      841 ccaacagcaa tacaatcaac aaggccaaaa caaccagcag caataccagc aacaaggcca
+      901 aaactatcag catcaacaac agggtcagca gcagcaacaa ggccactcca gttcattctc
+      961 agctttggct tccatggcaa gttcctacct gggcaataac tccaattcaa attcgagtta
+     1021 tgggggccag caacaggcta atgagtatgg tagaccgcaa cagaatggtc aacagcaatc
+     1081 caatgagtac ggaagaccgc aatacggcgg aaaccagaac tccaatggac agcacgaatc
+     1141 cttcaatttt tctggcaact tttctcaaca gaacaataac ggcaaccaga accgctactg
+     1201 aacgatgatt cagttcgcct tctatccttt gtttacgtat ttgtttatat atataacttt
+     1261 attttttttt attaattggg ctgcaagaca attttgttgt cagtgatgcc tcaatccttc
+     1321 ttttgcttcc atatttacca tgtggaccct ttcaaaacag agttgtatct ctgcaggatg
+     1381 ccctttttga cgtattgaat ggcataattg cactgtcact tttcgcgctg tctcattttg
+     1441 gtgcgatgat gaaacaaaca tgaaacgtct gtaatttgaa acaaataacg taattctcgg
+     1501 gattggtttt atttaaatga caatgtaaga gtggctttgt aaggtatgtg ttgctcttaa
+     1561 aatatttgga tacgacatcc tttatctttt ttcctttaag agcaggatat aagccatcaa
+     1621 gtttctgaaa atcaaaggat ccgtaatacg actcactata gggcccgggg ccaccatgag
+     1681 acaagtttgg ttttcctgga tcgttggttt attcttatgc tttttcaatg tgtcttctgc
+     1741 tgccccagtc aacactacta ctgaagatga aactgcccaa attcccgctg aagctgttat
+     1801 tggctactca gatttggaag gtgattttga tgtggctgtt ttgccattta gtaatagtac
+     1861 taataatggt ctgttattca ttaacacaac catcgcctct attgccgcca aagaagaagg
+     1921 tgtttcctta gaaaagagag aagctgaagc tcaccaccat caccatcata tgacagtcaa
+     1981 gaagttatat tttgttcctg ctggtagatg catgttagat cattcatcag ttaactcccg
+     2041 tttgacacct ggtaatttgc taaacttacc tgtgtggtgt tacttattgg aaacagaaga
+     2101 aggtttaatt ttagttgata caggtatgcc agaatccgca gttaataatg aaaatttgtt
+     2161 tgacggtacc ttcgtagaag gtcaaatttt gccaaagatg actgaagaag acagaattgt
+     2221 taacatcttg aaaagagttg gttatggtcc agaggactta ctttacatca tatcttctca
+     2281 tttgcatttt gatcatgctg gtggtaatgg tgcagtaact aatacaccaa ttatagttca
+     2341 aagagctgag tatgaggctg cccaacattc agaagagtac ttaaaagaat gcattttgcc
+     2401 taatttaaat tataaaatta ttgaaggtga ttacgaagtt gtaccaggtg tccaattgtt
+     2461 gcacactcct ggtcatacac caggtcatca atctttattg atcgaaaccg agaaaagtgg
+     2521 tcctgtgtta ttaactatcg atgcttctta cacaaaagaa aattttgaag atgaagtccc
+     2581 tttcgctggt ttcgatcccg aattggctct gtcttctata aagagattaa aagaagttgt
+     2641 catgaaggaa aaacctattg tttttttcgg tcatgacatt gaacaagaaa ggggctgtaa
+     2701 agaatttcca gaatatatct aagcttggta ccgcggctag ctaagatccg ctctaaccga
+     2761 aaaggaagga gttagacaac ctgaagtcta ggtccctatt tattttttta tagttatgtt
+     2821 agtattaaga acgttattta tatttcaaat ttttcttttt tttctgtaca gacgcgtgta
+     2881 cgcatgtaac attatactga aaaccttgct tgagaaggtt ttgggacgct cgaag
+//

@@ -1,0 +1,21 @@
+LOCUS       bba-25h84lmx              44 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25H84LMX Gpa1-tail-q | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=cd708deb-804d-485c-8347-a405ee075fd0 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 44)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..44
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 caccaaattg tattctttaa ggttttgctg gatgattaga tcgg
+//

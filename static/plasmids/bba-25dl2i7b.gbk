@@ -1,0 +1,30 @@
+LOCUS       bba-25dl2i7b             324 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25DL2I7B Human CEACAM1 N-terminal domain (C1ND) | 
+            type=Protein_Domain | status=published | updated=2025-10-02 | 
+            license=cc-by-4.0 | uuid=686973e2-daa5-42d8-84e2-14383ab459bb | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 324)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..324
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             1..324
+                     /label=C1ND
+                     /note="color: #ffff99; direction: RIGHT"
+ORIGIN
+        1 atgcaattga ccaccgaaag tatgccattc aacgttgctg agggtaaaga agttttgttg
+       61 ttggtccata atttgcctca acaattgttt ggttattcct ggtataaagg tgaaagggtt
+      121 gatggcaaca gacaaatcgt tggatatgct attggtaccc aacaagctac tccaggtcca
+      181 gctaattcgg gtagagaaac tatttaccca aatgcttcat tgttgatcca aaatgttaca
+      241 cagaacgata ctggtttcta tactctacaa gtgataaaaa gtgacttggt taatgaagag
+      301 gcaactggtc aatttcatgt gtac
+//

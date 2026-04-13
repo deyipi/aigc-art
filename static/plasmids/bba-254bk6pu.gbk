@@ -1,0 +1,29 @@
+LOCUS       bba-254bk6pu             276 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_254BK6PU preOst1-pro-alpha-MF (pOpM) secretion signal | 
+            type=Protein_Domain | status=published | updated=2025-10-03 | 
+            license=cc-by-4.0 | uuid=d1b9eb0f-6635-49d1-a6d8-e2202c535121 | 
+            repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 276)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..276
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     sig_peptide     1..276
+                     /label=preOst1-pro-alpha-MF secretion signal
+                     /note="color: #cc99b2"
+ORIGIN
+        1 atgagacaag tttggttttc ctggatcgtt ggtttattct tatgcttttt caatgtgtct
+       61 tctgctgccc cagtcaacac tactactgaa gatgaaactg cccaaattcc cgctgaagct
+      121 gttattggct actcagattt ggaaggtgat tttgatgtgg ctgttttgcc atttagtaat
+      181 agtactaata atggtctgtt attcattaac acaaccatcg cctctattgc cgccaaagaa
+      241 gaaggtgttt ccttagaaaa gagagaagct gaagct
+//

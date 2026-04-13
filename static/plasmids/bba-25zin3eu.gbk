@@ -1,0 +1,21 @@
+LOCUS       bba-25zin3eu              18 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25ZIN3EU EGFP-F (pET28a-EGFP) | type=Primer | status=published |
+            updated=2025-10-02 | license=cc-by-4.0 | 
+            uuid=0a65d454-ee1f-43e1-a0e4-75d4b2cca060 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 18)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..18
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 atggtgagca agggcgag
+//

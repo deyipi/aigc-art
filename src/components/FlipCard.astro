@@ -1,0 +1,91 @@
+---
+import Card from './Card.astro'
+
+const {
+  class: className,
+  title = 'Default title',
+  img = 'https://placehold.co/640x360',
+  imageComponent,
+  imageAlt = '',
+  width = 640,
+  height = 360,
+  inferSize = false,
+  imageScale = 1,
+  headingLevel = 'h3',
+  headingSize = 'h6',
+  footer = '',
+  fullHeight = false,
+  objectPosition = 'center',
+} = Astro.props
+---
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <Card title={title} img={img} imageAlt={imageAlt} footer={footer} width={width} height={height}
+      objectPosition={objectPosition} imageScale={imageScale},>
+        <p class="description"><slot /></p>
+      </Card>
+    </div>
+    <div class="flip-card-back">
+      <div class="back-content">
+        <slot name="back" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const flipCards = document.querySelectorAll('.flip-card')
+  flipCards.forEach(card => {
+    const inner = card.querySelector('.flip-card-inner')
+    card.addEventListener('click', () => {
+      inner.classList.toggle('flipped')
+    })
+  })
+</script>
+
+<style>
+  .flip-card { 
+    perspective: 1000px; 
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 2 / 3;
+    cursor: pointer; 
+  }
+  .flip-card-inner { 
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.6s; 
+    transform-style: preserve-3d; 
+  }
+  .flip-card-inner.flipped { 
+    transform: rotateY(180deg); 
+  }
+  .flip-card-front, 
+  .flip-card-back { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    backface-visibility: hidden; 
+  }
+  .flip-card-back { 
+    background-color: var(--link-color); 
+    color: white; 
+    font-family: 'Tangerine'!important;
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transform: rotateY(180deg); 
+    padding: 1rem; 
+    text-align: center; 
+    border-radius: 0.5rem;
+  }
+
+  .description {
+    font-size: 1.05rem;
+  }
+
+</style>

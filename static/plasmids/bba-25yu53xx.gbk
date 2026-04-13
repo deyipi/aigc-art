@@ -1,0 +1,21 @@
+LOCUS       bba-25yu53xx              19 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25YU53XX tCYC1-R | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=a842a05f-9fab-4390-b32c-a8480bd502c6 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 19)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..19
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 cgtacacgcg tctgtacag
+//

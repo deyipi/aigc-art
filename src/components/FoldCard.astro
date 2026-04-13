@@ -1,0 +1,167 @@
+---
+import { Heading } from 'accessible-astro-components'
+
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  class?: string
+  title?: string
+  headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  footer?: string
+  fullHeight?: boolean
+}
+
+const {
+  class: className,
+  title = 'Default title',
+  headingLevel = 'h3',
+  headingSize = 'h6',
+  footer = '',
+  fullHeight = true,
+  ...rest
+} = Astro.props
+---
+
+<article class:list={['card', { 'card--full-height': fullHeight }, className]} {...rest}>
+  <div class="content">
+    <div class="left-column">
+      <slot name="left" />
+    </div>
+
+    <div class="right-column">
+      <div class="title">
+        <Heading level={headingLevel} size={headingSize}>{title}</Heading>
+      </div>
+
+      <p class="description"><slot /></p>
+
+      {footer && <small class="footer">{footer}</small>}
+    </div>
+  </div>
+
+  <div class="more-section">
+    <div class="expanded-content">
+      <div class="expanded-inner">
+        <slot name="more" />
+      </div>
+    </div>
+    <button class="toggle-btn" type="button">Click for more</button>
+  </div>
+</article>
+
+<script>
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  const btn = card.querySelector('.toggle-btn');
+  const content = card.querySelector('.expanded-content');
+  if (!btn || !content) return;
+
+  content.style.height = '0px'; // 初始折叠
+  btn.addEventListener('click', () => {
+    const expanded = content.style.height && content.style.height !== '0px';
+    if (expanded) {
+      content.style.height = '0px';
+      btn.textContent = 'Click for more';
+    } else {
+      // 用 scrollHeight 动态计算高度
+      content.style.height = content.scrollHeight + 'px';
+      btn.textContent = 'Collapse';
+    }
+  });
+});
+</script>
+
+<style>
+
+:where(.card) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--link-color);
+  border-radius: 0.5rem;
+  max-inline-size: 60ch;
+  width: 100%;    
+  margin-inline: auto; 
+  overflow: hidden;
+  padding: 1rem; /* 卡片整体内边距 */
+  font-size: 1.1rem;
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+:where(.card:hover) {
+  box-shadow: 0 0 0 0.25rem var(--foreground-color);
+}
+
+:where(.content) {
+  display: flex;
+  flex-direction: row; /* 大屏左右排列 */
+  gap: 1rem;
+  flex-wrap: wrap; /* 小屏自动换行 */
+}
+
+/* 左列 */
+.left-column {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem; /* 内边距 */
+}
+
+/* 右列 */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem; /* 内边距 */
+}
+
+/* 折叠区域 */
+.more-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.expanded-content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background: rgba(0,0,0,0.05);
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 0; /* 初始折叠 */
+}
+
+.expanded-inner {
+  padding: 0.5rem; /* 内边距放在内部容器 */
+}
+
+/* 按钮 */
+.toggle-btn {
+  background: var(--link-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.toggle-btn:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* 响应式：小屏幕下左右列上下排列 */
+@media screen and (max-width: 768px) {
+  :where(.content) {
+    flex-direction: column;
+  }
+  .left-column, .right-column {
+    flex: 1 1 100%;
+    padding: 0.5rem 0; /* 上下内边距 */
+  }
+}
+</style>

@@ -1,0 +1,21 @@
+LOCUS       bba-25yamp6h              44 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25YAMP6H Gpa1-tail-i | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=57628361-b723-4409-9cc1-19fc01eeda5c | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 44)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..44
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 aaatagaccg cagtctttaa ggttttgctg gatgattaga tcgg
+//

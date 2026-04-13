@@ -1,0 +1,22 @@
+---
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import Content from "../content/contribution.md"
+
+const toc = [
+  { id: 'parts', text: 'Parts', depth: 4 },
+  { id: 'multiple-knockout', text: 'Multiple Knockout', depth: 5 },
+  { id: 'chimeric-gpcr-signaling-pathway', text: 'Chimeric GPCR signaling pathway', depth: 5 },
+  { id: 'protocol', text: 'Protocol', depth: 4 },
+  { id: 'modified-immunocytofluorescence-icf-assay', text: 'Modified Immunocytofluorescence (ICF) Assay', depth: 5 },
+  { id: 'new-model', text: 'New Model', depth: 4 },
+  { id: 'physical-modeling-of-the-process-of-penetrating-the-gastric-mucus-layer', text: 'Physical modeling of the process of penetrating the gastric mucus layer', depth: 5 },
+  { id: 'new-seir-model-considering-drug-resistance', text: 'New SEIR model considering drug resistance', depth: 5 },
+  { id: 'human-practice---framework-collaboration-and-safety', text: 'Human practice - Framework, Collaboration and Safety', depth: 4 },
+  { id: 'a-blueprint-for-inter-team-collaboration-the-live-biotherapeutics-exchange-meeting', text: 'A Blueprint for Inter-Team Collaboration: The Live Biotherapeutics Exchange Meeting', depth: 5 },
+  { id: 'codifying-safety-the-igem-safety-standard-for-engineered-live-biotherapeutics', text: 'Codifying Safety: The iGEM Safety Standard for Engineered Live Biotherapeutic Products', depth: 5 }
+];
+---
+<ArticleLayout title="Contribution" toc={toc} featuredImage="https://static.igem.wiki/teams/5870/header/contribution.webp">
+    <Content />
+</ArticleLayout>
+

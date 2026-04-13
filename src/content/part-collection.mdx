@@ -1,0 +1,260 @@
+import PlasmidTable from '../components/PlasmidTable.astro';
+import { Heading } from "accessible-astro-components";
+export const toc = [
+    { id: 'sensorySystem', text: 'Sensory System', depth: 2 },
+    { id: 'sensorySystemGPCR1', text: 'Chimeric GPCR', depth: 4},
+    { id: 'sensorySystemGPCR2', text: 'Chimeric GPCR', depth: 4},
+    { id: 'sensorySystemReporters', text: 'Reporters', depth: 4},
+    { id: 'knockOutStrategy', text: 'Knock-out Strategy', depth: 2},
+    { id: 'adhesionModule', text: 'Adhesion Module', depth: 2},
+    { id: 'keyProteinsAndDomains', text: 'Key Proteins & Domains', depth: 2},
+    { id: 'References', text: 'References', depth: 2 }
+
+];
+export const sensorySystemGPCR1 = [
+    {
+        partNumber: "BBa_25J9IIZR",
+        file: "bba-25j9iizr.gbk",
+        description: "Encodes a chimeric GPCR of human histamine receptor 4 (HRH4) and yeast *Ste2*. The receptor is activated by histamine, activate the G-protein Gpa1 and then the downstream mating pathway."
+    },
+    {
+        partNumber: "BBa_25QRRCR3",
+        file: "bba-25qrrcr3.gbk", 
+        description: "Encodes a chimeric GPCR of human histamine receptor 3 (HRH3) and yeast *Ste2*. The receptor is activated by histamine and/or Nalpha-methylhistamine, activate the G-protein Gpa1 and then the downstream mating pathway."
+    },
+    {
+        partNumber: "BBa_25BSG0GB",
+        file: "bba-25bsg0gb.gbk",
+        description: "Encodes a chimeric GPCR of human histamine receptor 1 (HRH1) and yeast *Ste2*. The receptor is activated by histamine, activate the G-protein Gpa1 and then the downstream mating pathway."
+    },
+    {
+        partNumber: "BBa_25TM8A5F",
+        file: "bba-25tm8a5f.gbk",
+        description: "Encodes a chimeric GPCR of human histamine receptor 1 (HRH2) and yeast *Ste2*. The receptor is activated by histamine, activate the G-protein Gpa1 and then the downstream mating pathway."
+    }
+];
+export const sensorySystemGPCR2 = [
+    {
+        partNumber: "BBa_25IYJ78Q",
+        file: "bba-25iyj78q.gbk",
+        description: "Encodes the yeast-adapted human histamine receptor 3 and the chimeric yeast GPA1 (KIGⅡ) C5 Gαi type, linked by a P2A coding sequence, acting as a self-splitting module. Addition of histamine or Nalpha-methylhistamine activate them and lead to the activation of yeast mating pathway, thus promoting the expression of downstream genes. This part can be used as a histamine biosensor to drive the reporter gene downstream the pFUS1 promoters. "
+    },
+    {
+        partNumber: "BBa_25FZIUAR",
+        file: "bba-25fziuar.gbk", 
+        description: "Encodes a chimeric Gα protein expressed in *Saccharomyces cerevisiae* with its original C-terminal five amino acids replaced with the homologous mammalian Gαs (QYELL), allowing for the coupling to certain types of mammalian GPCRs. It functionally activates the mating pathway of yeast, and enhance the expression of the downstream genes."
+    },
+    {
+        partNumber: "BBa_251BDE0N",
+        file: "bba-251bde0n.gbk",
+        description: "Encodes a chimeric Gα protein expressed in *Saccharomyces cerevisiae* with its original C-terminal five amino acids replaced with the homologous mammalian Gαq (EYNLV), allowing for the coupling to certain types of mammalian GPCRs. It functionally activates the mating pathway of yeast, and enhance the expression of the downstream genes."
+    },
+    {
+        partNumber: "BBa_25IJ552S",
+        file: "bba-25ij552s.gbk",
+        description: "Encodes a chimeric Gα protein expressed in *Saccharomyces cerevisiae* with its original C-terminal five amino acids replaced with the homologous mammalian Gαi (DCGLF), allowing for the coupling to certain types of mammalian GPCRs. It functionally activates the mating pathway of yeast, and enhance the expression of the downstream genes."
+    },
+    {
+        partNumber: "BBa_25KO3HQL",
+        file: "bba-25ko3hql.gbk",
+        description: "Encodes a 4-AA mutant (L73M, F193S, S359Y, C415R) of human histamine H3 receptor (H3R) with recovered activity when expressed in Saccahromyces cerevisiae. The receptor is activated by histamine and/or Nalpha-methylhistamine and interacts with Gαi protein."
+    }
+];
+export const adhesionModule = [
+    
+    
+    
+    {
+        partNumber: "BBa_25SLPYHA",
+        file: "bba-25slpyha.gbk",
+        description: "Encodes a fusion protein of the N-terminal domain of hCEACAM1 (C1ND) and yeast surface display anchor Sed1. C1ND functions as the binding domain, with a dissociation constant 296 ± 40 nM binding to HopQ a surface protein of *H. pylori* (Hp). Sed1 is used for yeast surface display in *Saccharomyces cerevisiae* and *S. boulardii*. Expressing this fusion protein in yeast displays C1ND on the surface of yeast cell wall, which can be used for interaction investigation or Hp-specific adhesion."
+    },
+    {
+        partNumber: "BBa_254BK6PU",
+        file: "bba-254bk6pu.gbk",
+        description: "Encodes a chimeric secretion signal combining the pre-region of Ost1 secretion signal and the pro-region of alpha mating factor secretion signal that allows for efficient secretion of proteins in *Saccharomyces cerevisiae* and *S. boulardii*."
+    },
+    {
+        partNumber: "BBa_25I5AIHM",
+        file: "bba-25i5aihm.gbk",
+        description: "Encodes the transmembrane domain of a secretory protein Sed1, which is used for yeast surface display in *Saccharomyces cerevisiae* and *S. boulardii*. The protein of interest should be linked to its N-terminal, where often a linker is required. Expressing this fusion protein should display the protein of interest on the surface of yeast cell wall, which can be used for further investigation."
+    },
+    {
+        partNumber: "BBa_25L70G1V",
+        file: "bba-25l70g1v.gbk",
+        description: "Encodes the adhesion domain of HopQ (HopQAD) from *Helicobater pylori*. HopQ is a cell-surface protein in the original organism, with the function of adhesion when interacting with a human glycoprotein CEACAM1 (hCEACAM1) on the surface of gastric mucous.  The soluable adhesion domain is separated and codon-optimized for heterogeneous expression in E. coli, which can be used for adhesion tests with hCEACAM1."
+    },
+    {
+        partNumber: "BBa_25DL2I7B",
+        file: "bba-25dl2i7b.gbk",
+        description: "Encodes the N-terminal domain of hCEACAM1 (C1ND), which is a member of the carcinoembryonic antigen-related cell adhesion molecule (CEACAM) family as receptors of *H. pylori*. C1ND functions as the binding domain, with a dissociation constant 296 ± 40 nM binding to HopQ a surface protein of *H. pylori*. It is codon-optimized for yeast expression."
+    },
+    {
+        partNumber: "BBa_25W6GGDU",
+        file: "bba-25w6ggdu.gbk",
+        description: "(G4S)3 linker, which features 3 repeats of (Gly)₄Ser, reduces the interaction and functional interference between the two proteins or protein domains connected by."
+    },
+    {
+        partNumber: "BBa_25JCWPXX",
+        file: "bba-25jcwpxx.gbk",
+        description: "Encodes an EGFP linked to the N-terminal of Sed1 anchor, which would be secreted and displayed on the surface of yeast cell wall. It can be used as a positive control for yeast surface display by Sed1 anchor."
+    }
+];
+export const sensorySystemReporters = [
+    {
+        partNumber: "BBa_25SLASG1",
+        file: "bba-25slasg1.gbk",
+        description: "Encodes a red fluorescent protein mCherry under the yeast mating pathway downstream promoter pFUS1. If the yeast mating pathway is activated, this fluorescent reporter would express, allowing for observation under a fluorescence microscope or a fluorescence microplate reader. The recommmended excitation/emssion wavelength is 580 nm/ 610 nm."
+    },
+    {
+        partNumber: "BBa_25AC9YKJ",
+        file: "bba-25ac9ykj.gbk", 
+        description: "Encodes the yeast-adapted human histamine receptor 3 and a fluorecent protein mCherry, linked by P2A, a sequence coding the self-splitting peptide P2A. This part functions as a positive control for the expression of yhH3R."
+    },
+    
+    {
+        partNumber: "BBa_25FMG7Z6",
+        file: "bba-25fmg7z6.gbk",
+        description: "Encodes mCherry, a widely used red fluorescent protein derived from the green fluorescent protein (GFP) family. Wavelegnths for maximium excitation/emission are 587 nm / 610 nm."
+    }
+];
+
+export const knockOutStrategy = [
+    {
+        partNumber: "BBa_2511XBG4",
+        file: "bba-2511xbg4.gbk",
+        description: "A double-stranded DNA construct that serves as the template to transcribe sgRNAs targeting *Ste2* and *Sst2* of *Saccahromyce cerevisiae* for improving the efficiency of mating pathway engineering. Only one promoter is needed because the tRNA-linker conducts self-splicing to generate two separate sgRNAs."
+    },
+    {
+        partNumber: "BBa_25CVODN1",
+        file: "bba-25cvodn1.gbk", 
+        description: "A double-stranded DNA construct that serves as the template to transcribe sgRNA targeting *Ste2* of *Saccahromyce cerevisiae*. The transcribed RNA comprises a 20-nt targeting spacer, and a gRNA scaffold for Cas9 binding. It is expected to produce sgRNA that anchors to *Ste2* and recruits Cas9 for gene knockout."
+    },
+    {
+        partNumber: "BBa_25WBTBQ5",
+        file: "bba-25wbtbq5.gbk",
+        description: "A double-stranded DNA construct that serves as the template to transcribe sgRNA targeting *Sst2* of Saccahromyce cerevisae. The transcribed RNA comprises a 20-nt targeting spacer, and a gRNA scaffold for Cas9 binding. It is expected to produce sgRNA that anchors to *Sst2* and recruits Cas9 for gene knockout."
+    },
+    {
+        partNumber: "BBa_25QT2RZU",
+        file: "bba-25qt2rzu.gbk",
+        description: "KanMX selector module conferring kanamycin resistance, for gene disruption in yeast, KanMX4 version."
+    },
+    {
+        partNumber: "BBa_25V9JZM4",
+        file: "bba-25v9jzm4.gbk",
+        description: "Encodes yeast glycine transfer RNA as a self-splicing linkage between two sgRNAs."
+    }
+];
+
+export const keyProteinsAndDomains = [
+    {
+        partNumber: "BBa_25KTITN4",
+        file: "bba-25ktitn4.gbk", 
+        description: "Encodes an N-acyl-L-homoserine lactonase AiiA which inhibits biofilm formation in Gram-negative baterial pathogens. It is regulated by the yeast mating factor pathway downstream promoter pFUS1. In yeasts engineered on the mating pathway, the expression if AiiA can be determined by the modified signalling pathway."
+    },
+    
+    {
+        partNumber: "BBa_250MM05O",
+        file: "bba-250mm05o.gbk",
+        description: "Encodes an N-acyl-L-homoserine lactonase originated from Bacillus licheniformis. AiiA is capable of hydrolizing homoserine lactones, which is a type of autoinducer-2 which mediates quorum sensing. AiiA inhibits biofilm formation in Gram-negative baterial pathogens."
+    },
+    {
+        partNumber: "BBa_25CIGPA2",
+        file: "bba-25cigpa2.gbk",
+        description: "A yeast endogenous terminator used to terminate the transcription process and form a complete expression cassette."
+    },
+    {
+        partNumber: "BBa_25MXY9ZL",
+        file: "bba-25mxy9zl.gbk",
+        description: "Encodes HopQAD with a C-terminal FLAG tag."
+    },
+    {
+        partNumber: "BBa_25H3KNY1",
+        file: "bba-25h3kny1.gbk", 
+        description: "Encodes HopQAD with an N-terminal EGFP tag and a C-terminal FLAG tag. Interaction with other proteins can be measured by direct fluorescence quantification."
+    }
+];
+
+The **HpBuster Part Collection** provides a comprehensive validated set of functional biological parts implementing the adhesion between engineered yeast and *Helicobacter pylori*, a modular platform for the detection and sensing of biomarkers (especially human molecule analogs), a strategy of rapid multi-gene knocking-out, and expressions of key proteins and functional domains in *Saccharomyces cerevisiae*. This collection is designed to offer researchers in synthetic biology and bioengineering, as well as future iGEM teams, a flexible and user-friendly toolkit to promote the application of yeast as a synthetic biology platform. Our Parts Collection is highly flexible and reusable, adaptable to different research needs and experimental designs. At the same time, the HpBuster Part Collection has great potential for future development, allowing for further expansion and optimization to meet a wider range of application scenarios.
+
+To implement the **<a href="https://registry.igem.org/collections/174b16a8-bcdb-49c8-8820-d1fa473d47a7" target="_blank">Adhesion Module</a>**, we designed and validated a set of parts for expressing adhesion proteins on the yeast surface, enabling specific binding to target cells and molecules. This system is supposed to achieve specific Hp adhesion via the natural C1ND-HopQ interaction and stable Sed1-mediated display, with potential for pathological intervention. The C1ND-HopQ pair combined with the Sed1 system has key advantages: 
+- high specificity (Hp-specific HopQ + dimer interface-based binding);
+- clinical adaptability (targeting HopQ Ia subtype + CEACAM target enrichment);
+- environmental tolerance (pH adaptability + stable Sed1 display);
+- simplified operation (no auxiliary proteins);
+- pathological intervention potential (blocking colonization, CagA translocation, and inflammatory pathways);
+- clinical relevance (supported by human gastric tissue evidence) <sup id="back1">[1](#ref1)</sup>,<sup id="back2">[2](#ref2)</sup>,<sup id="back3">[3](#ref3)</sup>.
+
+For the **Sensory System** we developed a set of modified GPCRs based on the concept of chimerizing the extracellular domain of human GPCRs with the intracellular domain of the yeast mating factor signaling pathway GPCRs<sup id="back4">[4](#ref4)</sup>. We also developed another set of modified GPCRs based on the yeastlized-human GPCR approach<sup id="back5">[5](#ref5)</sup>. We also designed and validated a reporter system to detect and quantify GPCR-mediated signal transduction. 
+
+Furthermore, to enhance the sensitivity and specificity of the signal transduction system, we knocked-out two key genes in the yeast signaling pathway, *Ste2* and *Sst2*. To this end, we designed a single-transcript, multi-sgRNA vector system based on the tRNA linking approach<sup id="back6">[6](#ref6)</sup> for rapid, single-vector, multi-gene knockout in yeast. 
+
+Finally, to implement the therapeutic systems and the remaining modules of the HpBuster Project, we designed and implemented an efficient yeast protein expression system, successfully expressing our key proteins, fusion proteins, and domains in yeast.
+
+It is worth noting that all these parts have undergone multiple rounds of the design-build-test-learn engineering cycle to ensure their functional reliability and stability. We believe that these parts not only meet the needs of our project but also provide a solid foundation for future research.
+
+
+**HpBuster Part Collection** consists of the following components:
+
+**Adhesion Module**: This includes parts for expressing adhesion proteins on the yeast surface, allowing for specific binding to target cells or surfaces.
+
+**Sensory System**: This includes two sets of chimeric GPCR receptors designed and validated based on two different approaches, as well as a reporter system for detecting and quantifying GPCR-mediated signal transduction. These parts enable the sensing and detection of specific biomarkers, are highly flexible and reusable, and are suitable for further development to meet broader application needs.
+
+**Knock-out Strategy**: This includes a single-transcript, multi-sgRNA vector knockout system we developed and validated for rapid, single-vector, multi-gene knockout in yeast. These parts enable efficient knockout of multiple genes in yeast, improving the efficiency and precision of gene editing, and have great development potential.
+
+**Key Proteins & Domains**: This includes an efficient yeast protein expression system we designed and implemented for expressing key proteins, fusion proteins, and domains in yeast. These parts enable high-level expression of target proteins, meeting the functional requirements of the therapeutic and adhesion systems, and are highly flexible and reusable.
+
+    <Heading level="h2" id={"adhesionModule"}>Adhesion Module</Heading>
+    This set of parts is designed for expressing adhesion proteins on the yeast surface, enabling specific binding to target cells and molecules. It also contains parts for the expression the adhesin receptor protein HopQAD in *E. coli*.
+
+    We conducted comprehesive validation of the adhesion module, including Protein Interaction Modelling, Molecular Dynamics Simulation of Protein Modelling, Protein Expression and Analysis and Immunofluorescence Assay. The results demonstrated that our adhesion module can specifically bind to *H. pylori* via the C1ND-HopQ interaction and achieve stable surface display through the Sed1 system. This adhesion module has potential applications in pathological intervention, such as blocking *H. pylori* colonization, CagA translocation, and inflammatory pathways, with clinical relevance supported by evidence from human gastric tissue<sup id="back1">[1](#ref1)</sup>,<sup id="back2">[2](#ref2)</sup>,<sup id="back3">[3](#ref3)</sup>.
+    
+    For more details, please refer to our document on <a href="https://registry.igem.org/collections/174b16a8-bcdb-49c8-8820-d1fa473d47a7" target="_blank"> iGEM Registry</a>.
+
+    <PlasmidTable plasmids={adhesionModule} />
+
+    <Heading level="h2" id={"sensorySystem"}>Sensory System</Heading>
+    These parts enable the sensing and detection of specific biomarkers and the quantification of signal transduction.
+    
+    <Heading level="h4" id={"sensorySystemGPCR1"}>Chimeric GPCR</Heading>
+    This set of parts is a chimeric GPCR receptor developed based on the idea of chimerizing the extracellular domain of a human GPCR receptor with the intracellular domain of a yeast mating factor signaling pathway GPCR receptor.
+
+    <PlasmidTable plasmids={sensorySystemGPCR1} />
+    
+    <Heading level="h4" id={"sensorySystemGPCR2"}>Yeastlized GPCRs</Heading>
+    This set of parts is a chimeric GPCR receptor developed based on the idea of yeastlizing a human GPCR receptor in yeast.
+
+    <PlasmidTable plasmids={sensorySystemGPCR2} />
+    
+    <Heading level="h4" id={"sensorySystemReporters"}>Reporters</Heading>
+    This set of parts is a reporter system we designed and validated to detect and quantify GPCR-mediated signal transduction.
+    
+    <PlasmidTable plasmids={sensorySystemReporters} />
+    
+    <Heading level="h2" id={"knockOutStrategy"}>Knock-out Strategy</Heading>
+    This set of parts is a multi-gene knockout system we developed for rapid, single-vector, multi-gene knockout in yeast.
+
+
+    <PlasmidTable plasmids={knockOutStrategy} />
+    
+    <Heading level="h2" id={"keyProteinsAndDomains"}>Key Proteins & Domains</Heading>
+    This set of parts is an efficient yeast protein expression system designed and implemented to express key proteins, domains, and fusion proteins in yeast.
+
+    <PlasmidTable plasmids={keyProteinsAndDomains} />
+
+    <Heading level="h2" id={"References"}>References</Heading>
+<br />
+   
+   ##### Reference
+   
+   <span class="space-content reference">
+   
+   ---
+    1. <span id="ref1"> **Javaheri A, Kruse T, Moonens K, et al.** *Helicobacter pylori* adhesin HopQ engages in a virulence-enhancing interaction with human CEACAMs. *Nat Microbiol*. 2016;2:16189. Published 2016 Oct 17. doi:10.1038/nmicrobiol.2016.189 [↖](#back1)</span>
+    2. <span id="ref2"> **Bonsor DA, Zhao Q, Schmidinger B, et al.** The *Helicobacter pylori* adhesin protein HopQ exploits the dimer interface of human CEACAMs to facilitate translocation of the oncoprotein CagA. *EMBO J*. 2018;37(13):e98664. doi:10.15252/embj.201798664 [↖](#back2)</span>
+    3. <span id="ref3"> **Taxauer K, Hamway Y, Ralser A, et al.** Engagement of CEACAM1 by *Helicobacter pylori* HopQ Is Important for the Activation of Non-Canonical NF-κB in Gastric Epithelial Cells. *Microorganisms*. 2021;9(8):1748. Published 2021 Aug 16. doi:10.3390/microorganisms9081748 [↖](#back3)</span>
+    4. <span id="ref4"> **Schulz R, Korkut-Demirbaş M, Venturino A, Colombo G, Siegert S.** Chimeric GPCRs mimic distinct signaling pathways and modulate microglia responses. *Nat Commun*. 2022;13(1):4728. Published 2022 Aug 15. doi:10.1038/s41467-022-32390-1 [↖](#back4)</span>
+    5. <span id="ref5"> **Scott BM, Gutiérrez-Vázquez C, Sanmarco LM, et al.** Self-tunable engineered yeast probiotics for the treatment of inflammatory bowel disease. *Nat Med*. 2021;27(7):1212-1222. doi:10.1038/s41591-021-01390-x [↖](#back5)</span>
+    6. <span id="ref6"> **Zhang Y, Wang J, Wang Z, et al.** A gRNA-tRNA array for CRISPR-Cas9 based rapid multiplexed genome editing in *Saccharomyces cerevisiae*. *Nat Commun*. 2019;10(1):1053. Published 2019 Mar 5. doi:10.1038/s41467-019-09005-3 [↖](#back6)</span>
+    </span>

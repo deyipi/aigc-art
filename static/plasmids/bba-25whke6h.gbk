@@ -1,0 +1,21 @@
+LOCUS       bba-25whke6h              21 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25WHKE6H HRH2-F | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=5cafba8d-4a57-46b5-92d9-1bfa1f316b43 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 21)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..21
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 gctcctaatg ggactgcctc c
+//

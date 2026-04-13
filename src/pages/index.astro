@@ -1,0 +1,327 @@
+---
+import '../styles/tailwind.css'
+import '../assets/scss/index.scss'
+import SiteMeta from '../components/SiteMeta.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { ClientRouter } from 'astro:transitions'
+
+import { Link } from 'accessible-astro-components'
+import myImage from '../assets/jpg/rabbit-banner.png'
+import myImage1 from '../assets/jpg/icon1.png'
+import {Image} from 'astro:assets';
+
+
+const { 
+  title = '首页',
+  description = '南京师范大学美术学院“智绘心光”艺术疗愈研究团队',
+  url = Astro.site,
+  image = 'social-preview-image.png',
+  author = '“智绘心光”艺术疗愈研究团队'
+} = Astro.props
+---
+<!-- 以上部分是astro的内容，pidy注释 2026.3.29 -->
+
+
+<!-- 以下部分是HTML部分，pidy注释 -->
+<html lang="en" dir="ltr">
+  <head>  <!-- HTML头开始，pidy注释 -->
+    <meta charset="utf-8" />   <!-- 字符集是UTF8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->  <!-- 标签图标(浏览器上的标签页) pidy 注释-->
+    <link rel="icon" type="image/png" href={myImage1.src} />
+
+    <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author='' />
+
+    <!-- Enable Astro View Transitions for all browsers -->
+    <ClientRouter />
+  </head> <!-- HTML头结束，pidy注释 -->
+
+
+
+
+  <!-- 下面是body内容 pidy 26.3.9 -->
+  <body>
+    <Header />
+    <!-- 这是astro的头组件，就是一个下拉菜单 pidy 26.3.1 -->
+
+    <main id="main-content" >
+
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="hero-banner">
+
+            <Image src={myImage} alt="考神兔形象海报" class="hero-image" />
+
+            <p class="hero-tag">NNU Innovation Project</p>
+            <h1>AIGC 驱动校本文化疗愈美育研究</h1>
+            <p class="hero-subtitle">
+              南京师范大学大学生创新训练项目中期检查展示页
+            </p>
+            <!-- <div class="hero-actions">
+              <a href="#achievements" class="hero-btn hero-btn-primary">查看中期成果</a>
+              <a href="#future" class="hero-btn">查看今后计划</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 这是一个Astro做的 尾部标签，是一个layout pidy 2026.3.28 -->
+    <Footer />
+
+    <script>
+
+      // 限制连续滚动，一次只滚一屏，平滑滚动 2026.3.29
+      let isScrolling = false;
+
+      // 监听滚轮滚动 pidy 2026.3.29
+      window.addEventListener('wheel', (e) => {
+        if (isScrolling) return;
+        e.preventDefault();
+
+        const direction = e.deltaY > 0 ? 1 : -1;
+        const sections = document.querySelectorAll('.page-block');
+        const current = Math.round(window.scrollY / window.innerHeight);
+        const next = Math.min(Math.max(current + direction, 0), sections.length - 1);
+
+        isScrolling = true;
+        window.scrollTo({
+          top: sections[next].offsetTop,
+          behavior: 'smooth'
+        });
+
+        setTimeout(() => (isScrolling = false), 1000); // 防止快速多次滚动
+      }, { passive: false });
+
+
+
+
+
+// 获取所有 section（只选择你想加提示的那些）
+      const sections = document.querySelectorAll("#section2, #section3, #section4");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const scrollHint = entry.target.querySelector(".scroll-hint"); // 每个 section 内的 hint
+          if (!scrollHint) return;
+
+          if (entry.isIntersecting) {
+            // 延迟显示（例如 2 秒后）
+            setTimeout(() => {
+              scrollHint.style.opacity = 1;
+            }, 2000);
+          } else {
+            // 离开可视区域后再次隐藏
+            scrollHint.style.opacity = 0;
+          }
+        });
+      }, { threshold: 0.6 });
+
+      // 对每个 section 启动观察
+      sections.forEach(section => observer.observe(section));
+    </script>
+
+    <style lang="scss" is:global>
+      @use '../assets/scss/base/mixins' as *;
+
+      // 自动出现滚动条,高度占100% pidy 2026.3.29
+      html {
+        height: 100%;
+        overflow: auto;
+      }
+
+      body {
+        display: flex;    //弹性总局容器 pidy 2026.3.29
+        flex-direction: column;   //排列方式，从上向下；
+        overflow-x: clip;         // 强制禁止出现横向进度条 
+        min-height: 100vh;        //高度，最小是一屏
+
+        main {
+          flex: 1 0 auto;
+        }
+
+        footer {
+          flex-shrink: 0;
+        }
+      }
+
+.section {
+  padding: 2rem 0;
+  scroll-margin-top: calc(var(--header-height) + 18px);
+}
+
+.section-alt {
+  background: transparent;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.15rem;
+}
+
+      .container {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 1rem 0 1.8rem;
+      }
+
+      .hero-banner {
+        min-height: clamp(300px, 46vw, 430px);
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background:
+          linear-gradient(120deg, rgba(42, 159, 167, 0.92), rgba(42, 159, 167, 0.5)),
+          radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.42), transparent 28%),
+          radial-gradient(circle at 76% 70%, rgba(255, 255, 255, 0.25), transparent 24%),
+          linear-gradient(45deg, #7dc9ce, #97d7db);
+        box-shadow: 0 12px 30px rgba(29, 101, 106, 0.18);
+        padding: clamp(1.1rem, 3vw, 2.4rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: #f5fdff;
+        margin:0 auto;
+      }
+
+      .hero-image {
+        width: 100%;
+        height:auto;
+        // max-width: 520px;
+        margin: 0 0 0.8rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-tag {
+        margin-bottom: 0.5rem;
+        color: #d8f9fb;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      .hero-banner h1 {
+        margin-bottom: 0.6rem;
+        font-size: clamp(1.8rem, 3vw, 2.25rem);
+        color: #f8feff;
+      }
+
+      .hero-subtitle {
+        max-width: 680px;
+        margin-bottom: 1rem;
+        color: #edfefe;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .hero-btn {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(247, 254, 255, 0.7);
+        color: #f7feff;
+        padding: 0.5rem 0.95rem;
+        font-weight: 600;
+        font-size: 0.94rem;
+        transition: 0.2s ease;
+      }
+
+      .hero-btn:hover {
+        background: #e0f8f8;
+        color: #0d6161;
+        transform: scale(1.02);
+        text-decoration: none;
+      }
+
+      .hero-btn-primary {
+        background: #f7feff;
+        color: #0f6268;
+        border-color: #f7feff;
+      }
+
+      .hero-btn-primary:hover {
+        background: #e9feff;
+      }
+
+
+      // 没有见过使用这个标签 pidy 2026.3.29
+      pre {
+        border: 2px solid var(--link-color);
+        border-radius: 0.35rem;
+        padding: 1rem;
+      }
+
+
+      // 这个标签是在layout Header中定义 pidy 2026.3.28 注释
+      header {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+      }
+
+      header.header-visible {
+        opacity: 1;
+      }
+      
+      .inset-0 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      //这个page-block的高度是viewport height的100%，就是一个满屏  pidy 2026.3.29
+
+      // .page-block {
+      //   height: 100vh;
+      //   transition: background-color 0.5s ease;
+      // }
+
+       .page-block {
+        height: 200px;
+        transition: background-color 0.5s ease;
+      }
+
+
+      @keyframes flashTwice {
+        0%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+
+      .fixed-lottie:hover {
+        animation: flashTwice 0.6s ease-in-out;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+    </style>
+  </body>
+</html>
+

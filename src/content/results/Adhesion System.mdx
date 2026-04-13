@@ -1,0 +1,172 @@
+import Plasmid from '../../components/Plasmid.astro';
+
+### Adhesion System
+
+---
+
+#### Abstract
+
+Aiming to develop an adhesion system selectively targeting *Helicobacter pylori* without inducing an inflammatory response we expressed the N-terminal domain of the gastric-derived human protein CEACAM1 (C1ND) on our yeast cells as the HopQ-targeted adhesion site of *H. pylori*. Additionally, the soluble portion of HopQ (Re combinant HopQAD) was produced using an *E.coli* expression system to simulate and evaluate the adhesion effect.
+
+#### Introduction
+
+##### Background
+
+We aimed to identify protein pairs with strong adhesion capabilities against *Helicobacter pylori*, which led us to consider simulating gastric cell targets to achieve specific adhesion. Through literature review, we selected several candidate adhesion molecules. However, due to concerns that certain protein interactions might trigger inflammatory or pathogenic responses, we ultimately chose the human gastric protein CEACAM1, which is known as the hunman gastric bind site of *H. pylori*'s outer membrane protein HopQ. Expressing this very protein in yeast is like "beating the bacteria at their own game". On the other hand, as a human protein, this molecule is less likely to provoke an immune response, making it a safer choice for our application.
+
+
+##### Design
+
+We plan to express CEACAM1 on the yeast cell surface via a lipid anchor system Sed1, while HopQ will be expressed in *E. coli*. Considering the native transmembrane characteristics of both proteins, we selected the N-terminal domain of CEACAM1 (C1ND) and the soluble portion of HopQ (HopQAD). After adding a 6×His tag to each, we constructed the corresponding plasmids (pET-15b-HopQAD-FLAG and pESC-URA-pOpM-C1ND-Sed1). Following transformation into the respective microorganisms, we aim to confirm the successful expression of both proteins and subsequently verify their interaction using immunocytochemistry.
+
+{/* <!-- 这里放交互式质粒展示 --> */}
+{/* [text](<../../All used plasmids/pET-15b-HopQAD-FLAG.gbk>)  */}
+{/* [text](<../../All used plasmids/pESC-URA-pOpM-C1ND-Sed1.gbk>) */}
+
+export const plasmid1 = [
+    {
+        partNumber: 'pET-15b-HopQAD-FLAG',
+        file: 'pET-15b-HopQAD-FLAG.gbk',
+        description: 'Plasmid for expressing HopQ protein in E. coli.'
+    }
+];
+
+export const plasmid2 = [
+    {
+        partNumber: 'pESC-URA-pOpM-C1ND-Sed1',
+        file: 'pESC-URA-pOpM-C1ND-Sed1.gbk',
+        description: 'Plasmid for expressing C1ND-Sed1 fusion protein in yeast.'
+    }
+];
+
+<Plasmid plasmids={plasmid1} />
+<Plasmid plasmids={plasmid2} />
+
+##### Goal
+
+The goal of this module is to establish and validate the core biological mechanism that underpins our entire project: enabling *Saccharomyces cerevisiae* with C1ND to specifically bind to *Helicobacter pylori*. So this part serves as the foundational proof-of-concept for our adhesion strategy.
+
+#### Results
+
+##### hCEACAM1 N-terminal domain (C1ND) was successfully expressed on the surface of *Saccharomyces cerevisiae*.
+
+We successfully induced the plasmid carrying the C1ND gene into *Saccharomyces cerevisiae*.
+
+![Figure 1](https://static.igem.wiki/teams/5870/results/adhesion/recombinant-yeast-colony.webp)
+
+<p class="figure-caption"><b>Figure 1:</b> Recombinant Yeast Colonies. The image shows colonies of successful transformants growing on a SC-Ura selection plate following heat-shock transformation.</p>
+
+Then we performed SDS-PAGE to detect the expression level gradient of C1ND protein in yeast over time and to evaluate the efficiency of our protein purification.
+
+![Figure 2](https://static.igem.wiki/teams/5870/results/adhesion/c1nd-exp-t.webp)
+
+<p class="figure-caption"><b>Figure 2:</b> Time Dependent C1ND Expression (SDS-PAGE). SDS-PAGE analysis of C1ND expression over a 0-2 hour period and the comparison between purified protein, yeast lysate, and supernatant. The results indicate the presence of a stable fragment, but not the full-length C1ND protein (due to our enzymatic protein extraction method). The C1ND protein was purified using IDA-Ni magnetic beads targeting the His-tag.</p>
+
+Respectively, we used Western Blot to further confirm the successful expression of C1ND protein.
+
+![Figure 3](https://static.igem.wiki/teams/5870/results/adhesion/c1nd-time-wb.webp)
+
+<p class="figure-caption"><b>Figure 3:</b> Time Dependent C1ND Expression (Western Blot). Western Blot analysis of C1ND expression over a 0-2 hour period and the comparison between purified protein, yeast lysate, and supernatant. The C1ND protein was purified using IDA-Ni magnetic beads targeting the His-tag. </p>
+
+##### Adhesion receptor Recombinant HopQAD was successfully expressed in *E.coli*.
+
+Plasmid carrying HopQAD gene marked by Amp resilience gene  are  delicately introduced into *E.coli*. 
+
+![Figure 4](https://static.igem.wiki/teams/5870/results/adhesion/recombinant-e-coli-colony.webp)
+
+<p class="figure-caption"><b>Figure 4:</b> Recombinant <i>E.coli</i> Colonies. Transformed *E. coli* BL21(DE5) colonies selected on an LB agar plate supplemented with ampicillin. Competent cells were transformed via 42°C heat-shock treatment with HopQ recombinant plasmid.</p>
+
+Subsequently, we employed Western blot and SDS-PAGE to systematically analyze the expression gradient of the HopQ protein, evaluating both time-dependent and IPTG concentration-dependent changes.
+
+![Figure 5](https://static.igem.wiki/teams/5870/results/adhesion/time-dependent-hopq-expression-sds-page.webp)
+
+<p class="figure-caption"><b>Figure 5:</b> Time Dependent HopQ expression (SDS-PAGE). SDS-PAGE analysis of purified HopQ samples taken at indicated time points (0-6h). The HopQ protein was purified using IDA-Ni magnetic beads targeting the His- tag.</p>
+
+The figure above shows the successful expression of the target protein HopQ, and the expression level increased significantly with the extension of the induction time.  The band appeared between 45 kDa and 55 kDa, which is consistent with the expected size of the HopQ protein, approximately 49.3 kDa. There were almost no protein bands at 0 hours (before induction). Bands started to appear at 1 hour, and then the intensity (concentration) of the bands continued to increase at 2 hours, 4 hours, and 6 hours, indicating that the production of the protein within the cells continued to accumulate, reaching the highest level at 6 hours. 
+
+
+![Figure 6](https://static.igem.wiki/teams/5870/results/adhesion/iptg-concentration-dependent-hopq-expression-sds-page.webp)
+
+<p class="figure-caption"><b>Figure 6:</b> IPTG concentration Dependent HopQ expression (SDS-PAGE). SDS-PAGE analysis of HopQ protein expressed in <i>E. coli</i> under different concentrations of IPTG induction. Lysis: Total cell lysate; Supernatant: Soluble fraction after centrifugation; Purified: HopQ protein purified using Ni magnetic beads.</p>
+
+The figure above shows the results of optimizing the induction expression conditions of the target protein HopQ and purifying it. A low concentration of the inducer (IPTG) can efficiently express the HopQ protein, and the protein is soluble and was finally successfully purified to a relatively high purity.
+
+The experiment tested the effects of different concentrations of IPTG (from 0 mM to 1.0 mM) on protein expression. As the concentration of IPTG increased, there was a relatively small increase in protein expression. This indicates that a low concentration of IPTG is sufficient for efficient expression.
+
+In the right lane shown , there is a dominant and pure protein band at the ~49.3 kDa position, indicating that most of the contaminating proteins have been removed.
+
+Respectively, we used Western Blot to further confirm the successful expression of HopQ protein.
+
+![Figure 7](https://static.igem.wiki/teams/5870/results/adhesion/hopq-time-wb.webp)
+
+<p class="figure-caption"><b>Figure 7:</b> Time Dependent HopQ expression (Western Blot). Western Blot analysis of purified HopQ samples taken at indicated time points (0-6h). The HopQ protein was purified using IDA-Ni magnetic beads targeting the His- tag.</p>
+
+![Figure 8](https://static.igem.wiki/teams/5870/results/adhesion/hopq-iptg-wb.webp)
+
+<p class="figure-caption"><b>Figure 8:</b> IPTG concentration Dependent HopQ expression (Western Blot). Western Blot analysis of HopQ protein expressed in <i>E. coli</i> under different concentrations of IPTG induction. Lysis: Total cell lysate; Supernatant: Soluble fraction after centrifugation; Purified: HopQ protein purified using Ni magnetic beads.</p>
+
+
+##### A Modified Immunocytofluorescence (ICF) assay confirmed the Adhesion between C1ND-expressing Yeast and receptor HopQAD protein
+
+To validate the adhesion between yeast with C1ND and HopQ target, we mixed yeast expressing the C1ND protein with a solution of HopQ protein, followed by treatment with a Cy3 fluorescently labeled secondary antibody and a primary antibody targeting the His-tag-HopQ. Simultaneously, we performed fluorescent staining of the yeast cell wall with CFW stains to observe whether the two fluorescent signals co-localized.
+
+![Figure 9](https://static.igem.wiki/teams/5870/results/adhesion/icc.webp)
+
+<p class="figure-caption"><b>Figure 9:</b> Modified Immunocytofluorescence (ICF) Assay Results. The first column (Fig A,D,G,J) shows results in CFW channel, locating yeast cell walls; the second column (Fig B,E,H,K) shows results in Cy3 channel, locating HopQ receptor protein; the third column (Fig C,F,I,L) shows merged images of the first two columns. The first row (Fig A-C) is the experimental group (C1ND +, HopQ +); the second and third rows (Fig D-I) is the background control group (C1ND -, HopQ +; C1ND +, HopQ  - ); the fourth row (Fig J-L) is the blank group (C1ND -, HopQ -).</p>
+
+In the experimental group (first row), we observed significant co-localization of the two fluorescent signals, indicating that HopQ successfully adhered to the yeast cell wall. In contrast, the control groups (second and third rows) showed no Cy3 fluorescence signal, demonstrating that in the absence of either C1ND or HopQ, no adhesion occurred. The blank group (fourth row) also showed no fluorescence signal, confirming the specificity of the staining. Overall, these results confirm the successful adhesion between yeast expressing C1ND and the HopQ protein.   
+
+#### Discussion
+
+##### C1ND expression
+
+By chemically transforming and inducing the expression of a plasmid carrying the C1ND gene fragment in yeast cells, C1ND was successfully expressed on the cell surface. Subsequently, the yeast cell walls were digested by lyticase, while cell wall proteins were extracted. SDS-PAGE and Western Blot analyse of the extracted proteins successfully detected the C1ND protein band, confirming the successful surface expression of C1ND.
+
+However, judging by the SDS-PAGE band size, the C1ND protein we purified using the magnetic bead method appears to be only a fragment, rather than the expected full-length C1ND protein. The reason for this was find out to be the enzymatic digestion method we used to extract the cell wall proteins. The lyticase enzyme specifically digests the β-1,3-glucan component of the yeast cell wall, which may have led to partial degradation of the C1ND protein during the extraction process. This suggests that while our method was effective in isolating cell wall proteins, it may not be suitable for preserving the integrity of all surface-expressed proteins. Future experiments could explore alternative extraction methods that minimize protein degradation to obtain full-length C1ND. 
+
+Overall, the successful detection (especially Western Blot confirmation) of C1ND confirms the feasibility of our yeast surface display strategy.
+
+
+##### HopQAD expression
+
+After transforming a plasmid containing the HopQAD protein gene fragment into *E. coli*, its expression was induced. The *E. coli* cells were then lysed to extract soluble proteins. Detection by SDS-PAGE and Western Blot revealed the HopQAD band, validating its normal expression.
+
+The SDS-PAGE results showed that the HopQAD protein band appeared between 45 kDa and 55 kDa, consistent with the expected size of approximately 49.3 kDa. The expression level increased significantly with longer induction times, reaching the highest level at 6 hours. Additionally, varying IPTG concentrations demonstrated that even low levels of IPTG were sufficient for efficient HopQAD expression, indicating that the protein can be produced effectively without requiring high inducer concentrations. The purified HopQAD protein exhibited a dominant band at the expected size, indicating successful purification with minimal contamination.
+
+For future experiments, optimizing induction conditions such as IPTG concentration and induction time could further enhance yield and purity. Overall, the successful expression and purification of HopQAD confirm the effectiveness of our *E. coli* expression system.
+
+##### Immunocytochemistry
+
+Yeast cells expressing the C1ND protein on its surface was incubated with a purified HopQAD protein solution. After treatment with a fluorescently labeled antibody to mark HopQAD and Calcofluor White fluorescent dye to localize the yeast cell wall, fluorescence microscopy revealed co-localization of the two fluorescent signals. The control group showed no HopQAD fluorescence, demonstrating that HopQAD successfully adhered to the yeast cell wall and confirming the adhesion between C1ND-expressing yeast and HopQAD protein.
+
+Considering the water solubility of secretory proteins, we expressed not the full-length HopQ protein but rather its soluble fragment. This may have a certain impact on its binding affinity with C1ND. It has been concluded that C1ND can bind to the HopQAD fragment. Future studies could further test its binding capacity with the full-length transmembrane HopQ protein.
+
+Overall, the successful co-localization of fluorescence signals in the experimental group confirms the specific adhesion between yeast expressing C1ND and the HopQAD protein, validating our adhesion system design.
+
+##### Outlook
+
+The current results have successfully validated the expression of both proteins and their interaction on the surface of engineered yeast. However, due to time constraints of the iGEM competition, we could not obtain more data to confirm the adhesion effects under gastric fluid conditions or to obtain kinetic parameters of the protein interaction.
+In the future, additional experiments such as pull-down assays, co-immunoprecipitation (Co-IP) and surface plasmon resonance (SPR) shall be necessary to comprehensively characterize the functional interaction. We believe that with further validation and refinement, this system can achieve more precise and effective functionality.
+
+Additionally, for technical feasibility and material accessibility, our adhesion system was tested using auxotrophic *Saccharomyces cerevisiae* as the chassis organism, rather than *Saccharomyces boulardii* as originally designed. In future studies, this system should be validated and refined through implementation in *Saccharomyces boulardii*.
+
+Overall, while our current results provide a solid proof-of-concept, further experiments are needed to fully realize the potential of this adhesion system in practical applications.
+
+<br />
+
+##### References
+   
+   
+---
+  
+1. **Bamba T, Inokuma K, Hasunuma T, Kondo A.** Enhanced cell-surface display of a heterologous protein using SED1 anchoring system in SED1-disrupted *Saccharomyces cerevisiae* strain. J Biosci Bioeng. 2018 Mar;125(3):306-310. 
+2. **Begum H, Murugesan P, Tangutur AD.** Western blotting: a powerful staple in scientific and biomedical research. Biotechniques. 2022 Jun;73(1):58-69. doi: 10.2144/btn-2022-0003. Epub 2022 Jul 1. 
+3. **Bussineau CM, Shuster JR.** Genetic stability of protein expression systems in yeast. Dev Biol Stand. 1994;83:13-9.
+4. **Doohan D, Rezkitha YAA, Waskito LA, Yamaoka Y, Miftahussurur M.** *Helicobacter pylori* BabA-SabA Key Roles in the Adherence Phase: The Synergic Mechanism for Successful Colonization and Disease Development. Toxins (Basel). 2021 Jul 13;13(7):485.
+5. **Froger A, Hall JE.** Transformation of plasmid DNA into *E. coli* using the heat shock method. J Vis Exp. 2007;(6):253. 
+6. **Goffeau A, Barrell BG, Bussey H, Davis RW, Dujon B, Feldmann H, Galibert F, Hoheisel JD, Jacq C, Johnston M, Louis EJ, Mewes HW, Murakami Y, Philippsen P, Tettelin H, Oliver SG.** Life with 6000 genes. Science. 1996 Oct 25;274(5287):546, 563-7.
+7. **Matsuo Y, Kido Y, Yamaoka Y.**  *Helicobacter pylori* Outer Membrane Protein-Related Pathogenesis. Toxins (Basel). 2017 Mar 11;9(3):101.
+8. **Meilhoc E, Teissie J.** Electrotransformation of *Saccharomyces cerevisiae*. Methods Mol Biol. 2020;2050:187-193.
+9. **Nguyen QA, Schmitt L, Mejías-Luque R, Gerhard M.** Effects of *Helicobacter pylori* adhesin HopQ binding to CEACAM receptors in the human stomach. Front Immunol. 2023 Feb 20;14:1113478. 
+10. **Qu S, Huang X, Song X, Wu Y, Ma X, Shen J, Zhu K.** A Rigid Nanoplatform for Precise and Responsive Treatment of Intracellular Multidrug-Resistant Bacteria. Engineering, 15:57-66.
+11. **Shans N, Esmaeili M, Abraheh K, Asadi Hanjani N, Farrokhi M, Sardarpour N, Talebkhan Y, Kazemi-Lomedasht F, Mirabzadeh E, Mohammadi M.** Development of Experimental Platforms to Assess *Helicobacter pylori* HopQ Interaction with Host CEACAM Molecules. Iran Biomed J. 2025 May 1;29(3):138-148.

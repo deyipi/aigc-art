@@ -1,0 +1,21 @@
+LOCUS       bba-25x47ig3              14 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25X47IG3 EGFP-R (pET28a-EGFP) | type=Primer | status=published |
+            updated=2025-10-02 | license=cc-by-4.0 | 
+            uuid=8ebbc8de-997e-4ab8-a8e5-7c6e21ce6de1 | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 14)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..14
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 tcgagtgcgg ccgc
+//

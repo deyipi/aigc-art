@@ -1,0 +1,674 @@
+---
+import ResponsiveToggle from './ResponsiveToggle.astro'
+import Logo from './Logo.astro'
+import ScrollProgressBar from "../components/ScrollProgressBar"
+---
+
+ <!-- 创建一个80Px的占位空区域 pidy 2026.2.27  -->
+<div style="height:80px;"></div>
+
+<div id="main-navigation">
+  <div class="container">
+   <!-- 创建一个logo 组件 pidy 2026.2.27  -->
+    <Logo /> 
+    <div class="wrapper">
+      <nav class="desktop-menu" aria-label="Main navigation desktop"> <!-- 创建一个nav 区域 -->  
+        <ul class="menu">   <!-- 创建一个无序列表 pidy 2026.2.27  --> 
+          <slot />
+        </ul>
+      </nav>
+      <ResponsiveToggle />
+    </div>
+    <nav class="mobile-menu" aria-label="Main navigation mobile">
+      <ul class="menu">
+        <slot />
+      </ul>
+    </nav>
+  </div>
+</div>
+<ScrollProgressBar client:load offsetTop={80} />
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const mainNav = document.querySelector('#main-navigation') as HTMLElement | null
+    if (!mainNav) return
+
+    const mainMenu = mainNav.querySelector('ul') as HTMLUListElement | null
+    const dropdownMenus = [...document.querySelectorAll('.has-dropdown')] as HTMLElement[]
+    const mobileMenu = mainNav.querySelector('.mobile-menu') as HTMLElement | null
+    const toggleBtn = mainNav.querySelector('.responsive-toggle') as HTMLElement | null
+
+    const isOutOfViewport = (element: Element): boolean => {
+      const elementBounds = element.getBoundingClientRect()
+      return elementBounds.right > (window.innerWidth || document.documentElement.clientWidth)
+    }
+
+
+    const openDropdownMenu = (dropdown: HTMLElement): void => {
+      const button = dropdown.querySelector('button') as HTMLButtonElement | null
+      const list = dropdown.querySelector('ul') as HTMLUListElement | null
+      if (!button || !list) return
+
+      button.classList.add('show')
+      button.setAttribute('aria-expanded', 'true')
+      list.classList.add('show')
+
+      if (isOutOfViewport(list)) {
+        list.style.left = 'auto'
+      }
+    }
+
+    const closeDropdownMenu = (dropdown: HTMLElement): void => {
+      const button = dropdown.querySelector('button') as HTMLButtonElement | null
+      const list = dropdown.querySelector('ul') as HTMLUListElement | null
+      if (!button || !list) return
+
+      button.classList.remove('show')
+      button.setAttribute('aria-expanded', 'false')
+      list.classList.remove('show')
+    }
+
+    const closeAllDropdownMenus = (): void => {
+      dropdownMenus.forEach((dropdown) => closeDropdownMenu(dropdown))
+    }
+
+    dropdownMenus.forEach((dropdown) => {
+      let closeTimeout: number | null = null
+      let openTimeout: number | null = null
+
+      const button = dropdown.querySelector('button') as HTMLButtonElement | null
+      const list = dropdown.querySelector('ul') as HTMLUListElement | null
+      if (!button || !list) return
+
+      // Check if we're in mobile menu
+      const isMobileMenu = dropdown.closest('.mobile-menu')
+
+      if (isMobileMenu) {
+        // Mobile menu: use both click and hover to toggle
+        const toggleMobileDropdown = () => {
+          const isOpen = list.classList.contains('show')
+          
+          // Close all other mobile dropdowns first
+          const allMobileDropdowns = document.querySelectorAll('.mobile-menu .has-dropdown ul')
+          allMobileDropdowns.forEach((ul) => {
+            if (ul !== list) {
+              ul.classList.remove('show')
+              const btn = ul.parentElement?.querySelector('button')
+              if (btn) btn.classList.remove('active')
+            }
+          })
+          
+          if (isOpen) {
+            list.classList.remove('show')
+            button.classList.remove('active')
+          } else {
+            list.classList.add('show')
+            button.classList.add('active')
+          }
+        }
+
+        // Click/tap to toggle
+        button.addEventListener('click', (event: MouseEvent) => {
+          event.preventDefault()
+          toggleMobileDropdown()
+        })
+
+        // Hover to open (but not close)
+        button.addEventListener('mouseenter', () => {
+          if (!list.classList.contains('show')) {
+            // Close all other mobile dropdowns first
+            const allMobileDropdowns = document.querySelectorAll('.mobile-menu .has-dropdown ul')
+            allMobileDropdowns.forEach((ul) => {
+              if (ul !== list) {
+                ul.classList.remove('show')
+                const btn = ul.parentElement?.querySelector('button')
+                if (btn) btn.classList.remove('active')
+              }
+            })
+            
+            list.classList.add('show')
+            button.classList.add('active')
+          }
+        })
+
+        // Keyboard support for mobile
+        button.addEventListener('keydown', (event: KeyboardEvent) => {
+          const key = event.key
+          if (key === 'Enter' || key === ' ') {
+            event.preventDefault()
+            toggleMobileDropdown()
+          }
+        })
+      } else {
+        // Desktop menu: use hover and click
+        const openMenu = () => {
+          if (closeTimeout) {
+            clearTimeout(closeTimeout)
+            closeTimeout = null
+          }
+          openTimeout = window.setTimeout(() => {
+            openDropdownMenu(dropdown)
+          }, 50)
+        }
+
+        const closeMenu = () => {
+          // give users time to move pointer between button and list
+          if (openTimeout) {
+            clearTimeout(openTimeout)
+            openTimeout = null
+          }
+          closeTimeout = window.setTimeout(() => {
+            closeDropdownMenu(dropdown)
+          }, 50)
+        }
+
+        // use pointer events to better handle small gaps and touch inputs
+        button.addEventListener('pointerenter', openMenu)
+        button.addEventListener('pointerleave', closeMenu)
+        list.addEventListener('pointerenter', openMenu)
+        list.addEventListener('pointerleave', closeMenu)
+
+        // click (touch) toggles the dropdown - important for touch accessibility
+        button.addEventListener('click', (event: MouseEvent) => {
+          event.preventDefault()
+          const isOpen = button.classList.contains('show')
+          if (isOpen) {
+            closeDropdownMenu(dropdown)
+          } else {
+            closeAllDropdownMenus()
+            openDropdownMenu(dropdown)
+          }
+        })
+
+        // keyboard activation on the button: Enter/Space toggles, ArrowDown opens and focuses first item
+        button.addEventListener('keydown', (event: KeyboardEvent) => {
+          const key = event.key
+          if (key === 'Enter' || key === ' ') {
+            event.preventDefault()
+            const isOpen = button.classList.contains('show')
+            if (isOpen) {
+              closeDropdownMenu(dropdown)
+            } else {
+              closeAllDropdownMenus()
+              openDropdownMenu(dropdown)
+              const firstItem = list.querySelector('li') as HTMLElement | null
+              if (firstItem) {
+                const focusable = firstItem.querySelector('a, button, input') as HTMLElement | null
+                if (focusable) focusable.focus()
+              }
+            }
+          }
+
+          if (key === 'ArrowDown') {
+            event.preventDefault()
+            closeAllDropdownMenus()
+            openDropdownMenu(dropdown)
+            const firstItem = list.querySelector('li') as HTMLElement | null
+            if (firstItem) {
+              const focusable = firstItem.querySelector('a, button, input') as HTMLElement | null
+              if (focusable) focusable.focus()
+            }
+          }
+        })
+      }
+    })
+
+    mainMenu &&
+      mainMenu.addEventListener('keydown', (event: KeyboardEvent) => {
+        const element = event.target as Element
+        const currentMenuItem = element.closest('li')
+        const menuItems = [...mainMenu.querySelectorAll('.menu-item')] as HTMLLIElement[]
+        const currentDropdownMenu = element.closest('.has-dropdown button') as HTMLButtonElement | null
+        const currentDropdownMenuItem = element.closest('.has-dropdown li') as HTMLLIElement | null
+        const currentIndex = currentMenuItem ? menuItems.findIndex((item) => item === currentMenuItem) : -1
+
+        const key = event.key
+        let targetItem: Element | null = null
+
+        if (key === 'ArrowRight') {
+          if (currentMenuItem && menuItems.indexOf(currentMenuItem as HTMLLIElement) === menuItems.length - 1) {
+            targetItem = menuItems[0]
+          } else if (currentMenuItem) {
+            targetItem = menuItems[currentIndex + 1]
+          }
+        }
+
+        if (key === 'ArrowLeft') {
+          if (currentMenuItem && menuItems.indexOf(currentMenuItem as HTMLLIElement) === 0) {
+            targetItem = menuItems[menuItems.length - 1]
+          } else if (currentMenuItem) {
+            targetItem = menuItems[currentIndex - 1]
+          }
+        }
+
+        if (key === 'Escape') {
+          targetItem = menuItems[0]
+        }
+
+        if (currentDropdownMenu) {
+          const nextElement = currentDropdownMenu.nextElementSibling as Element | null
+          if (nextElement) {
+            const firstDropdownItem = nextElement.querySelector('li')
+
+            if (key === 'ArrowDown') {
+              event.preventDefault()
+              openDropdownMenu(currentDropdownMenu.parentElement as HTMLElement)
+              targetItem = firstDropdownItem
+            }
+          }
+
+          if (key === 'Escape') {
+            closeDropdownMenu(currentDropdownMenu.parentElement as HTMLElement)
+          }
+        }
+
+        if (currentDropdownMenuItem) {
+          const currentDropdownList = currentDropdownMenuItem.parentNode as Element | null
+          if (currentDropdownList) {
+            const dropdownMenuItems = [...currentDropdownList.querySelectorAll('li')] as HTMLLIElement[]
+            const currentIndex = dropdownMenuItems.findIndex((item) => item === currentDropdownMenuItem)
+
+            if (key === 'ArrowDown') {
+              event.preventDefault()
+              targetItem =
+                currentIndex === dropdownMenuItems.length - 1 ? dropdownMenuItems[0] : dropdownMenuItems[currentIndex + 1]
+            }
+
+            if (key === 'ArrowUp') {
+              event.preventDefault()
+              targetItem =
+                currentIndex === 0 ? dropdownMenuItems[dropdownMenuItems.length - 1] : dropdownMenuItems[currentIndex - 1]
+            }
+
+            if (key === 'Escape') {
+              const currentDropdownMenu = currentDropdownList.previousElementSibling as HTMLButtonElement | null
+              if (currentDropdownMenu) {
+                targetItem = currentDropdownMenu.parentElement
+                closeAllDropdownMenus()
+              }
+            }
+
+            if (key === 'Tab') {
+              const currentDropdownMenu = currentDropdownList.previousElementSibling as HTMLButtonElement | null
+              if (currentDropdownMenu) {
+                if (currentIndex === dropdownMenuItems.length - 1) {
+                  closeDropdownMenu(currentDropdownMenu.parentElement as HTMLElement)
+                }
+              }
+            }
+          }
+        }
+
+        if (targetItem) {
+          const focusableElement = targetItem.querySelector('a, button, input') as HTMLElement | null
+          if (focusableElement) focusableElement.focus()
+        }
+      })
+
+
+    window.addEventListener('click', (event: MouseEvent) => {
+      const element = event.target as Element
+      if (!element.hasAttribute('aria-haspopup') && !element.classList.contains('submenu-item')) {
+        closeAllDropdownMenus()
+      }
+
+      // Close mobile menu when clicking outside navigation
+      if (mobileMenu && toggleBtn) {
+        const clickedInsideNav = mainNav.contains(element)
+        if (!clickedInsideNav && mobileMenu.classList.contains('show')) {
+          mobileMenu.classList.remove('show')
+          document.body.classList.remove('menu-open')
+          const text = toggleBtn.querySelector('span')
+          const icon = toggleBtn.querySelector('svg')
+          if (text && icon) {
+            text.textContent = 'Menu'
+            toggleBtn.setAttribute('aria-expanded', 'false')
+            toggleBtn.setAttribute('aria-label', 'Open menu navigation')
+            icon.innerHTML = `<path d="M2 1.667h20m-20 6h20m-20 6h20" stroke="var(--background-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`
+          }
+        }
+      }
+    })
+
+    // Close mobile menu after clicking any link inside it (better UX)
+    if (mobileMenu && toggleBtn) {
+      mobileMenu.addEventListener('click', (event: MouseEvent) => {
+        const target = event.target as Element
+        if (target.closest('a')) {
+          mobileMenu.classList.remove('show')
+          document.body.classList.remove('menu-open')
+          const text = toggleBtn.querySelector('span')
+          const icon = toggleBtn.querySelector('svg')
+          if (text && icon) {
+            text.textContent = 'Menu'
+            toggleBtn.setAttribute('aria-expanded', 'false')
+            toggleBtn.setAttribute('aria-label', 'Open menu navigation')
+            icon.innerHTML = `<path d="M2 1.667h20m-20 6h20m-20 6h20" stroke="var(--background-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`
+          }
+        }
+      })
+    }
+  })
+</script>
+
+
+<style lang="scss" is:global>
+@use '../assets/scss/base/mixins' as *;
+@use '../assets/scss/base/breakpoint' as *;
+
+#main-navigation {
+  position: fixed;
+  display: flex;
+  align-items: center; 
+  height: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--foreground-color);
+  box-shadow: 0 4px 8px rgba(2, 6, 23, 0.08);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.4s cubic-bezier(0.65, 0, 0.35, 1),
+      background-color 200ms linear,
+      box-shadow 200ms linear,
+      backdrop-filter 200ms linear;
+  }
+  
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* added for vertical center */
+  }
+
+  // Mobile-first: show mobile menu by default
+  .mobile-menu {
+    position: fixed;
+    inset-inline: 0;
+    inset-block-start: 80px;
+    background-color: var(--foreground-color);
+    box-shadow: 0 10px 16px rgba(2, 6, 23, 0.1);
+    border-radius: 0 0 var(--radius-l) var(--radius-l);
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    overflow: hidden;
+    transition: max-height 300ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier), transform 250ms var(--cubic-bezier);
+
+    &.show {
+      max-height: calc(100vh - 90px);
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+    }
+
+    > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-s);
+      margin: 0;
+      padding: var(--space-m);
+      overflow-y: auto;
+      max-height: inherit;
+      -webkit-overflow-scrolling: touch;
+
+      li {
+        a,
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: var(--space-2xs) var(--space-xs);
+          min-block-size: 44px;
+        }
+      }
+    }
+
+    .has-dropdown {
+      border-radius: var(--radius-m);
+      padding: var(--space-5xs) var(--space-3xs);
+      background: rgba(255, 255, 255, 0.08);
+
+      > button {
+        width: 100%;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+
+      ul {
+        position: relative;
+        inset: auto;
+        transform: none;
+        opacity: 0;
+        visibility: hidden;
+        background: transparent;
+        backdrop-filter: none;
+        pointer-events: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 var(--space-xs);
+        max-height: 0;
+        margin: 0;
+        display: grid;
+        gap: var(--space-2xs);
+        overflow: hidden;
+        transition:
+          max-height 250ms var(--cubic-bezier),
+          opacity 200ms var(--cubic-bezier),
+          visibility 200ms linear,
+          margin 200ms ease;
+      }
+
+      ul.show {
+        max-height: 440px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        margin-top: var(--space-3xs);
+      }
+
+      ul li a,
+      ul li button {
+        justify-content: flex-start;
+        gap: var(--space-3xs);
+        padding-left: var(--space-xs);
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .responsive-toggle {
+    display: flex;
+    align-items: center; /* added for vertical center */
+    gap: var(--space-2xs);
+  }
+
+  .desktop-menu {
+    display: none;
+
+    > ul {
+      li {
+        display: flex; /* added for vertical center */
+        align-items: center; /* added for vertical center */
+        a,
+        button {
+          display: flex; /* added for vertical center */
+          align-items: center; /* added for vertical center */
+          height: 100%; /* added for vertical center */
+        }
+      }
+    }
+  }
+
+  @include breakpoint('nav') {
+    .mobile-menu { display: none; }
+    .responsive-toggle { display: none; }
+    .desktop-menu { display: block; }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center; /* added for vertical center */
+    gap: var(--space-m);
+  }
+
+  a,
+  button {
+    color: var(--foreground-color);
+    display: flex; /* added for vertical center */
+    align-items: center; /* added for vertical center */
+    justify-content: center; /* added for vertical center */
+  }
+
+  nav {
+    > ul {
+      display: flex;
+      gap: var(--space-m);
+      align-items: center; /* added for vertical center */
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        align-content: center; /* already exists */
+      }
+
+      a:hover,
+      a:focus-visible,
+      .is-active,
+      button[aria-expanded='true'],
+      .has-dropdown > button:hover,
+      .has-dropdown > button:focus-visible {
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 7px;
+        color: var(--link-hover-color)!important;
+      }
+
+      .is-active {
+        font-weight: bold;
+      }
+
+      .awards-item:hover > a,
+      .awards-item a:hover,
+      .awards-item a:focus-visible,
+      .awards-item a:active {
+        color: var(--background-color) !important; 
+        text-decoration: none !important; 
+      }
+    }
+  }
+
+  .has-dropdown {
+    position: relative;
+
+    > button {
+      display: flex; /* added for vertical center */
+      align-items: center; /* added for vertical center */
+      gap: var(--space-4xs);
+      margin-block-start: -1px;
+
+      svg {
+        inline-size: 1em;
+        block-size: 1em;
+        transition: all var(--animation-speed-instant) var(--cubic-bezier);
+      }
+
+      &.show {
+        svg {
+          scale: -1;
+        }
+      }
+    }
+
+    ul {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      flex-direction: column;
+      gap: var(--space-2xs);
+      transform: translateY(8px) translateZ(0);
+      opacity: 0;
+      z-index: 100;
+      inset-block-start: 125%;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      box-shadow: var(--elevation-4);
+      border: 2px solid var(--border-color-subtle);
+      border-radius: var(--radius-l);
+      background-color: rgba(var(--background-color-rgb),0.4);
+      backdrop-filter: blur(6px) saturate(140%) brightness(1.1);
+      padding: var(--space-m);
+      min-inline-size: 275px;
+      display: flex;
+      transition: opacity 250ms var(--cubic-bezier), transform 250ms var(--cubic-bezier), visibility 250ms linear;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba(10, 12, 15, 0.55);
+      }
+    }
+
+    &:hover > ul,
+    ul.show {
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      opacity: 1;
+      display: flex;
+    }
+  }
+
+  // Mobile dropdown overrides：在右侧以滑入方式展开
+  // Lock body scroll when mobile menu is open
+  :global(body.menu-open) {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  .responsive-toggle {
+    display: flex;
+    align-items: center; /* added for vertical center */
+    gap: var(--space-2xs);
+
+    @include breakpoint('nav') {
+      display: none;
+    }
+  }
+
+  .darkmode-toggle {
+    border: none;
+    padding: 0;
+
+    display: flex; /* added for vertical center */
+    align-items: center; /* added for vertical center */
+
+    @include breakpoint('nav') {
+      margin-block-start: 7px;
+    }
+
+    .icon {
+      inline-size: 30px;
+      block-size: 30px;
+    }
+
+    &:where(:hover, :focus-visible) {
+      box-shadow: none;
+    }
+
+    &:focus {
+      @include outline;
+
+      &:not(:focus-visible) {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+</style>

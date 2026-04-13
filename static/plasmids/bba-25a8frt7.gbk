@@ -1,0 +1,21 @@
+LOCUS       bba-25a8frt7              44 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25A8FRT7 Gpa1-tail-s | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=0243f96b-06ad-4e01-9e65-7f797252cd1d | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 44)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..44
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 aagtagttca tattgtttaa ggttttgctg gatgattaga tcgg
+//

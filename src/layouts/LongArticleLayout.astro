@@ -1,0 +1,115 @@
+---
+import '../styles/tailwind.css'
+import '../assets/scss/index.scss'
+import SiteMeta from '../components/SiteMeta.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { ClientRouter } from 'astro:transitions'
+import PageHeader from '../components/PageHeader.astro'
+import FoldPageNavigation from '../components/PageNavigation-fold.jsx'
+import BackToTop from '../components/BackToTop.jsx'
+
+const {
+  title = 'Title',
+  description = '',
+  url = Astro.site,
+  image = 'social-preview-image.png',
+  author = 'Peking 2025', 
+  toc,
+  featuredImage
+} = Astro.props
+
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/webp" href="https://static.igem.wiki/teams/5870/icon/team-logo.webp" />
+
+    <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
+
+    <!-- Enable Astro View Transitions for all browsers -->
+    <ClientRouter />
+  </head>
+  <body>
+    <Header />
+    <main id="main-content" transition:animate="fade">
+      <section class="layout-section">
+        <PageHeader
+          title={title}
+          subtitle={description}
+          bgType="bordered"
+          featuredImage={featuredImage}
+        />
+      </section>
+      <section class="layout-section">
+        <div class="layout-shell layout-shell--with-nav">
+          <FoldPageNavigation client:load toc={toc} />
+          <article class="space-content content-panel content-shadow">
+            <slot />
+          </article>
+        </div>
+      </section>
+    </main>
+    <Footer />
+    <BackToTop client:load />
+  </body>
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.space-content p > img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        document.body.appendChild(overlay);
+
+        const bigImg = document.createElement('img') as HTMLImageElement;
+        bigImg.src = img.src;
+        overlay.appendChild(bigImg);
+
+        // 触发过渡动画
+        requestAnimationFrame(() => {
+          overlay.style.background = 'rgba(0,0,0,0.5)';
+          bigImg.style.transform = 'scale(1)';
+        });
+
+        overlay.addEventListener('click', () => {
+          // 收回动画
+          overlay.style.background = 'rgba(0,0,0,0)';
+          bigImg.style.transform = 'scale(0.5)';
+          setTimeout(() => overlay.remove(), 300); // 等动画完成后移除
+        });
+      });
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.md-img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        document.body.appendChild(overlay);
+
+        const bigImg = document.createElement('img') as HTMLImageElement;
+        bigImg.src = img.src;
+        overlay.appendChild(bigImg);
+
+        // 触发过渡动画
+        requestAnimationFrame(() => {
+          overlay.style.background = 'rgba(0,0,0,0.5)';
+          bigImg.style.transform = 'scale(1)';
+        });
+
+        overlay.addEventListener('click', () => {
+          // 收回动画
+          overlay.style.background = 'rgba(0,0,0,0)';
+          bigImg.style.transform = 'scale(0.5)';
+          setTimeout(() => overlay.remove(), 300); // 等动画完成后移除
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,216 @@
+---
+import { Heading, Link } from 'accessible-astro-components'
+
+/**
+ * Footer Component
+ *
+ * @description A component that displays the footer of the website
+ */
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <section class="footer-content">
+    <div class="container">
+    
+       <!-- Sponsors, Affiliations, and Contact Us in parallel -->
+      <div class="footer-parallel-sections">
+        <!-- Sponsors -->
+        <div class="footer-section">
+          <h3>项目团队</h3>
+          <div class="sponsors-grid">
+          南京师范大学美术学院“智绘心光”艺术疗愈研究团队
+          </div>
+        </div>
+
+        <!-- Affiliations -->
+        <div class="footer-section">
+          <h3>指导老师</h3>
+          <div class="affiliations-grid">
+              南京师范大学美术学院阚青、<br>南京师范大学电气与自动化工程学院李宗安<br>
+              合作咨询联系邮箱：12240421@njnu.com
+          </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="footer-section">
+          <h3>合作方鸣谢</h3>
+          <div class="contact-info">
+           南京外国语学校、江苏省艺术与科技中心、<br>妙峰庵社区、南京师范大学美术学院、<br>南京师范大学心理学院、<br>南京师范大学电气与自动化工程学院
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+      <div class="container flex flex-col gap-4 md:flex-row md:justify-between">
+        <div class="copyright-info">
+          <p>
+            &copy; 南京师范大学“智绘心光”大学生创新训练项目  所有 Rights Reserved
+          </p>
+          <p>
+           南外 “考神兔” IP 为项目专属视觉符号，未经授权禁止商用
+          </p>
+        </div>
+        <p>
+          <br/>
+        </p>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<style>
+  .footer-content {
+    border-top: 1px solid var(--border-color-subtle);
+    padding: 3rem 0 1rem 0;
+  }
+
+  .footer-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-parallel-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-parallel-sections .footer-section {
+    margin-bottom: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 1.65rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--foreground-color);
+  }
+
+  .nav-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .nav-column h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--foreground-color);
+  }
+
+  .nav-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-column li {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-column a {
+    font-size: 1rem;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease ,color 0.2s ease;
+  }
+
+  .nav-column a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+
+  .sponsors-grid,
+  .affiliations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .sponsor-logo,
+  .affiliation-logo {
+    height: 60px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .sponsor-link:hover .sponsor-logo,
+  .affiliation-link:hover .affiliation-logo {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  .contact-info p {
+    margin-bottom: 0.1rem;
+    color: var(--text-color-subtle);
+    font-size: 1rem;
+  }
+
+  .contact-info strong {
+    color: var(--foreground-color);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-color-subtle);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85em;
+    color: var(--text-color-subtle);
+  }
+
+  .footer-bottom a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .nav-columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .footer-parallel-sections {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .sponsors-grid,
+    .affiliations-grid {
+      justify-content: center;
+    }
+
+    .sponsor-logo,
+    .affiliation-logo {
+      height: 50px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-columns {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .footer-content {
+      padding: 2rem 0 1rem 0;
+    }
+
+    .footer-section {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

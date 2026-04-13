@@ -1,0 +1,21 @@
+LOCUS       bba-25hakvmd              20 bp    DNA     linear   SYN 07-OCT-2025
+DEFINITION  BBa_25HAKVMD HRH3-F | type=Primer | status=published | 
+            updated=2025-10-04 | license=cc-by-4.0 | 
+            uuid=b6bde4e1-ec73-43b0-aa4d-0e8967492e8b | repository=igem.
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 20)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Oct 7, 2025 from SnapGene 8.1.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..20
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+ORIGIN
+        1 gagagagcac cacctgacgg
+//
